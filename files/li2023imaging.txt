@@ -1,0 +1,7 @@
+@article{li2023imaging,
+  title={Imaging Simulation and Learning-based Image Restoration for Remote Sensing Time Delay and Integration Cameras},
+  author={Li, Menghao and Zhang, Ziran and Chen, Shiqi and Xu, Zhihai and Li, Qi and Feng, Huajun and Chen, Yueting},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  year={2023},
+  publisher={IEEE}
+}

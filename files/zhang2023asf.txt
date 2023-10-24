@@ -1,0 +1,10 @@
+@article{zhang2023asf,
+  title={ASF-Transformer: neutralizing the impact of atmospheric turbulence on optical imaging through alternating learning in the spatial and frequency domains},
+  author={Zhang, Ziran and Zhao, Bin and Chen, Yueting and Wang, Zhigang and Wang, Dong and Sun, Jiawei and Zhang, Jie and Xu, Zhihai and Li, Xuelong},
+  journal={Optics Express},
+  volume={31},
+  number={22},
+  pages={37128--37141},
+  year={2023},
+  publisher={Optica Publishing Group}
+}

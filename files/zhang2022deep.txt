@@ -1,0 +1,10 @@
+@article{zhang2022deep,
+  title={Deep learning-based image reconstruction for photonic integrated interferometric imaging},
+  author={Zhang, Ziran and Li, Haoying and Lv, Guomian and Zhou, Hao and Feng, Huajun and Xu, Zhihai and Li, Qi and Jiang, Tingting and Chen, Yueting},
+  journal={Optics Express},
+  volume={30},
+  number={23},
+  pages={41359--41373},
+  year={2022},
+  publisher={Optica Publishing Group}
+}

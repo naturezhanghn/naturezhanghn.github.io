@@ -1,0 +1,9 @@
+@inproceedings{li2023real,
+  title={Real-world deep local motion deblurring},
+  author={Li, Haoying and Zhang, Ziran and Jiang, Tingting and Luo, Peng and Feng, Huajun and Xu, Zhihai},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={37},
+  number={1},
+  pages={1314--1322},
+  year={2023}
+}
