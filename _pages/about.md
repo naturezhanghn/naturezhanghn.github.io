@@ -28,6 +28,6 @@ Currently pursuing my Ph.D. at the College of Optical Science and Engineering, Z
 <html>
   <body align="left">
 <!--   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=400&t=tt&d=AzKZGryLz3amj3g5IaqEy4_eXki3g-RXrlssFZtJFpk&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0&cl=ffffff&w=200"></script>
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0&cl=ffffff&w=50"></script>
   </body>
 </html>
