@@ -1,0 +1,6 @@
+@inproceedings{chen2024deep,
+  title={Deep Linear Array Pushbroom Image Restoration: A Degradation Pipeline and Jitter-Aware Restoration Network},
+  author={Zida Chen and Ziran Zhang and Haoying Li and Menghao Li and Yueting Chen and Qi Li and Huajun Feng and Zhihai Xu and Shiqi Chen},
+  booktitle={AAAI},
+  year={2024}
+}
