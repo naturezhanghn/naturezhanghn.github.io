@@ -1,19 +1,19 @@
 ---
-title: "xxxxDeep learning-based image reconstruction for photonic integrated interferometric imaging"
+title: "Deep Linear Array Pushbroom Image Restoration: A Degradation Pipeline and Jitter-Aware Restoration Network"
 collection: publications
 permalink: 
-date: 2022-11-07
-venue: "Optics Express"
-authors: "<b>Ziran Zhang</b>, Haoying Li, Guomian Lv, Hao Zhou, Huajun Feng, Zhihai Xu, Qi Li, Tingting Jiang, Yueting Chen"
+date: 2024-01-16
+venue: "AAAI"
+authors: "Zida Chen, <b>Ziran Zhang</b>, Haoying Li, Menghao Li, Yueting Chen, Qi Li, Huajun Feng, Zhihai Xu, Shiqi Chen"
 url: 
 project: 
-bibtex: files/zhang2022deep.txt
+bibtex: "files/2024_jarnet.txt"
 arxiv: 
-openpdf: https://opg.optica.org/oe/fulltext.cfm?uri=oe-30-23-41359
+openpdf: "https://browse.arxiv.org/pdf/2401.08171"
 supp: 
-teaser: images/oe2022.png
+teaser: "images/2024_jarnet.png"
 videoresults: 
 videotalk: 
 poster: 
-code: https://github.com/naturezhanghn/SFDF-Nets
+code: "https://github.com/JHW2000/JARNet"
 ---
