@@ -4,7 +4,7 @@ collection: publications
 permalink: 
 date: 2024-01-16
 venue: "AAAI"
-authors: "<b>Zida Chen</b>, Zida Chen, Ziran Zhang, Haoying Li, Menghao Li, Yueting Chen, Qi Li, Huajun Feng, Zhihai Xu, Shiqi Chen
+authors: "Zida Chen, <b>Zida Chen</b>, Ziran Zhang, Haoying Li, Menghao Li, Yueting Chen, Qi Li, Huajun Feng, Zhihai Xu, Shiqi Chen
 url: 
 project: 
 bibtex: files/2024_jarnet.txt
