@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am currently pursuing my Ph.D. at the College of Optical Science and Engineering at Zhejiang University. Under the mentorship of Dr. Chen Yueting, I also receive valuable guidance from Professors Xu Zhihai, Feng Huajun, and Li Qi. Additionally, I am a trainee researcher at the Shanghai Artificial Intelligence Laboratory, collaborating with Xue Tianfan, Gu Jinwei, Guo Shi, and Zhao Bin. My research interests are primarily in optical imaging and low-level vision.
+I am currently pursuing my Ph.D. at the College of Optical Science and Engineering at Zhejiang University. Under the mentorship of Dr. Chen Yueting, I also receive valuable guidance from Professors Xu Zhihai, Feng Huajun, and Li Qi. Additionally, I am a trainee researcher at the Shanghai Artificial Intelligence Laboratory, working closely with Xue Tianfan, Gu Jinwei, Guo Shi, and Zhao Bin. My research interests are primarily in optical imaging and low-level vision.
 
 
 ## News
