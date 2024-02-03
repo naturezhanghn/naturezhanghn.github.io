@@ -8,8 +8,8 @@ authors: "Zida Chen, <b>Ziran Zhang</b>, Haoying Li, Menghao Li, Yueting Chen, Q
 url: 
 project: 
 bibtex: "files/2024_jarnet.txt"
-arxiv: 
-openpdf: "https://browse.arxiv.org/pdf/2401.08171"
+arxiv: "https://browse.arxiv.org/pdf/2401.08171"
+openpdf: 
 supp: 
 teaser: "images/2024_jarnet.png"
 videoresults: 
