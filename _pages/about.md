@@ -72,6 +72,11 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
+    <li><b>2023-now, Shanghai Artificial Intelligence Laboratory</b>
+      <ul>
+        <li>Trainee Researcher, AI for Imaging</li>
+      </ul>
+    </li>
     <li><b>2022, Huawei 2012 Lab, Central Media Technology Institute</b>
       <ul>
         <li>Media Algorithm Intern, AI-ISP Algorithm Development</li>
