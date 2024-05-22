@@ -74,7 +74,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
   <ul>
     <li><b>Huawei 2012 Lab</b>, <b>Central Media Technology Institute</b>, Photographic Department
       <ul>
-        <li>Media Algorithm Intern, ISP Algorithm Development</li>
+        <li>Media Algorithm Intern, AI-ISP Algorithm Development</li>
       </ul>
     </li>
   </ul>
@@ -96,9 +96,9 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li>Reviewer for <b>ACM MM, TGRS, OE, AAAI, ECCV, ICCV</b></li>
-    <li>President, Electronic Design Association, <b>Central South University</b>, 2018-2019</li>
-    <li>Deputy Director, Youth Volunteers Association Office, <b>Central South University</b>, 2017-2018</li>
+    <li>Reviewer for ACM MM, TGRS, OE, AAAI, ECCV, ICCV</li>
+    <li>President, Electronic Design Association, Central South University, 2018-2019</li>
+    <li>Deputy Director of the Office, Youth Volunteers Association, Central South University, 2017-2018</li>
   </ul>
 </div>
 
@@ -108,10 +108,10 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li><b>Sunny Optical Innovation and Entrepreneurship Scholarship, 2022</b></li>
-    <li>Outstanding Graduate Student, <b>Zhejiang University</b>, 2021-2023</li>
+    <li>Sunny Optical Innovation and Entrepreneurship Scholarship, 2022</li>
+    <li>Outstanding Graduate Student, Zhejiang University, 2021-2023</li>
     <li>Second Prize, Chang'e-7 Science Payload Creative Competition, 2022</li>
-    <li>Outstanding Graduate of <b>Hunan Province</b>, 2020</li>
+    <li>Outstanding Graduate of Hunan Province, 2020</li>
     <li>National Scholarship for Undergraduates, 2019</li>
   </ul>
 </div>
