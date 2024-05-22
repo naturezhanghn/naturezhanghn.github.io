@@ -86,7 +86,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li>AI for Imaging, Computational Optics, Imaging Principles, and Image Processing Algorithms</li>
+    <li>AI for Imaging, Computational Optics, Imaging Principles, and Low-level Vision</li>
   </ul>
 </div>
 
