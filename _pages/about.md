@@ -55,7 +55,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
         <li>Co-Advisors: Chen Yueting, Xu Zhihai, Li Qi</li>
       </ul>
     </li>
-    <li><b>2022-2025</b> Ph.D., <b>Zhejiang University</b>, Optical Engineering
+    <li><b>2022-2025 Ph.D., Zhejiang University, Optical Engineering</b>
       <ul>
         <li>Combined Master's and Ph.D. Program, Joint Training by <b>Shanghai Artificial Intelligence Laboratory</b></li>
         <li>Focused on AI for Imaging</li>
