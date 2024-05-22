@@ -72,7 +72,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li><b>2023-now, Shanghai Artificial Intelligence Laboratory</b>
+    <li><b>2023-Present, Shanghai Artificial Intelligence Laboratory</b>
       <ul>
         <li>Trainee Researcher, AI for Imaging</li>
       </ul>
