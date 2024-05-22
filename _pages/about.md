@@ -37,12 +37,83 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
   {% include publications.html %}
 {% endfor %}
 
-## Experiences
+## Education
 <style style="text/css">
   .experiences { font-size: 1em; }
 </style>
 <div class="experiences">
-  {% include experiences.html %}
+  <ul>
+    <li><b>2016-2020</b> B.S., <b>Central South University</b>, Optoelectronic Information Science and Engineering
+      <ul>
+        <li>Focused on Imaging Principles, Materials, and Devices</li>
+      </ul>
+    </li>
+    <li><b>2020-2022</b> M.S., <b>Zhejiang University</b>, Optical Engineering
+      <ul>
+        <li>Focused on Computational Optics and Imaging Systems</li>
+        <li>Advisor: <b>Feng Huajun</b></li>
+        <li>Co-Advisors: <b>Chen Yueting, Xu Zhihai, Li Qi</b></li>
+      </ul>
+    </li>
+    <li><b>2022-2025</b> Ph.D., <b>Zhejiang University</b>, Optical Engineering
+      <ul>
+        <li>Combined Master's and Ph.D. Program, Joint Training by <b>Shanghai Artificial Intelligence Laboratory</b></li>
+        <li>Focused on AI for Imaging</li>
+        <li>Advisor: <b>Chen Yueting</b></li>
+        <li>Co-Advisors: <b>Xue Tianfan, Gu Jinwei, Guo Shi</b></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+## Internships
+<style style="text/css">
+  .experiences { font-size: 1em; }
+</style>
+<div class="experiences">
+  <ul>
+    <li><b>Huawei 2012 Lab</b>, <b>Central Media Technology Institute</b>, Photographic Department
+      <ul>
+        <li>Media Algorithm Intern, ISP Algorithm Development</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+## Research Focus
+<style style="text/css">
+  .experiences { font-size: 1em; }
+</style>
+<div class="experiences">
+  <ul>
+    <li>AI for Imaging, Computational Optics, Imaging Principles, and Image Processing Algorithms</li>
+  </ul>
+</div>
+
+## Services
+<style style="text/css">
+  .experiences { font-size: 1em; }
+</style>
+<div class="experiences">
+  <ul>
+    <li>Reviewer for <b>ACM MM, TGRS, OE, AAAI, ECCV, ICCV</b></li>
+    <li>President, Electronic Design Association, <b>Central South University</b>, 2018-2019</li>
+    <li>Deputy Director, Youth Volunteers Association Office, <b>Central South University</b>, 2017-2018</li>
+  </ul>
+</div>
+
+## Honors
+<style style="text/css">
+  .experiences { font-size: 1em; }
+</style>
+<div class="experiences">
+  <ul>
+    <li><b>Sunny Optical Innovation and Entrepreneurship Scholarship, 2022</b></li>
+    <li>Outstanding Graduate Student, <b>Zhejiang University</b>, 2021-2023</li>
+    <li>Second Prize, Chang'e-7 Science Payload Creative Competition, 2022</li>
+    <li>Outstanding Graduate of <b>Hunan Province</b>, 2020</li>
+    <li>National Scholarship for Undergraduates, 2019</li>
+  </ul>
 </div>
 
 ## Map
