@@ -43,7 +43,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li><b>2022-2025 Ph.D., Zhejiang University</b>
+    <li><b>2022-2025(expected) Ph.D., Zhejiang University</b>
       <ul>
         <li>Combined Master's and Ph.D. Program, Joint Training by <b>Shanghai Artificial Intelligence Laboratory</b></li>
         <li>Major: Optical Engineering </li>
@@ -51,7 +51,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
         <li>Co-Advisors: Xue Tianfan, Gu Jinwei, Guo Shi</li>
       </ul>
     </li>
-    <li><b>2020-2022 M.S., Zhejiang University, Optical Engineering</b>
+    <li><b>2020-2022 M.S., Zhejiang University</b>
       <ul>
         <li>Major: Optical Engineering</li>
         <li>Advisor: Feng Huajun</li>
