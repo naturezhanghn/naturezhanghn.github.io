@@ -72,7 +72,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li><b>Huawei 2012 Lab</b>, <b>Central Media Technology Institute</b>, Photographic Department
+    <li><b>Huawei 2012 Lab</b>, <b>Central Media Technology Institute</b>
       <ul>
         <li>Media Algorithm Intern, AI-ISP Algorithm Development</li>
       </ul>
