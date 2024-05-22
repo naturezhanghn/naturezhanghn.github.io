@@ -39,7 +39,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Education
 <style style="text/css">
-  .experiences { font-size: 1em; }
+  .experiences { font-size: 0.75em; }
 </style>
 <div class="experiences">
   <ul>
@@ -68,7 +68,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Internships
 <style style="text/css">
-  .experiences { font-size: 1em; }
+  .experiences { font-size: 0.75em; }
 </style>
 <div class="experiences">
   <ul>
@@ -82,7 +82,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Research Focus
 <style style="text/css">
-  .experiences { font-size: 1em; }
+  .experiences { font-size: 0.75em; }
 </style>
 <div class="experiences">
   <ul>
@@ -92,7 +92,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Services
 <style style="text/css">
-  .experiences { font-size: 1em; }
+  .experiences { font-size: 0.75em; }
 </style>
 <div class="experiences">
   <ul>
@@ -104,7 +104,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Honors
 <style style="text/css">
-  .experiences { font-size: 1em; }
+  .experiences { font-size: 0.75em; }
 </style>
 <div class="experiences">
   <ul>
