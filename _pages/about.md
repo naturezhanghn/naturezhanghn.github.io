@@ -101,7 +101,7 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li>Reviewer for ACM MM, TGRS, OE, AAAI, ECCV, ICCV</li>
+    <li>Reviewer for TGRS, OE, ACM MM, AAAI, ECCV, ICCV</li>
     <li>President, Electronic Design Association, Central South University, 2018-2019</li>
     <li>Deputy Director of the Office, Youth Volunteers Association, Central South University, 2017-2018</li>
   </ul>
