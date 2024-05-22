@@ -39,9 +39,11 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Experiences
 <style style="text/css">
-  .news { font-size: 0.75em; }
+  .experiences { font-size: 1em; }
 </style>
-{% include experiences.html %}
+<div class="experiences">
+  {% include experiences.html %}
+</div>
 
 ## Map
 <div align="left">
