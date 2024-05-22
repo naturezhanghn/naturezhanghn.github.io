@@ -43,16 +43,16 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li><b>2016-2020</b> B.S., <b>Central South University</b>, Optoelectronic Information Science and Engineering
+    <li><b>2016-2020 B.S., Central South University, Optoelectronic Information Science and Engineering</b>
       <ul>
         <li>Focused on Imaging Principles, Materials, and Devices</li>
       </ul>
     </li>
-    <li><b>2020-2022</b> M.S., <b>Zhejiang University</b>, Optical Engineering
+    <li><b>2020-2022 M.S., Zhejiang University, Optical Engineering</b>
       <ul>
         <li>Focused on Computational Optics and Imaging Systems</li>
-        <li>Advisor: <b>Feng Huajun</b></li>
-        <li>Co-Advisors: <b>Chen Yueting, Xu Zhihai, Li Qi</b></li>
+        <li>Advisor: Feng Huajun</li>
+        <li>Co-Advisors: Chen Yueting, Xu Zhihai, Li Qi</li>
       </ul>
     </li>
     <li><b>2022-2025</b> Ph.D., <b>Zhejiang University</b>, Optical Engineering
