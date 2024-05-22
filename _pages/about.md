@@ -23,28 +23,6 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 {% include experiences.html %}
 
 
-### Education
-- **2016-2020:** B.S., Central South University, Optoelectronic Information Science and Engineering - Focus on Imaging Principles/Materials/Devices
-- **2020-2022:** M.S., Zhejiang University, Optical Engineering - Focus on Computational Optics/Imaging Systems  
-  **Advisor:** Feng Huajun  
-  **Co-Advisors:** Chen Yueting, Xu Zhihai, Li Qi
-- **2022-2025:** Ph.D. (Combined Master and Ph.D. Program), Shanghai Artificial Intelligence Laboratory & Zhejiang University, Joint Training in Optical Engineering - Focus on AI for Imaging  
-  **Advisor:** Chen Yueting  
-  **Co-Advisors:** Guo Shi, Xue Tianfan, Gu Jinwei
-
-### Services
-- Reviewer for ACM MM/TGRS/OE/AAAI/ECCV/ICCV
-- Deputy Director, Youth Volunteers Association Office, Central South University, 2018-2019
-- President, Electronic Design Enthusiasts Association, Central South University, 2018-2019
-
-### Honors
-- Sunny Optical Innovation and Entrepreneurship Scholarship, 2022
-- Outstanding/Three-Good Graduate Student, Zhejiang University, 2021-2023
-- Second Prize, Chang'e-7 Science Payload Creative Competition
-- National Scholarship for Undergraduates, 2019
-- Outstanding Graduate of Hunan Province, 2020
-
-
 ## Map
 <html>
   <body align="left">
