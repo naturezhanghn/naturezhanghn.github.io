@@ -43,9 +43,12 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 </style>
 <div class="experiences">
   <ul>
-    <li><b>2016-2020 B.S., Central South University, Optoelectronic Information Science and Engineering</b>
+    <li><b>2022-2025 Ph.D., Zhejiang University, Optical Engineering</b>
       <ul>
-        <li>Focused on Imaging Principles, Materials, and Devices</li>
+        <li>Combined Master's and Ph.D. Program, Joint Training by <b>Shanghai Artificial Intelligence Laboratory</b></li>
+        <li>Focused on AI for Imaging</li>
+        <li>Advisor: Chen Yueting</li>
+        <li>Co-Advisors: Xue Tianfan, Gu Jinwei, Guo Shi</li>
       </ul>
     </li>
     <li><b>2020-2022 M.S., Zhejiang University, Optical Engineering</b>
@@ -55,12 +58,9 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
         <li>Co-Advisors: Chen Yueting, Xu Zhihai, Li Qi</li>
       </ul>
     </li>
-    <li><b>2022-2025 Ph.D., Zhejiang University, Optical Engineering</b>
+    <li><b>2016-2020 B.S., Central South University, Optoelectronic Information Science and Engineering</b>
       <ul>
-        <li>Combined Master's and Ph.D. Program, Joint Training by <b>Shanghai Artificial Intelligence Laboratory</b></li>
-        <li>Focused on AI for Imaging</li>
-        <li>Advisor: Chen Yueting</li>
-        <li>Co-Advisors: Xue Tianfan, Gu Jinwei, Guo Shi</li>
+        <li>Focused on Imaging Principles, Materials, and Devices</li>
       </ul>
     </li>
   </ul>
