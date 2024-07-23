@@ -123,5 +123,8 @@ I am currently pursuing my Ph.D. at the College of Optical Science and Engineeri
 
 ## Map
 <div align="left">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0&cl=ffffff&w=400"></script>
+<!--   <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0&cl=ffffff&w=400"></script> -->
+  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0'></script>
 </div>
+
+
