@@ -1,0 +1,7 @@
+@inproceedings{zhang2024sim,
+  title={From Sim-to-Real: Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization},
+  author={Zhang, Ziran and Ma, Yongrui and Chen, Yueting and Zhang, Feng and Gu, Jinwei and Xue, Tianfan and Guo, Shi},
+  booktitle={SIGGRAPH Asia 2024 Conference Papers},
+  pages={1--10},
+  year={2024}
+}
