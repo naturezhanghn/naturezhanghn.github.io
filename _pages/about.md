@@ -68,7 +68,7 @@ My research interests focus on interdisciplinary areas related to imaging techno
     <li><b>2016-2020 B.S., Central South University</b>
       <ul>
         <li>Major: Optoelectronic Information Science and Engineering</li>
-        <li>Rank: 3/50+<li>
+        <li>Rank: 3/50+</li>
       </ul>
     </li>
   </ul>
