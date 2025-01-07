@@ -8,12 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-
-I am a joint Ph.D. student at the **[College of Optical Science and Engineering, Zhejiang University](https://www.example.com)** and **[Shanghai AI Laboratory](https://www.shlab.org.cn/)**. I am supported by the **[Pujiang National Laboratory Master-Ph.D. Program (2022-2025)](https://www.shlab.org.cn/news/5443403.html)**, under the supervision of **[Dr. Yueting Chen](https://scholar.google.com.hk/citations?hl=zh-CN&user=gS-0tfAAAAAJ&view_op=list_works&sortby=pubdate)** and co-supervision of **[Prof. Tianfan Xue](https://scholar.google.com.hk/citations?user=RfSQKrIAAAAJ&hl=zh-CN)**. Prior to joining the Pujiang National Laboratory program, I pursued my Master of Science degree under the guidance of **[Prof. Huajun Feng](https://person.zju.edu.cn/0086127)** at Zhejiang University (2020-2022).
+I am a joint Ph.D. student at the **[College of Optical Science and Engineering, Zhejiang University](https://www.example.com)** and **[Shanghai AI Laboratory](https://www.shlab.org.cn/)**. I passed the master's-to-doctoral assessment at Zhejiang University and received support from the first cohort of the **[Pujiang National Laboratory Master-Ph.D. Program (2022-2025)](https://www.shlab.org.cn/news/5443403.html)**, under the supervision of **[Dr. Yueting Chen](https://scholar.google.com.hk/citations?hl=zh-CN&user=gS-0tfAAAAAJ&view_op=list_works&sortby=pubdate)** and co-supervision of **[Prof. Tianfan Xue](https://scholar.google.com.hk/citations?user=RfSQKrIAAAAJ&hl=zh-CN)**. Prior to joining the Pujiang National Laboratory program, I pursued my Master of Science degree under the guidance of **[Prof. Huajun Feng](https://person.zju.edu.cn/0086127)** at Zhejiang University (2020-2022).
 
 I completed my undergraduate studies at **[Central South University (2016-2020)](https://www.csu.edu.cn/)**, where I received the **National Scholarship** and was recognized as an **Outstanding Graduate of Hunan Province**. Additionally, I served as the president of the **Electronic Design Association** at Central South University. Under my leadership, the association was recognized as one of the **Top 100 Student Organizations in Hunan Province**.
 
 My research interests focus on interdisciplinary areas related to imaging technology, including **artificial intelligence**, **optics**, **imaging science**, **computer vision**, and **remote sensing**. I have collaborated closely with **[Shi Guo](https://guoshi28.github.io/)**, **[Zhihai Xu](https://person.zju.edu.cn/0089108)**, **[Jinwei Gu](https://www.gujinwei.org/)**, **[Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW)**, and **[Qi Li](https://person.zju.edu.cn/0098047)**.
+
 
 
 ## News
