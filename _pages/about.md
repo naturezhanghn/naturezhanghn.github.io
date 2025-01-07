@@ -12,7 +12,7 @@ I am a joint Ph.D. student at the **[College of Optical Science and Engineering,
 
 I completed my undergraduate studies at **[Central South University (2016-2020)](https://www.csu.edu.cn/)**, where I received the **National Scholarship** and was recognized as an **Outstanding Graduate of Hunan Province**. Additionally, I served as the president of the **Electronic Design Association** at Central South University. Under my leadership, the association was recognized as one of the **Top 100 Student Organizations in Hunan Province**.
 
-My research interests focus on interdisciplinary areas related to imaging technology, including **artificial intelligence**, **optics**, **imaging science**, **computer vision**, and **remote sensing**. I have collaborated closely with **[Shi Guo](https://guoshi28.github.io/)**, **[Zhihai Xu](https://person.zju.edu.cn/0089108)**, **[Jinwei Gu](https://www.gujinwei.org/)**, **[Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW)**, **[Qi Li](https://person.zju.edu.cn/0098047)**, and **[Zhao Bin]([https://scholar.google.com.tw/citations?user=DQB0hqwAAAAJ&hl=zh-TW](https://iopen.nwpu.edu.cn/info/1251/1852.htm))**.
+My research interests focus on interdisciplinary areas related to imaging technology, including **artificial intelligence**, **optics**, **imaging science**, **computer vision**, and **remote sensing**. I have collaborated closely with **[Shi Guo](https://guoshi28.github.io/)**, **[Zhihai Xu](https://person.zju.edu.cn/0089108)**, **[Jinwei Gu](https://www.gujinwei.org/)**, **[Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW)**, **[Qi Li](https://person.zju.edu.cn/0098047)**, and **[Zhao Bin](https://iopen.nwpu.edu.cn/info/1251/1852.htm)**.
 
 
 
