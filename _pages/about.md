@@ -53,14 +53,14 @@ My research interests focus on **interdisciplinary areas related to imaging tech
     <li><b>2022-2025(expected) Ph.D., Zhejiang University</b>
       <ul>
         <li>Major: Optical Engineering </li>
-        <li>Advisor: Chen Yueting</li>
+        <li>Advisor:Yueting Chen</li>
         <li>Co-Advisors: Tianfan Xue, Shi Guo, Jinwei Gu</li>
       </ul>
     </li>
     <li><b>2020-2022 M.S., Zhejiang University</b>
       <ul>
         <li>Major: Optical Engineering</li>
-        <li>Advisor: Feng Huajun</li>
+        <li>Advisor: Huajun Feng</li>
         <li>Co-Advisors: Zhihai Xu, Yueting Chen, Qi Li</li>
       </ul>
     </li>
