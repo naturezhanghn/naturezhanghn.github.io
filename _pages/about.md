@@ -126,7 +126,7 @@ I aim to integrate these disciplines to develop innovative imaging technologies 
 <div class="experiences">
   <ul>
     <li>Sunny Optical Innovation and Entrepreneurship Scholarship, 2022</li>
-    <li>Outstanding Graduate Student, Zhejiang University, 2021-2023</li>
+    <li>Outstanding Graduate Student, Zhejiang University, 2021-2024</li>
     <li>Second Prize, Chang'e-7 Science Payload Creative Competition, 2022</li>
     <li>Outstanding Graduate of Hunan Province, 2020</li>
     <li>National Scholarship for Undergraduates, 2019</li>
