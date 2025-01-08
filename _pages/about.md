@@ -18,7 +18,7 @@ I have collaborated closely with **[Shi Guo](https://guoshi28.github.io/)**, **[
 
 ### Research Interests
 
-My research interests focus on **interdisciplinary areas related to “AI for Imaging”**, including:
+My research interests focus on interdisciplinary areas related to **“AI for Imaging”**, including:
 
 - **Artificial Intelligence**
 - **Optics**
@@ -102,16 +102,6 @@ I aim to integrate these disciplines to develop innovative imaging technologies 
         <li>Media Algorithm Intern, AI-ISP Algorithm Development</li>
       </ul>
     </li>
-  </ul>
-</div>
-
-## Research Focus
-<style style="text/css">
-  .experiences { font-size: 0.75em; }
-</style>
-<div class="experiences">
-  <ul>
-    <li>AI for Imaging, Event-based Low-level Vision, Computational Optics, and Imaging Principles. </li>
   </ul>
 </div>
 
