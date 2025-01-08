@@ -52,24 +52,24 @@ My research interests focus on **interdisciplinary areas related to imaging tech
   <ul>
     <li><b>2022-2025(expected) Ph.D., Zhejiang University</b>
       <ul>
-        <li>Jointly Trained by Shanghai Artificial Intelligence Laboratory and the State Key Laboratory of Extreme Photonics and Instrumentation</li>
+        <li>Laboratory: Jointly Trained by Shanghai Artificial Intelligence Laboratory and the State Key Laboratory of Extreme Photonics and Instrumentation</li>
         <li>Major: Optical Engineering </li>
-        <li>Advisor: Chen Yueting</li>
-        <li>Co-Advisors: Xue Tianfan, Gu Jinwei, Guo Shi</li>
+        <li>Advisor: [Chen Yueting](https://person.zju.edu.cn/chenyt/612418.html)</li>
+        <li>Co-Advisors: [Xue Tianfan](https://tianfan.info/), [Gu Jinwei](https://www.gujinwei.org/), [Guo Shi](https://guoshi28.github.io/)</li>
       </ul>
     </li>
     <li><b>2020-2022 M.S., Zhejiang University</b>
       <ul>
-        <li>State Key Laboratory of Modern Optical Instrumentation</li>
+        <li>Laboratory: State Key Laboratory of Modern Optical Instrumentation</li>
         <li>Major: Optical Engineering</li>
-        <li>Advisor: Feng Huajun</li>
-        <li>Co-Advisors: Chen Yueting, Xu Zhihai, Li Qi</li>
+        <li>Advisor: [Feng Huajun](https://person.zju.edu.cn/0086127)</li>
+        <li>Co-Advisors: [Chen Yueting](https://person.zju.edu.cn/chenyt/612418.html), [Xu Zhihai](https://person.zju.edu.cn/0089108), [Li Qi](https://person.zju.edu.cn/0098047)</li>
       </ul>
     </li>
     <li><b>2016-2020 B.S., Central South University</b>
       <ul>
-        <li>Hunan Key Laboratory of Super Micro-structure and Ultrafast Process</li>
-        <li>Advisor: Yuan Xiaoming</li>
+        <li>Laboratory: Hunan Key Laboratory of Super Micro-structure and Ultrafast Process</li>
+        <li>Advisor: [Xie Wenke](https://faculty.csu.edu.cn/xiewenke/zh_CN/index.htm), [Yuan Xiaoming](https://faculty.csu.edu.cn/yuanxiaoming/zh_CN/index.htm)</li>
         <li>Major: Optoelectronic Information Science and Engineering</li>
         <li>Rank: 3/50+</li>
       </ul>
