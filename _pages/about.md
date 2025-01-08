@@ -53,15 +53,15 @@ My research interests focus on **interdisciplinary areas related to imaging tech
     <li><b>2022-2025(expected) Ph.D., Zhejiang University</b>
       <ul>
         <li>Major: Optical Engineering </li>
-        <li>Advisor: [Chen Yueting](https://person.zju.edu.cn/chenyt/612418.html)</li>
-        <li>Co-Advisors: [Xue Tianfan](https://tianfan.info/), [Gu Jinwei](https://www.gujinwei.org/), [Guo Shi](https://guoshi28.github.io/)</li>
+        <li>Advisor: Chen Yueting</li>
+        <li>Co-Advisors: Xue Tianfan, Guo Shi, Gu Jinwei</li>
       </ul>
     </li>
     <li><b>2020-2022 M.S., Zhejiang University</b>
       <ul>
         <li>Major: Optical Engineering</li>
-        <li>Advisor: [Feng Huajun](https://person.zju.edu.cn/0086127)</li>
-        <li>Co-Advisors: [Chen Yueting](https://person.zju.edu.cn/chenyt/612418.html), [Xu Zhihai](https://person.zju.edu.cn/0089108), [Li Qi](https://person.zju.edu.cn/0098047)</li>
+        <li>Advisor: Feng Huajun</li>
+        <li>Co-Advisors:  Xu Zhihai, Chen Yueting, Li Qi</li>
       </ul>
     </li>
     <li><b>2016-2020 B.S., Central South University</b>
