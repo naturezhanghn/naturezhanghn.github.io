@@ -65,6 +65,7 @@ I aim to integrate these disciplines to develop innovative imaging technologies 
   <ul>
     <li><b>2022-2025(expected) Ph.D., Zhejiang University</b>
       <ul>
+        <li>Jointly Trained by Shanghai Artificial Intelligence Laboratory and the State Key Laboratory of Extreme Photonics and Instrumentation</li>
         <li>Major: Optical Engineering </li>
         <li>Advisor:Yueting Chen</li>
         <li>Co-Advisors: Tianfan Xue, Shi Guo, Jinwei Gu</li>
@@ -72,6 +73,7 @@ I aim to integrate these disciplines to develop innovative imaging technologies 
     </li>
     <li><b>2020-2022 M.S., Zhejiang University</b>
       <ul>
+        <li>State Key Laboratory of Modern Optical Instrumentation</li>
         <li>Major: Optical Engineering</li>
         <li>Advisor: Huajun Feng</li>
         <li>Co-Advisors: Zhihai Xu, Yueting Chen, Qi Li</li>
