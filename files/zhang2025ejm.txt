@@ -1,0 +1,7 @@
+@article{zhang2025jitter,
+  title={Jitter-Aware Restoration with Equivalent Jitter Model for Remote Sensing Push-Broom Image},
+  author={Zhang, Ziran and Chen, Zida and Hu, Die and Li, Menghao and Xu, Zhihai and Feng, Huajun and Li, Qi and Chen, Yueting},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  year={2025},
+  publisher={IEEE}
+}
