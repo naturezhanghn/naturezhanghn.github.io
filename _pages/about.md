@@ -24,7 +24,7 @@ My research interests focus on interdisciplinary areas related to **“AI for Im
 - **Optics**
 - **Graphics**
 - **Computer Vision**
-- **Remote Sensing**
+- **Imaging Sensors**
 
 I aim to integrate these disciplines to develop innovative imaging technologies and applications.
 
