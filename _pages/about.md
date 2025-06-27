@@ -10,7 +10,7 @@ redirect_from:
 
 ## About Me
 
-I am a joint Ph.D. student at the **[College of Optical Science and Engineering, Zhejiang University](http://opt.zju.edu.cn/)** and **[Shanghai AI Laboratory](https://www.shlab.org.cn/)**. I passed the master's-to-doctoral assessment at Zhejiang University in 2022 and received support from **the first cohort of [the Pujiang National Laboratory Joint Training Ph.D. Program (2022-2025)](https://www.shlab.org.cn/news/5443403.html)**. My research is conducted under the supervision of **[Dr. Yueting Chen](https://scholar.google.com.hk/citations?hl=zh-CN&user=gS-0tfAAAAAJ&view_op=list_works&sortby=pubdate)** and co-supervision of **[Prof. Tianfan Xue](https://scholar.google.com.hk/citations?user=RfSQKrIAAAAJ&hl=zh-CN)**. Prior to joining the Pujiang National Laboratory program, I pursued my Master of Science degree under the guidance of **[Prof. Huajun Feng](https://person.zju.edu.cn/0086127)** at Zhejiang University (2020-2022).
+I am currently working as an imaging algorithm engineer at Honor. I received my Ph.D. from the College of Optical Science and Engineering, Zhejiang University in June 2023. Previously, I was a joint Ph.D. student at Zhejiang University and Shanghai AI Laboratory. I passed the master's-to-doctoral assessment at Zhejiang University in 2022 and received support from **the first cohort of [the Pujiang National Laboratory Joint Training Ph.D. Program (2022-2025)](https://www.shlab.org.cn/news/5443403.html)**. My research is conducted under the supervision of **[Dr. Yueting Chen](https://scholar.google.com.hk/citations?hl=zh-CN&user=gS-0tfAAAAAJ&view_op=list_works&sortby=pubdate)** and co-supervision of **[Prof. Tianfan Xue](https://scholar.google.com.hk/citations?user=RfSQKrIAAAAJ&hl=zh-CN)**. Prior to joining the Pujiang National Laboratory program, I pursued my Master of Science degree under the guidance of **[Prof. Huajun Feng](https://person.zju.edu.cn/0086127)** at Zhejiang University (2020-2022).
 
 I completed my undergraduate studies at **[Central South University (2016-2020)](https://www.csu.edu.cn/)**, where I received the **National Scholarship** and was recognized as an **Outstanding Graduate of Hunan Province**.
 
@@ -63,7 +63,7 @@ I aim to integrate these disciplines to develop innovative imaging technologies 
 </style>
 <div class="experiences">
   <ul>
-    <li><b>2022-2025(expected) Ph.D., Zhejiang University</b>
+    <li><b>2022-2025 Ph.D., Zhejiang University</b>
       <ul>
         <li>Jointly Trained by Shanghai Artificial Intelligence Laboratory and the State Key Laboratory of Extreme Photonics and Instrumentation</li>
         <li>Major: Optical Engineering </li>
