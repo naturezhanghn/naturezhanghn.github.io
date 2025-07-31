@@ -65,9 +65,9 @@ I am passionate about harnessing interdisciplinary approaches to develop state-o
   <ul>  
     <li><b>Ph.D. in Optical Engineering, Zhejiang University (2022-2025)</b>  
       <ul>  
-        <li>Joint training with Shanghai AI Laboratory and State Key Laboratory of Extreme Photonics and Instrumentation</li>  
+        <li>Joint training with Shanghai AI Laboratory and Zhejiang University</li>  
         <li>Advisor: Yueting Chen</li>  
-        <li>Co-Advisors: Tianfan Xue, Shi Guo, Jinwei Gu</li>  
+        <li>Co-Advisors: Tianfan Xue</li>  
       </ul>  
     </li>  
     <li><b>M.S. in Optical Engineering, Zhejiang University (2020-2022)</b>  
