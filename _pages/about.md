@@ -23,7 +23,7 @@ During my Ph.D., I was honored to join the inaugural cohort of the **[Pujiang Na
 My research and engineering expertise encompass:
 
 - Generative Artificial Intelligence for Imaging  
-- Optical Engineering and Photonics  
+- Optical Engineering
 - Computer Vision and Graphics  
 - Sensor Technologies and Signal Processing  
 - Computational Photography and Image Enhancement  
