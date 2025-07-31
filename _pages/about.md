@@ -10,7 +10,7 @@ redirect_from:
 
 ## About Me
 
-I am a Senior Imaging Algorithm Engineer at **[Honor](https://www.honor.com/cn/)**, specializing in the development and application of advanced imaging technologies powered by artificial intelligence. With a Ph.D. from the **[College of Optical Science and Engineering, Zhejiang University](http://opt.zju.edu.cn/)** completed in June 2025, I have cultivated deep expertise in both optical engineering and AI-driven imaging solutions, including extensive hands-on experience in generative artificial intelligence.
+I am a Senior Vision Algorithm Engineer at **[Honor](https://www.honor.com/cn/)**, specializing in the development and application of advanced imaging technologies powered by artificial intelligence. With a Ph.D. from the **[College of Optical Science and Engineering, Zhejiang University](http://opt.zju.edu.cn/)** completed in June 2025, I have cultivated deep expertise in both optical engineering and AI-driven imaging solutions, including extensive hands-on experience in generative artificial intelligence.
 
 My professional focus lies in leveraging generative AI models to enhance imaging algorithms, improve sensor data interpretation, and create innovative computational photography techniques. I have led and contributed to multiple projects that integrate generative AI with optics and computer vision, driving breakthroughs in image synthesis, enhancement, and real-time processing.
 
