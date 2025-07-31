@@ -10,25 +10,25 @@ redirect_from:
 
 ## About Me
 
-I am a Senior Imaging Algorithm Engineer at **[Honor](https://www.honor.com/cn/)**, with a strong academic foundation and extensive experience in the fields of artificial intelligence and optical imaging. I hold a Ph.D. from the **[College of Optical Science and Engineering, Zhejiang University](http://opt.zju.edu.cn/)**, completed in June 2025, where I conducted cutting-edge research jointly with **[Shanghai AI Laboratory](https://www.shlab.org.cn/)**.
+I am a Senior Imaging Algorithm Engineer at **[Honor](https://www.honor.com/cn/)**, specializing in the development and application of advanced imaging technologies powered by artificial intelligence. With a Ph.D. from the **[College of Optical Science and Engineering, Zhejiang University](http://opt.zju.edu.cn/)** completed in June 2025, I have cultivated deep expertise in both optical engineering and AI-driven imaging solutions, including extensive hands-on experience in generative artificial intelligence.
 
-Throughout my career, I have focused on bridging the gap between AI and imaging technologies to develop innovative solutions that enhance image quality, sensor performance, and computational photography. My work integrates expertise in optics, computer vision, graphics, and sensor technologies to push the boundaries of imaging science.
+My professional focus lies in leveraging generative AI models to enhance imaging algorithms, improve sensor data interpretation, and create innovative computational photography techniques. I have led and contributed to multiple projects that integrate generative AI with optics and computer vision, driving breakthroughs in image synthesis, enhancement, and real-time processing.
 
-I began my academic journey with a Bachelor of Science in Optoelectronic Information Science and Engineering from **[Central South University](https://www.csu.edu.cn/)**, graduating among the top of my class and earning the **National Scholarship** as well as recognition as an **Outstanding Graduate of Hunan Province**. I then pursued a Master of Science degree at Zhejiang University under the mentorship of **Prof. Huajun Feng**, focusing on modern optical instrumentation.
+My academic background includes a Bachelor of Science in Optoelectronic Information Science and Engineering from **[Central South University](https://www.csu.edu.cn/)**, where I graduated top of my class and received the **National Scholarship** and recognition as an **Outstanding Graduate of Hunan Province**. I earned my Master of Science degree at Zhejiang University under the guidance of **Prof. Huajun Feng**, focusing on modern optical instrumentation.
 
-During my Ph.D., I was honored to be part of the inaugural cohort of the **[Pujiang National Laboratory Joint Training Ph.D. Program (2022-2025)](https://www.shlab.org.cn/news/5443403.html)**, where I conducted research under the supervision of **Dr. Yueting Chen** and co-supervision from **Prof. Tianfan Xue**. This experience allowed me to collaborate with leading researchers such as **Shi Guo**, **Zhihai Xu**, **Jinwei Gu**, **Xuelong Li**, **Qi Li**, and **Bin Zhao**, contributing to impactful projects at the forefront of AI for imaging.
+During my Ph.D., I was honored to join the inaugural cohort of the **[Pujiang National Laboratory Joint Training Ph.D. Program (2022-2025)](https://www.shlab.org.cn/news/5443403.html)**, conducting research under **Dr. Yueting Chen** and co-supervision from **Prof. Tianfan Xue**. This experience enabled me to collaborate with leading experts such as **[Shi Guo](https://guoshi28.github.io/)**, **[Zhihai Xu](https://person.zju.edu.cn/0089108)**, **[Jinwei Gu](https://www.gujinwei.org/)**, **[Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW)**, **[Qi Li](https://person.zju.edu.cn/0098047)**, and **[Bin Zhao](https://iopen.nwpu.edu.cn/info/1251/1852.htm)**, advancing the frontiers of AI for imaging.
 
 ### Research Interests
 
-My research and professional interests include:
+My research and engineering expertise encompass:
 
-- Artificial Intelligence and Machine Learning for Imaging  
+- Generative Artificial Intelligence for Imaging  
 - Optical Engineering and Photonics  
 - Computer Vision and Graphics  
-- Sensor Design and Signal Processing  
+- Sensor Technologies and Signal Processing  
 - Computational Photography and Image Enhancement  
 
-I am passionate about leveraging interdisciplinary approaches to create advanced imaging systems and algorithms that have real-world impact.
+I am passionate about harnessing interdisciplinary approaches to develop state-of-the-art imaging systems and AI algorithms with practical impact.
 
 ## News  
 <style>  
@@ -93,7 +93,7 @@ I am passionate about leveraging interdisciplinary approaches to create advanced
   <ul>  
     <li><b>2023-Present: Trainee Researcher, Shanghai Artificial Intelligence Laboratory</b>  
       <ul>  
-        <li>Focus on AI-driven imaging technologies</li>  
+        <li>Leading projects on generative AI applications in imaging</li>  
       </ul>  
     </li>  
     <li><b>2022: Media Algorithm Intern, Huawei 2012 Lab, Central Media Technology Institute</b>  
