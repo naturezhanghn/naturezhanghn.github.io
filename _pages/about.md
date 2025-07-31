@@ -22,7 +22,7 @@ Throughout my doctoral studies, I had the privilege to collaborate with leading 
 
 My research and engineering expertise encompass:
 
-- Generative Artificial Intelligence for Imaging  
+- Generative Artificial Intelligence
 - Optical Engineering and Computational Photography
 - Computer Vision and Graphics  
 - Sensor Technologies and Signal Processing  
