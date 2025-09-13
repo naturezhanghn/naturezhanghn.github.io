@@ -91,7 +91,7 @@ I am passionate about harnessing interdisciplinary approaches to develop state-o
 </style>  
 <div class="experiences">  
   <ul>  
-    <li><b>2023-Present: Trainee Researcher, Shanghai Artificial Intelligence Laboratory</b>  
+    <li><b>2023-2025: Trainee Researcher, Shanghai Artificial Intelligence Laboratory</b>  
       <ul>  
         <li>Leading projects on generative AI applications in imaging</li>  
       </ul>  
@@ -110,6 +110,7 @@ I am passionate about harnessing interdisciplinary approaches to develop state-o
 </style>  
 <div class="experiences">  
   <ul>  
+    <li>AAAI 2026 program committee member </li> 
     <li>Reviewer for leading journals and conferences including TCI, TGRS, OE, AO, ACM MM, AAAI, ECCV, ICCV</li>  
     <li>President, Electronic Design Association, Central South University (2018-2019)</li>  
     <li>Deputy Director, Youth Volunteers Association, Central South University (2017-2018)</li>  
