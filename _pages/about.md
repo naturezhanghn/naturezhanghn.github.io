@@ -123,7 +123,7 @@ I am passionate about harnessing interdisciplinary approaches to develop state-o
 </style>  
 <div class="experiences">  
   <ul>  
-    <li>Excellent Postgraduate Students' Award (2025)</li>  
+    <li>Excellent Postgraduate Students' Award, Zhejiang University (2025)</li>  
     <li>Sunny Optical Innovation and Entrepreneurship Scholarship (2022)</li>  
     <li>Outstanding Graduate Student, Zhejiang University (2021-2024)</li>  
     <li>Second Prize, Chang'e-7 Science Payload Creative Competition (2022)</li>  
