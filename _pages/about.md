@@ -16,7 +16,7 @@ My professional work focuses on harnessing generative AI models to advance imagi
 
 I hold a Bachelor of Science degree in Optoelectronic Information Science and Engineering from **[Central South University](https://www.csu.edu.cn/)**, where I was honored with the **National Scholarship** and recognition as an **Outstanding Graduate of Hunan Province**. I pursued an integrated Master’s and Ph.D. program at Zhejiang University, with my Master’s research focused on computational imaging under the guidance of **[Prof. Huajun Feng](https://person.zju.edu.cn/0086127)**.
 
-Throughout my doctoral studies, I had the privilege to collaborate with leading experts including **[Shi Guo](https://guoshi28.github.io/)**, **[Zhihai Xu](https://person.zju.edu.cn/0089108)**, **[Jinwei Gu](https://www.gujinwei.org/)**, **[Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW)**, **[Qi Li](https://person.zju.edu.cn/0098047)**, and **[Bin Zhao](https://iopen.nwpu.edu.cn/info/1251/1852.htm)**, collectively pushing the boundaries of AI-driven imaging science.
+Throughout my doctoral studies, I had the privilege to collaborate with leading experts including **[Shi Guo](https://guoshi28.github.io/)**, **[Zhihai Xu](https://person.zju.edu.cn/0089108)**, **[Jinwei Gu](https://www.gujinwei.org/)**,**[Yihao Liu](https://lyh-18.github.io/)**, **[Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW)**, **[Qi Li](https://person.zju.edu.cn/0098047)**, and **[Bin Zhao](https://iopen.nwpu.edu.cn/info/1251/1852.htm)**, collectively pushing the boundaries of AI-driven imaging science.
 
 ### Research Interests
 
@@ -123,6 +123,7 @@ I am passionate about harnessing interdisciplinary approaches to develop state-o
 </style>  
 <div class="experiences">  
   <ul>  
+    <li>Excellent Postgraduate Students' Award (2025)</li>  
     <li>Sunny Optical Innovation and Entrepreneurship Scholarship (2022)</li>  
     <li>Outstanding Graduate Student, Zhejiang University (2021-2024)</li>  
     <li>Second Prize, Chang'e-7 Science Payload Creative Competition (2022)</li>  
