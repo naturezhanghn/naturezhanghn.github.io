@@ -27,23 +27,44 @@
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 15px;
       -webkit-font-smoothing: antialiased;
     }
 
     a {
       color: var(--accent);
       text-decoration: none;
+      text-decoration-color: transparent;
+      transition: color 0.15s ease, text-decoration-color 0.15s ease;
     }
 
     a:hover {
+      color: #162b63;
       text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-decoration-color: currentColor;
     }
 
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 32px 16px 40px 16px;
+      padding: 40px 16px 48px 16px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeInUp 0.5s ease-out forwards;
+      animation-delay: 0.05s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Header/Profile */
@@ -52,7 +73,7 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .profile-photo {
@@ -69,6 +90,13 @@
       border: 3px solid var(--accent-soft);
       box-shadow: 0 10px 22px rgba(15,23,42,0.12);
       background: #fff;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .profile-photo img:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 18px 35px rgba(15,23,42,0.16);
+      border-color: rgba(31,60,136,0.45);
     }
 
     .header-text {
@@ -77,10 +105,10 @@
     }
 
     .name {
-      font-size: 1.9rem;
+      font-size: 2.1rem;
       font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-bottom: 4px;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
     }
 
     .title-line {
@@ -119,13 +147,21 @@
 
     /* Sections */
     .section {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+
+    .section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .section-heading {
-      font-size: 1.08rem;
-      font-weight: 640;
-      margin-bottom: 8px;
+      font-size: 1.1rem;
+      font-weight: 650;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -140,6 +176,18 @@
 
     .section-body {
       font-size: 0.95rem;
+      max-width: 78ch;
+    }
+
+    .section-body p {
+      margin-bottom: 10px;
+    }
+
+    /* Global h3 (替代原来的 inline style) */
+    h3 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      font-weight: 600;
     }
 
     /* About & Research */
@@ -155,18 +203,28 @@
     }
 
     .pill {
-      padding: 3px 10px;
+      padding: 4px 11px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent);
       font-size: 0.78rem;
       font-weight: 500;
       white-space: nowrap;
+      border: 1px solid rgba(31,60,136,0.08);
+      box-shadow: 0 4px 10px rgba(15,23,42,0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15,23,42,0.12);
+      background-color: #d8e3ff;
     }
 
     .pill.muted {
       background: #e5e7eb;
       color: #4b5563;
+      border-color: rgba(148,163,184,0.5);
     }
 
     /* Highlights / News */
@@ -250,6 +308,13 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px rgba(15,23,42,0.15);
+      border-color: rgba(31,60,136,0.35);
     }
 
     .card img {
@@ -258,6 +323,11 @@
       margin-bottom: 6px;
       display: block;
       background: #f3f4f6;
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.02);
     }
 
     .card-title {
@@ -329,9 +399,23 @@
       }
       .header {
         text-align: left;
+        gap: 16px;
       }
       .section-heading::after {
         display: none;
+      }
+      .profile-photo {
+        flex: 0 0 96px;
+      }
+      .profile-photo img {
+        width: 96px;
+        height: 96px;
+      }
+      .name {
+        font-size: 1.6rem;
+      }
+      .section-body {
+        max-width: 100%;
       }
     }
   </style>
@@ -454,7 +538,7 @@
     <div class="section-body skills-grid">
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Generative AI &amp; Vision</h3>
+        <h3>Generative AI &amp; Vision</h3>
         <ul>
           <li>Generative models for <strong>image and video restoration</strong> and enhancement.</li>
           <li>Deep learning for <strong>inverse problems</strong> and reconstruction in imaging.</li>
@@ -463,7 +547,7 @@
       </div>
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Computational Photography</h3>
+        <h3>Computational Photography</h3>
         <ul>
           <li>Low-light imaging and frame interpolation, including event-based cameras.</li>
           <li>Linear-array / line-scan imaging and motion/jitter-aware restoration.</li>
@@ -472,7 +556,7 @@
       </div>
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">System &amp; Deployment</h3>
+        <h3>System &amp; Deployment</h3>
         <ul>
           <li>AI-native camera &amp; ISP pipelines (on-device and cloud-based).</li>
           <li>Algorithm–sensor co-design for image quality and robustness.</li>
@@ -592,7 +676,7 @@
     <div class="section-body two-col">
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Education</h3>
+        <h3>Education</h3>
         <ul>
           <li><strong>Ph.D. in Optical Engineering</strong>, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2022–2025)
             <ul class="sub-list">
@@ -606,12 +690,12 @@
               <li>State Key Laboratory of Modern Optical Instrumentation.</li>
               <li>Advisor: <a href="https://person.zju.edu.cn/0086127">Huajun Feng</a>.</li>
               <li>Co-Advisors: <a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a>,
-                  <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a>,
-                  <a href="https://person.zju.edu.cn/0098047">Qi Li</a>.</li>
+                <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a>,
+                <a href="https://person.zju.edu.cn/0098047">Qi Li</a>.</li>
             </ul>
           </li>
           <li><strong>B.S. in Optoelectronic Information Science and Engineering</strong>,
-              <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)
+            <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)
             <ul class="sub-list">
               <li>Graduated top 3 in class of 50+; National Scholarship; Outstanding Graduate of Hunan Province.</li>
             </ul>
@@ -620,10 +704,10 @@
       </div>
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Internships &amp; Research Positions</h3>
+        <h3>Internships &amp; Research Positions</h3>
         <ul>
           <li><strong>2023–2025: Trainee Researcher</strong>,
-              <a href="https://www.shlab.org.cn/">Shanghai Artificial Intelligence Laboratory</a>
+            <a href="https://www.shlab.org.cn/">Shanghai Artificial Intelligence Laboratory</a>
             <ul class="sub-list">
               <li>Leading projects on <strong>generative AI applications in imaging</strong> and computational photography.</li>
             </ul>
@@ -645,7 +729,7 @@
     <div class="section-body two-col">
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Advisors</h3>
+        <h3>Advisors</h3>
         <ul>
           <li><a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a> – Ph.D. advisor.</li>
           <li><a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Tianfan Xue</a> – Ph.D. co-advisor.</li>
@@ -656,7 +740,7 @@
       </div>
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Selected Collaborators</h3>
+        <h3>Selected Collaborators</h3>
         <ul>
           <li><a href="https://guoshi28.github.io/">Shi Guo</a></li>
           <li><a href="https://www.gujinwei.org/">Jinwei Gu</a></li>
@@ -675,7 +759,7 @@
     <div class="section-body two-col">
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Academic Service</h3>
+        <h3>Academic Service</h3>
         <ul>
           <li><strong>AAAI 2026 Program Committee Member</strong>.</li>
           <li>Reviewer for leading journals and conferences, including:
@@ -690,7 +774,7 @@
       </div>
 
       <div class="list-tight">
-        <h3 style="font-size:0.95rem; margin-bottom:4px;">Honors</h3>
+        <h3>Honors</h3>
         <ul>
           <li>Outstanding Graduate of Zhejiang University (2025).</li>
           <li>Excellent Postgraduate Students' Award, Zhejiang University (2021-2024).</li>
@@ -735,7 +819,26 @@
 </div>
 
 <script>
+  // 年份
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Section 滚动淡入效果
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  sections.forEach(sec => observer.observe(sec));
 </script>
 </body>
 </html>
