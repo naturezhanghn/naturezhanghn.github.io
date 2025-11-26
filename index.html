@@ -1,1 +1,640 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ziran Zhang – AI-native Imaging & Computational Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ziran Zhang – AI-native imaging, generative models for computational photography, remote sensing, and optical imaging.">
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --bg-card: #ffffff;
+      --text-main: #1b2430;
+      --text-muted: #6b7280;
+      --accent: #1f3c88;
+      --accent-soft: #e4ecff;
+      --border-soft: #e5e7eb;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, -sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 16px 40px 16px;
+    }
+
+    /* 顶部 Header */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .profile-photo {
+      flex: 0 0 140px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-photo img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-soft);
+      box-shadow: 0 8px 18px rgba(15,23,42,0.12);
+      background: #fff;
+    }
+
+    .header-text {
+      flex: 1 1 260px;
+      min-width: 0;
+    }
+
+    .name {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 4px;
+    }
+
+    .title-line {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .meta-line {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .meta-line span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: var(--border-soft);
+    }
+
+    .links {
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    .links a {
+      margin-right: 12px;
+    }
+
+    /* Section 通用布局 */
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-heading::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(31,60,136,0.32), transparent);
+    }
+
+    .section-body {
+      font-size: 0.96rem;
+    }
+
+    /* Vision & Research Focus */
+    .vision-text {
+      margin-bottom: 10px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .pill.muted {
+      background: #e5e7eb;
+      color: #4b5563;
+    }
+
+    /* News 时间轴 */
+    .news-list {
+      list-style: none;
+      font-size: 0.85rem;
+    }
+
+    .news-list li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .news-date {
+      min-width: 64px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* Featured Research */
+    .featured-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .featured-card {
+      flex: 1 1 240px;
+      max-width: 340px;
+      background: var(--bg-card);
+      border-radius: 10px;
+      border: 1px solid var(--border-soft);
+      padding: 8px 8px 10px 8px;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.06);
+      font-size: 0.86rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .featured-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 6px;
+      display: block;
+      background: #f3f4f6;
+    }
+
+    .featured-title {
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .featured-venue {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .featured-desc {
+      margin-bottom: 4px;
+    }
+
+    .featured-tags {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .featured-links {
+      margin-top: auto;
+      font-size: 0.8rem;
+    }
+
+    .featured-links a + a::before {
+      content: "·";
+      margin: 0 6px;
+      color: var(--border-soft);
+    }
+
+    /* Publications 概览 */
+    .pub-note {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .pub-list-compact {
+      font-size: 0.86rem;
+      margin-top: 4px;
+    }
+
+    .pub-list-compact li {
+      margin-bottom: 3px;
+    }
+
+    /* Experience & Education 两列 */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 0.9rem;
+    }
+
+    .two-col > div {
+      flex: 1 1 260px;
+    }
+
+    .list-tight ul {
+      padding-left: 1.1rem;
+    }
+
+    .list-tight li {
+      margin-bottom: 3px;
+    }
+
+    .sub-list {
+      padding-left: 1.05rem;
+      margin-top: 2px;
+    }
+
+    .sub-list li {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact & Footer */
+    .contact-list {
+      font-size: 0.9rem;
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      margin-top: 22px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* 响应式 */
+    @media (max-width: 720px) {
+      .page {
+        padding: 20px 14px 28px 14px;
+      }
+      .header {
+        text-align: left;
+      }
+      .section-heading::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 顶部：头像 + 基本信息 -->
+  <header class="header">
+    <div class="profile-photo">
+      <img src="profile.jpg" alt="Portrait of Ziran Zhang">
+    </div>
+    <div class="header-text">
+      <div class="name">Ziran Zhang</div>
+      <div class="title-line"><strong>AI-native Imaging & Computational Photography</strong></div>
+      <div class="tagline">
+        <strong>Senior Vision Algorithm Engineer</strong>, focusing on <strong>generative AI–driven imaging systems</strong> across optics, sensors, and the cloud.
+      </div>
+      <div class="meta-line">
+        <span>Shanghai, China</span>
+        <span>AI-native imaging · remote sensing · optical engineering</span>
+      </div>
+      <div class="links">
+        <a href="mailto:naturezhanghn@zju.edu.cn">Email</a>
+        <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>
+        <a href="https://github.com/naturezhanghn">GitHub</a>
+        <a href="https://orcid.org/0000-0001-7003-2735">ORCID</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 愿景 & 研究定位 -->
+  <section class="section">
+    <h2 class="section-heading">Vision & Research Positioning</h2>
+    <div class="section-body">
+      <p class="vision-text">
+        I work at the intersection of <strong>optical engineering</strong>, <strong>remote sensing</strong>, and <strong>generative AI</strong>, with the goal of building
+        <strong>AI-native imaging systems</strong> that are simultaneously <strong>physics-grounded</strong>, <strong>model-driven</strong>, and <strong>deployable at scale</strong>.
+      </p>
+      <p class="vision-text">
+        My long-term vision is to design end-to-end pipelines that connect <strong>photon capture</strong> at the sensor level with <strong>perceptual-quality image formation</strong> on devices and in the cloud,
+        enabling reliable imaging in challenging real-world conditions.
+      </p>
+      <div class="pill-list">
+        <div class="pill">AI-native imaging systems</div>
+        <div class="pill">Generative models for imaging</div>
+        <div class="pill">Remote sensing & push-broom cameras</div>
+        <div class="pill">Optical & interferometric imaging</div>
+        <div class="pill muted">Cloud–edge collaborative enhancement</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Research Areas -->
+  <section class="section">
+    <h2 class="section-heading">About & Research Areas</h2>
+    <div class="section-body">
+      <p>
+        I am a <strong>Senior Vision Algorithm Engineer</strong> currently working on <strong>AI-powered imaging pipelines</strong> that integrate
+        optical design, sensor modeling, and modern generative models. I received my Ph.D. in Optical Engineering from the
+        <strong>College of Optical Science and Engineering, Zhejiang University</strong>, where I was part of the inaugural cohort of the
+        <strong>Pujiang National Laboratory Joint Training Ph.D. Program</strong>. My work spans both <strong>fundamental research</strong> and
+        <strong>system-level deployment</strong>.
+      </p>
+      <p style="margin-top: 6px;">
+        Representative topics I continuously work on include:
+      </p>
+      <ul class="list-tight" style="margin-top: 4px;">
+        <li><strong>Generative AI for imaging</strong> – restoration, enhancement, and synthesis with physically informed models.</li>
+        <li><strong>Remote sensing & push-broom imaging</strong> – degradation modeling and jitter-aware restoration for operational satellites.</li>
+        <li><strong>Computational imaging & interferometric systems</strong> – deep learning–based image reconstruction for complex optical setups.</li>
+        <li><strong>Low-light & event-based imaging</strong> – sim-to-real pipelines and per-scene optimization for video quality.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section">
+    <h2 class="section-heading">News</h2>
+    <div class="section-body">
+      <ul class="news-list">
+        <li><span class="news-date">01.2025</span><span>A paper is published in <strong>IEEE TGRS 2025</strong>.</span></li>
+        <li><span class="news-date">12.2024</span><span>A paper is published in <strong>SIGGRAPH Asia 2024</strong>.</span></li>
+        <li><span class="news-date">07.2024</span><span>A paper is published in <strong>AAAI 2024</strong>.</span></li>
+        <li><span class="news-date">10.2023</span><span>A paper is published in <strong>Optics Express 2023</strong>.</span></li>
+        <li><span class="news-date">08.2023</span><span>A paper is published in <strong>IEEE TGRS 2023</strong>.</span></li>
+        <li><span class="news-date">06.2023</span><span>A paper is published in <strong>AAAI 2023</strong>.</span></li>
+        <li><span class="news-date">11.2022</span><span>A paper is published in <strong>Optics Express 2022</strong>.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 代表性成果，使用现有 images/* 作为封面 -->
+  <section class="section">
+    <h2 class="section-heading">Featured Research</h2>
+    <div class="section-body">
+      <div class="featured-grid">
+
+        <!-- TGRS 2025 -->
+        <article class="featured-card">
+          <img src="images/tgrs2025.png" alt="TGRS 2025 – Jitter-Aware Restoration with Equivalent Jitter Model">
+          <div class="featured-title">
+            Jitter-Aware Restoration with Equivalent Jitter Model for Remote Sensing Push-Broom Image
+          </div>
+          <div class="featured-venue"><strong>IEEE Transactions on Geoscience and Remote Sensing (TGRS)</strong>, 2025</div>
+          <div class="featured-desc">
+            A unified <strong>equivalent jitter model</strong> and restoration framework for real push-broom remote-sensing cameras,
+            bridging <strong>sensor physics</strong> and <strong>deep learning–based correction</strong>.
+          </div>
+          <div class="featured-tags">
+            Remote sensing · Jitter modeling · Push-broom imaging · Deep restoration
+          </div>
+          <div class="featured-links">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10841472">Paper</a>
+            <a href="files/zhang2025ejm.txt">BibTeX</a>
+            <a href="https://github.com/naturezhanghn/EJM">Code</a>
+          </div>
+        </article>
+
+        <!-- SIGGRAPH Asia 2024 -->
+        <article class="featured-card">
+          <img src="images/sa2024.png" alt="SIGGRAPH Asia 2024 – Event-based Low-light Frame Interpolation">
+          <div class="featured-title">
+            Event-based Low-light Frame Interpolation with Sim-to-Real and Per-scene Optimization
+          </div>
+          <div class="featured-venue"><strong>SIGGRAPH Asia</strong>, 2024</div>
+          <div class="featured-desc">
+            A <strong>sim-to-real</strong> framework for event-based cameras in low-light,
+            combining <strong>generative modeling</strong> with per-scene adaptation to recover high-quality video.
+          </div>
+          <div class="featured-tags">
+            Event-based imaging · Low-light video · Sim-to-real · Generative modeling
+          </div>
+          <div class="featured-links">
+            <a href="files/zhang2024sim2real.txt">BibTeX</a>
+          </div>
+        </article>
+
+        <!-- AAAI 2024 JARNet -->
+        <article class="featured-card">
+          <img src="images/2024_jarnet.png" alt="AAAI 2024 – Deep Linear Array Pushbroom Image Restoration: JARNet">
+          <div class="featured-title">
+            Deep Linear Array Pushbroom Image Restoration: Degradation Pipeline and JARNet
+          </div>
+          <div class="featured-venue"><strong>AAAI</strong>, 2024</div>
+          <div class="featured-desc">
+            Introduces a realistic <strong>degradation pipeline</strong> and <strong>Jitter-Aware Restoration Network</strong> (JARNet)
+            tailored for <strong>linear array pushbroom sensors</strong> in remote sensing.
+          </div>
+          <div class="featured-tags">
+            Linear array cameras · Degradation modeling · Jitter-aware restoration
+          </div>
+          <div class="featured-links">
+            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/27892">Paper</a>
+            <a href="files/2024_jarnet.txt">BibTeX</a>
+            <a href="https://github.com/JHW2000/JARNet">Code</a>
+          </div>
+        </article>
+
+        <!-- Optics Express 2022 深度重建 -->
+        <article class="featured-card">
+          <img src="images/oe2022.png" alt="Optics Express 2022 – Deep learning-based image reconstruction for photonic integrated interferometric imaging">
+          <div class="featured-title">
+            Deep Learning-based Image Reconstruction for Photonic Integrated Interferometric Imaging
+          </div>
+          <div class="featured-venue"><strong>Optics Express</strong>, 2022</div>
+          <div class="featured-desc">
+            A deep learning framework for <strong>interferometric imaging</strong> with photonic integrated chips,
+            demonstrating <strong>end-to-end reconstruction</strong> from complex optical measurements.
+          </div>
+          <div class="featured-tags">
+            Interferometric imaging · Computational optics · Deep reconstruction
+          </div>
+          <div class="featured-links">
+            <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-30-23-41359">Paper</a>
+            <a href="files/zhang2022deep.txt">BibTeX</a>
+            <a href="https://github.com/naturezhanghn/SFDF-Nets">Code</a>
+          </div>
+        </article>
+
+        <!-- TGRS 2023 & AAAI 2023 可作为延展，引用 tgrs2023 / aaai2023 图片 -->
+        <article class="featured-card">
+          <img src="images/tgrs2023.png" alt="IEEE TGRS 2023 – Real-world imaging and restoration">
+          <div class="featured-title">
+            Imaging and Restoration for Real-world Remote Sensing Systems
+          </div>
+          <div class="featured-venue"><strong>IEEE TGRS</strong>, 2023</div>
+          <div class="featured-desc">
+            Studies <strong>real imaging pipelines</strong> in remote sensing and develops
+            <strong>robust restoration algorithms</strong> for in-the-wild degradation.
+          </div>
+          <div class="featured-tags">
+            Real-world imaging · Remote sensing · Robust restoration
+          </div>
+          <div class="featured-links">
+            <a href="files/li2023imaging.txt">BibTeX</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications 概览 -->
+  <section class="section">
+    <h2 class="section-heading">Publications Overview</h2>
+    <div class="section-body">
+      <p class="pub-note">
+        A complete and up-to-date list of publications is available on
+        <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>.
+        Below is a compact view of selected representative works.
+      </p>
+      <ul class="pub-list-compact">
+        <li><strong>Z. Zhang</strong> et al., “Jitter-Aware Restoration with Equivalent Jitter Model for Remote Sensing Push-Broom Image,” <em>IEEE TGRS</em>, 2025.</li>
+        <li>Z. Chen, <strong>Z. Zhang</strong>*, et al., “Deep Linear Array Pushbroom Image Restoration: A Degradation Pipeline and Jitter-Aware Restoration Network,” <em>AAAI</em>, 2024.</li>
+        <li><strong>Z. Zhang</strong> et al., “Deep Learning-based Image Reconstruction for Photonic Integrated Interferometric Imaging,” <em>Optics Express</em>, 2022.</li>
+        <li>Additional works in <strong>IEEE TGRS</strong>, <strong>Optics Express</strong>, <strong>SIGGRAPH Asia</strong>, and <strong>AAAI</strong> on remote sensing, interferometric imaging, and generative AI for imaging.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience & Education & Honors -->
+  <section class="section">
+    <h2 class="section-heading">Experience, Education & Honors</h2>
+    <div class="section-body two-col">
+
+      <!-- Left column: Experience -->
+      <div class="list-tight">
+        <h3 style="font-size:0.96rem; margin-bottom:4px;">Experience</h3>
+        <ul>
+          <li><strong>Senior Vision Algorithm Engineer</strong>
+            <ul class="sub-list">
+              <li>Designing <strong>AI-native imaging pipelines</strong> that integrate optics, sensors, ISP, and generative models.</li>
+              <li>Driving <strong>system-level co-design</strong> and large-scale deployment on real devices.</li>
+            </ul>
+          </li>
+          <li><strong>Trainee Researcher, Shanghai Artificial Intelligence Laboratory</strong>
+            <ul class="sub-list">
+              <li>Worked on <strong>generative AI for imaging</strong>, including restoration, enhancement, and sim-to-real pipelines.</li>
+            </ul>
+          </li>
+          <li><strong>Media Algorithm Intern, Huawei 2012 Lab</strong>
+            <ul class="sub-list">
+              <li>Developed and optimized <strong>AI-ISP algorithms</strong> in complex real-world imaging pipelines.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right column: Education + Honors & Service -->
+      <div class="list-tight">
+        <h3 style="font-size:0.96rem; margin-bottom:4px;">Education</h3>
+        <ul>
+          <li><strong>Ph.D. in Optical Engineering</strong>, Zhejiang University
+            <ul class="sub-list">
+              <li>Joint training with <strong>Shanghai AI Laboratory</strong>.</li>
+              <li>Pujiang National Laboratory Joint Training Ph.D. Program.</li>
+            </ul>
+          </li>
+          <li><strong>M.S. in Optical Engineering</strong>, Zhejiang University
+            <ul class="sub-list">
+              <li>State Key Laboratory of Modern Optical Instrumentation.</li>
+            </ul>
+          </li>
+          <li><strong>B.S. in Optoelectronic Information Science and Engineering</strong>, Central South University
+            <ul class="sub-list">
+              <li>Graduated top of class; <strong>National Scholarship</strong>, <strong>Outstanding Graduate of Hunan Province</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3 style="font-size:0.96rem; margin:6px 0 4px 0;">Honors & Academic Service</h3>
+        <ul>
+          <li><strong>AAAI 2026 Program Committee Member</strong>.</li>
+          <li>Reviewer for <strong>IEEE TCI</strong>, <strong>IEEE TGRS</strong>, <strong>Optics Express</strong>, <strong>Applied Optics</strong>,
+              <strong>ACM MM</strong>, <strong>AAAI</strong>, <strong>ECCV</strong>, <strong>ICCV</strong>.</li>
+          <li>Excellent Postgraduate Students' Award, Zhejiang University.</li>
+          <li>Sunny Optical Innovation and Entrepreneurship Scholarship.</li>
+          <li>National Scholarship for Undergraduates, Central South University.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section class="section">
+    <h2 class="section-heading">Contact & Visitors</h2>
+    <div class="section-body">
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:naturezhanghn@zju.edu.cn">naturezhanghn@zju.edu.cn</a></li>
+        <li><strong>Location:</strong> Shanghai, China</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/naturezhanghn">github.com/naturezhanghn</a></li>
+        <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Scholar Profile</a></li>
+      </ul>
+
+      <div style="margin-top:10px;">
+        <div style="font-size:0.82rem; color:#6b7280; margin-bottom:4px;"><strong>Visitor map</strong></div>
+        <div align="left">
+          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0'></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Ziran Zhang. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  // 动态年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
