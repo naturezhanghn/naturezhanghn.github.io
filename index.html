@@ -176,14 +176,14 @@
 
     .section-body {
       font-size: 0.95rem;
-      max-width: 78ch;
+      /* 不再限制 max-width，避免卡片区域过窄 */
     }
 
     .section-body p {
       margin-bottom: 10px;
     }
 
-    /* Global h3 (替代原来的 inline style) */
+    /* Global h3 */
     h3 {
       font-size: 0.95rem;
       margin-bottom: 4px;
@@ -294,6 +294,7 @@
       flex-wrap: wrap;
       gap: 16px;
       margin-top: 6px;
+      justify-content: center; /* 让卡片在行内居中 */
     }
 
     .card {
@@ -415,7 +416,7 @@
         font-size: 1.6rem;
       }
       .section-body {
-        max-width: 100%;
+        /* 移动端默认全宽即可 */
       }
     }
   </style>
@@ -601,24 +602,26 @@
           </div>
         </article>
 
-        <!-- AAAI 2024 JARNet -->
+        <!-- AAAI 2023 Real-world Deblurring -->
         <article class="card">
-          <img src="images/2024_jarnet.png" alt="AAAI 2024 – Deep Linear Array Image Restoration: JARNet">
+          <img src="images/aaai2023.png" alt="AAAI 2023 – Real-world Deep Local Motion Deblurring">
           <div class="card-title">
-            Deep Linear Array Image Restoration: Degradation Pipeline and JARNet
+            Real-world Deep Local Motion Deblurring
           </div>
-          <div class="card-venue"><strong>AAAI</strong>, 2024</div>
+          <div class="card-venue"><strong>AAAI</strong>, 2023</div>
           <div class="card-desc">
-            Introduces a realistic <strong>degradation pipeline</strong> and a jitter-aware restoration network (JARNet) for linear-array imaging,
-            providing a reference design for physics-informed deep restoration.
+            Presents a real-world <strong>deep local motion deblurring</strong> framework that models spatially varying blur patterns
+            and restores sharp images from locally degraded observations.
           </div>
           <div class="card-tags">
-            Computational photography · Degradation modeling · Deep restoration
+            Motion deblurring · Real-world imaging · Deep restoration
           </div>
           <div class="card-links">
-            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/27892">Paper</a>
-            <a href="files/2024_jarnet.txt">BibTeX</a>
-            <a href="https://github.com/JHW2000/JARNet">Code</a>
+            <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">Paper</a>
+            <a href="https://leiali.github.io/ReLoBlur_homepage/index.html">Project</a>
+            <a href="https://arxiv.org/pdf/2204.08179.pdf">arXiv</a>
+            <a href="files/li2023real.txt">BibTeX</a>
+            <a href="https://github.com/LeiaLi/ReLoBlur">Code</a>
           </div>
         </article>
 
@@ -641,24 +644,24 @@
           </div>
         </article>
 
-        <!-- Optics Express 2022 -->
+        <!-- Optics Express 2023 ASF-Transformer -->
         <article class="card">
-          <img src="images/oe2022.png" alt="Optics Express 2022 – Deep learning-based image reconstruction for photonic integrated interferometric imaging">
+          <img src="images/oe2023.png" alt="Optics Express 2023 – ASF-Transformer for Atmospheric Turbulence Compensation">
           <div class="card-title">
-            Deep Learning-based Image Reconstruction for Photonic Integrated Interferometric Imaging
+            ASF-Transformer: neutralizing the impact of atmospheric turbulence on optical imaging through alternating learning in the spatial and frequency domains
           </div>
-          <div class="card-venue"><strong>Optics Express</strong>, 2022</div>
+          <div class="card-venue"><strong>Optics Express</strong>, 2023</div>
           <div class="card-desc">
-            Demonstrates <strong>end-to-end deep reconstruction</strong> for photonic integrated interferometric imaging,
-            bridging complex optical measurements with high-quality images in a computational imaging framework.
+            Proposes <strong>ASF-Transformer</strong>, an alternating spatial–frequency domain learning framework that mitigates
+            the impact of atmospheric turbulence and significantly improves optical imaging quality.
           </div>
           <div class="card-tags">
-            Computational imaging · Interferometry · Deep reconstruction
+            Atmospheric turbulence · Optical imaging · Transformer
           </div>
           <div class="card-links">
-            <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-30-23-41359">Paper</a>
-            <a href="files/zhang2022deep.txt">BibTeX</a>
-            <a href="https://github.com/naturezhanghn/SFDF-Nets">Code</a>
+            <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">Paper</a>
+            <a href="files/zhang2023asf.txt">BibTeX</a>
+            <a href="https://github.com/naturezhanghn/ASFTransformer">Code</a>
           </div>
         </article>
 
@@ -746,6 +749,8 @@
           <li><a href="https://www.gujinwei.org/">Jinwei Gu</a></li>
           <li><a href="https://lyh-18.github.io/">Yihao Liu</a></li>
           <li><a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a></li>
+          <li><a href="https://leiali.github.io/">Haoying Li</a></li>
+          <li><a href="https://tangeego.github.io/">Shiqi Chen</a></li>
           <li><a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a></li>
         </ul>
       </div>
