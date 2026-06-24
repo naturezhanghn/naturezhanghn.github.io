@@ -1,660 +1,671 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ziran Zhang – Researcher @ SAIS · Generative AI · AI for Science</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ziran Zhang's homepage – Researcher at Shanghai Academy of AI for Science, working on generative AI, AI for science, and efficient inference.">
-  <style>
-    :root {
-      --bg: #f5f6fa;
-      --bg-card: #ffffff;
-      --text-main: #111827;
-      --text-muted: #6b7280;
-      --accent: #1f3c88;
-      --accent-soft: #e4ecff;
-      --border-soft: #e5e7eb;
-      --max-width: 1080px;
-    }
+    <meta charset="UTF-8">
+    <title>Ziran Zhang – Researcher @ SAIS · Generative AI · AI for Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ziran Zhang's homepage – Researcher at Shanghai Academy of AI for Science, working on generative AI, AI for science, and efficient inference.">
+    <style>
+        :root {
+            --bg: #f5f6fa;
+            --bg-card: #ffffff;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --accent: #1f3c88;
+            --accent-soft: #e4ecff;
+            --border-soft: #e5e7eb;
+            --max-width: 1080px;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      line-height: 1.7;
-      font-size: 15px;
-      -webkit-font-smoothing: antialiased;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
 
-    a:hover {
-      color: #162b63;
-      text-decoration: underline;
-    }
+        a:hover {
+            color: #162b63;
+            text-decoration: underline;
+        }
 
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 40px 20px 48px;
-      opacity: 0;
-      transform: translateY(8px);
-      animation: fadeInUp 0.5s ease-out forwards;
-    }
+        .page {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 20px 48px;
+            opacity: 0;
+            transform: translateY(8px);
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
 
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 28px;
-      margin-bottom: 32px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border-soft);
-    }
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 28px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-soft);
+        }
 
-    .profile-photo {
-      flex: 0 0 140px;
-    }
+        .profile-photo {
+            flex: 0 0 140px;
+        }
 
-    .profile-photo img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      background: #fff;
-      transition: box-shadow 0.2s ease;
-    }
+        .profile-photo img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            transition: box-shadow 0.2s ease;
+        }
 
-    .profile-photo img:hover {
-      box-shadow: 0 12px 32px rgba(26, 59, 122, 0.15);
-    }
+        .profile-photo img:hover {
+            box-shadow: 0 12px 32px rgba(26, 59, 122, 0.15);
+        }
 
-    .header-text {
-      flex: 1;
-    }
+        .header-text {
+            flex: 1;
+        }
 
-    .name {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 2px;
-    }
+        .name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 2px;
+        }
 
-    .title-line {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
+        .title-line {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
 
-    .tagline {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 6px;
-    }
+        .tagline {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
 
-    .meta-line {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
+        .meta-line {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
 
-    .meta-line span + span::before {
-      content: "·";
-      margin: 0 8px;
-      color: #ccc;
-    }
+        .meta-line span+span::before {
+            content: "·";
+            margin: 0 8px;
+            color: #ccc;
+        }
 
-    .links a {
-      font-size: 0.85rem;
-      margin-right: 16px;
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease;
-    }
+        .links a {
+            font-size: 0.85rem;
+            margin-right: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
 
-    .links a:hover {
-      border-bottom-color: var(--accent);
-    }
+        .links a:hover {
+            border-bottom-color: var(--accent);
+        }
 
-    .section {
-      margin-bottom: 36px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+        .section {
+            margin-bottom: 36px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-    .section.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        .section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .section-heading {
-      font-size: 1.15rem;
-      font-weight: 650;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border-soft);
-      letter-spacing: -0.01em;
-      color: var(--text-main);
-    }
+        .section-heading {
+            font-size: 1.15rem;
+            font-weight: 650;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-soft);
+            letter-spacing: -0.01em;
+            color: var(--text-main);
+        }
 
-    .section-body {
-      font-size: 0.95rem;
-      color: #2d2d3f;
-    }
+        .section-body {
+            font-size: 0.95rem;
+            color: #2d2d3f;
+        }
 
-    .section-body p {
-      margin-bottom: 10px;
-    }
+        .section-body p {
+            margin-bottom: 10px;
+        }
 
-    h3 {
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
+        h3 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
 
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 4px;
-    }
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 4px;
+        }
 
-    .pill {
-      padding: 4px 14px;
-      border-radius: 20px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 500;
-      border: 1px solid rgba(26, 59, 122, 0.06);
-    }
+        .pill {
+            padding: 4px 14px;
+            border-radius: 20px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 500;
+            border: 1px solid rgba(26, 59, 122, 0.06);
+        }
 
-    .pill.muted {
-      background: #e5e7eb;
-      color: #4b5563;
-      border-color: rgba(148,163,184,0.5);
-    }
+        .pill.muted {
+            background: #e5e7eb;
+            color: #4b5563;
+            border-color: rgba(148, 163, 184, 0.5);
+        }
 
-    .news-list {
-      list-style: none;
-      font-size: 0.88rem;
-    }
+        .news-list {
+            list-style: none;
+            font-size: 0.88rem;
+        }
 
-    .news-list li {
-      margin-bottom: 4px;
-      display: flex;
-      gap: 12px;
-    }
+        .news-list li {
+            margin-bottom: 4px;
+            display: flex;
+            gap: 12px;
+        }
 
-    .news-date {
-      min-width: 70px;
-      font-weight: 600;
-      color: var(--accent);
-    }
+        .news-date {
+            min-width: 70px;
+            font-weight: 600;
+            color: var(--accent);
+        }
 
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
 
-    .skills-grid > div {
-      flex: 1 1 240px;
-    }
+        .skills-grid>div {
+            flex: 1 1 240px;
+        }
 
-    .list-tight ul {
-      padding-left: 1.2rem;
-    }
+        .list-tight ul {
+            padding-left: 1.2rem;
+        }
 
-    .list-tight li {
-      margin-bottom: 4px;
-    }
+        .list-tight li {
+            margin-bottom: 4px;
+        }
 
-    .two-col {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
+        .two-col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
 
-    .two-col > div {
-      flex: 1 1 240px;
-    }
+        .two-col>div {
+            flex: 1 1 240px;
+        }
 
-    .sub-list {
-      padding-left: 1.2rem;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
+        .sub-list {
+            padding-left: 1.2rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
 
-    .card-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 8px;
-    }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 8px;
+        }
 
-    .card {
-      flex: 1 1 280px;
-      max-width: 340px;
-      background: var(--bg-card);
-      border-radius: 12px;
-      border: 1px solid var(--border-soft);
-      padding: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      display: flex;
-      flex-direction: column;
-    }
+        .card {
+            flex: 1 1 280px;
+            max-width: 340px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-soft);
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
 
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      border-color: var(--accent);
-    }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent);
+        }
 
-    .card img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      border-radius: 8px;
-      background: #f0f2f5;
-      margin-bottom: 8px;
-    }
+        .card img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f0f2f5;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-    .card-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 2px;
-    }
+        .card-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
 
-    .card-venue {
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
+        .card-venue {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
 
-    .card-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-      flex: 1;
-    }
+        .card-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            flex: 1;
+        }
 
-    .card-tags {
-      font-size: 0.72rem;
-      color: #888;
-      margin-bottom: 6px;
-    }
+        .card-tags {
+            font-size: 0.72rem;
+            color: #888;
+            margin-bottom: 6px;
+        }
 
-    .card-links a {
-      font-size: 0.78rem;
-      font-weight: 500;
-      margin-right: 10px;
-      border-bottom: 1px dotted transparent;
-    }
+        .card-links a {
+            font-size: 0.78rem;
+            font-weight: 500;
+            margin-right: 10px;
+            border-bottom: 1px dotted transparent;
+        }
 
-    .card-links a:hover {
-      border-bottom-color: var(--accent);
-    }
+        .card-links a:hover {
+            border-bottom-color: var(--accent);
+        }
 
-    .small-note {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-bottom: 6px;
-    }
+        .small-note {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
 
-    .contact-list {
-      list-style: none;
-    }
+        .contact-list {
+            list-style: none;
+        }
 
-    .contact-list li {
-      margin-bottom: 4px;
-    }
+        .contact-list li {
+            margin-bottom: 4px;
+        }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-align: center;
-      border-top: 1px solid var(--border-soft);
-      padding-top: 20px;
-    }
+        footer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+            border-top: 1px solid var(--border-soft);
+            padding-top: 20px;
+        }
 
-    @media (max-width: 720px) {
-      .page { padding: 20px 14px; }
-      .header { gap: 16px; }
-      .profile-photo { flex: 0 0 80px; }
-      .profile-photo img { width: 80px; height: 80px; }
-      .name { font-size: 1.6rem; }
-      .card { flex: 1 1 100%; max-width: 100%; }
-    }
-  </style>
+        @media (max-width: 720px) {
+            .page {
+                padding: 20px 14px;
+            }
+            .header {
+                gap: 16px;
+            }
+            .profile-photo {
+                flex: 0 0 80px;
+            }
+            .profile-photo img {
+                width: 80px;
+                height: 80px;
+            }
+            .name {
+                font-size: 1.6rem;
+            }
+            .card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="page">
+    <div class="page">
 
-  <!-- Header / Profile -->
-  <header class="header">
-    <div class="profile-photo">
-      <img src="images/pic.png" alt="Ziran Zhang" loading="lazy">
+        <!-- Header / Profile -->
+        <header class="header">
+            <div class="profile-photo">
+                <img src="images/pic.png" alt="Ziran Zhang" loading="lazy">
+            </div>
+            <div class="header-text">
+                <div class="name">Ziran Zhang</div>
+                <div class="title-line">Researcher @ Shanghai Academy of AI for Science</div>
+                <div class="tagline">
+                    Under the supervision of <strong><a href="https://sites.google.com/site/zhusiyucs">Prof. Siyu Zhu</a></strong> · Generative AI · AI for Science · Efficient Inference
+                </div>
+                <div class="meta-line">
+                    <span>Shanghai, China</span>
+                    <span>Ph.D. @ Zhejiang University (2025)</span>
+                </div>
+                <div class="links">
+                    <a href="mailto:naturezhanghn@zju.edu.cn">Email</a>
+                    <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>
+                    <a href="https://github.com/naturezhanghn">GitHub</a>
+                    <a href="https://orcid.org/0000-0001-7003-2735">ORCID</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Me -->
+        <section class="section">
+            <h2 class="section-heading">About Me</h2>
+            <div class="section-body">
+                <p>
+                    I am a <strong>Researcher</strong> at the <a href="https://www.sais.com.cn"><strong>Shanghai Academy of AI for Science (SAIS)</strong></a>, under the supervision of <a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a>. My research centers on <strong>generative AI</strong> — including diffusion models, flow matching, and transformer-based architectures — and <strong>AI for science</strong>, with applications in computational imaging, physics-informed modeling, and scientific discovery. I also work on <strong>efficient inference</strong> techniques (quantization, pruning, and distillation) to enable scalable deployment.
+                </p>
+                <p>
+                    I earned my Ph.D. from <a href="http://opt.zju.edu.cn/"><strong>Zhejiang University</strong></a> in June 2025. Prior to SAIS, I was a <strong>Senior Vision Algorithm Engineer</strong> at <a href="https://www.honor.com/cn/"><strong>Honor</strong></a>, leading AI-native imaging pipelines. I was also a member of the inaugural cohort of the <a href="https://www.shlab.org.cn/news/5443403.html"><strong>Pujiang National Laboratory Joint Training Ph.D. Program (2022–2025)</strong></a>, jointly advised by <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Dr. Yueting Chen</a> and <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Prof. Tianfan Xue</a>.
+                </p>
+                <p>
+                    I obtained my B.S. from <a href="https://www.csu.edu.cn/"><strong>Central South University</strong></a>, where I received the National Scholarship and was recognized as an Outstanding Graduate of Hunan Province. My Master's research at Zhejiang University was advised by <a href="https://person.zju.edu.cn/0086127"><strong>Prof. Huajun Feng</strong></a>.
+                </p>
+                <p>
+                    I have collaborated with <a href="https://guoshi28.github.io/">Shi Guo</a>,
+                    <a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a>,
+                    <a href="https://www.gujinwei.org/">Jinwei Gu</a>,
+                    <a href="https://lyh-18.github.io/">Yihao Liu</a>,
+                    <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a>,
+                    <a href="https://person.zju.edu.cn/0098047">Qi Li</a>, and
+                    <a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section class="section">
+            <h2 class="section-heading">Research Interests</h2>
+            <div class="section-body">
+                <div class="pill-list">
+                    <div class="pill">Generative AI (Diffusion · Flow Matching · Transformers)</div>
+                    <div class="pill">AI for Science (Physics-informed ML · Scientific Discovery)</div>
+                    <div class="pill">Computational Photography &amp; Imaging</div>
+                    <div class="pill muted">Efficient Inference (Quantization · Pruning · Distillation)</div>
+                    <div class="pill muted">Optical &amp; Computational Imaging</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Highlights -->
+        <section class="section">
+            <h2 class="section-heading">Recent Highlights</h2>
+            <div class="section-body">
+                <ul class="news-list">
+                    <li><span class="news-date">2025</span> Physics-guided jitter-aware restoration accepted to <strong>IEEE TGRS</strong>.</li>
+                    <li><span class="news-date">2024</span> Event-based low-light frame interpolation at <strong>SIGGRAPH Asia</strong>.</li>
+                    <li><span class="news-date">2024</span> Deep restoration for linear-array imaging at <strong>AAAI</strong>.</li>
+                    <li><span class="news-date">2023</span> ASF-Transformer for atmospheric turbulence in <strong>Optics Express</strong>.</li>
+                    <li><span class="news-date">2023</span> Real-world deep local motion deblurring at <strong>AAAI</strong>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2 class="section-heading">Technical Skills</h2>
+            <div class="section-body skills-grid">
+                <div class="list-tight">
+                    <h3>Generative AI &amp; Foundation Models</h3>
+                    <ul>
+                        <li>Diffusion models, flow matching, transformer architectures.</li>
+                        <li>Physics-informed and data-driven generative modeling.</li>
+                        <li>Scientific applications: inverse problems, computational imaging.</li>
+                    </ul>
+                </div>
+                <div class="list-tight">
+                    <h3>Efficient Inference &amp; Acceleration</h3>
+                    <ul>
+                        <li>Model quantization, pruning, and knowledge distillation.</li>
+                        <li>Scalable deployment for real-time and edge applications.</li>
+                        <li>Algorithm–system co-design for performance.</li>
+                    </ul>
+                </div>
+                <div class="list-tight">
+                    <h3>Computational Imaging</h3>
+                    <ul>
+                        <li>Low-light imaging, event-based vision, line-scan restoration.</li>
+                        <li>Interferometric and optical reconstruction.</li>
+                        <li>AI-native camera &amp; ISP pipelines.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Publications -->
+        <section class="section">
+            <h2 class="section-heading">Selected Publications</h2>
+            <div class="section-body">
+                <p class="small-note">Full list on <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>.</p>
+                <div class="card-grid">
+
+                    <div class="card">
+                        <img src="images/tgrs2025.png" alt="TGRS 2025" loading="lazy">
+                        <div class="card-title">Jitter-Aware Restoration with Equivalent Jitter Model</div>
+                        <div class="card-venue">IEEE TGRS, 2025</div>
+                        <div class="card-desc">Physics-guided restoration for push-broom imaging.</div>
+                        <div class="card-tags">#remote-sensing #deblurring</div>
+                        <div class="card-links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10841472">Paper</a>
+                            <a href="https://github.com/naturezhanghn/EJM">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/aaai2023.png" alt="AAAI 2023" loading="lazy">
+                        <div class="card-title">Real-world Deep Local Motion Deblurring</div>
+                        <div class="card-venue">AAAI, 2023</div>
+                        <div class="card-desc">Spatially-varying blur modeling for dynamic scenes.</div>
+                        <div class="card-tags">#deblurring #real-world</div>
+                        <div class="card-links">
+                            <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">Paper</a>
+                            <a href="https://github.com/LeiaLi/ReLoBlur">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/sa2024.png" alt="SIGGRAPH Asia 2024" loading="lazy">
+                        <div class="card-title">Event-based Low-light Frame Interpolation</div>
+                        <div class="card-venue">SIGGRAPH Asia, 2024</div>
+                        <div class="card-desc">Sim-to-real framework for event-based low-light video.</div>
+                        <div class="card-tags">#event-cameras #low-light</div>
+                        <div class="card-links">
+                            <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">Paper</a>
+                            <a href="https://github.com/OpenImagingLab/Sim2Real">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/oe2023.png" alt="Optics Express 2023" loading="lazy">
+                        <div class="card-title">ASF-Transformer for Atmospheric Turbulence</div>
+                        <div class="card-venue">Optics Express, 2023</div>
+                        <div class="card-desc">Alternating spatial-frequency learning for turbulence compensation.</div>
+                        <div class="card-tags">#atmospheric #imaging</div>
+                        <div class="card-links">
+                            <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">Paper</a>
+                            <a href="https://github.com/naturezhanghn/ASFTransformer">Code</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education -->
+        <section class="section">
+            <h2 class="section-heading">Experience &amp; Education</h2>
+            <div class="section-body two-col">
+                <div class="list-tight">
+                    <h3>Professional</h3>
+                    <ul>
+                        <li><strong>2026–Present</strong> — Researcher @ <a href="https://www.sais.com.cn">SAIS</a></li>
+                        <li><strong>2025–2026</strong> — Senior Vision Algorithm Engineer @ <a href="https://www.honor.com/cn/">Honor</a></li>
+                        <li><strong>2023–2025</strong> — Trainee Researcher @ <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a></li>
+                        <li><strong>2022</strong> — Media Algorithm Intern @ Huawei 2012 Lab</li>
+                    </ul>
+                </div>
+                <div class="list-tight">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>Ph.D.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2022–2025)</li>
+                        <li><strong>M.S.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2020–2022)</li>
+                        <li><strong>B.S.</strong> Optoelectronic Engineering, <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advisors & Collaborators -->
+        <section class="section">
+            <h2 class="section-heading">Advisors &amp; Collaborators</h2>
+            <div class="section-body two-col">
+                <div class="list-tight">
+                    <h3>Advisors</h3>
+                    <ul>
+                        <li><a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a> — Current Supervisor (SAIS)</li>
+                        <li><a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a> — Ph.D. Advisor</li>
+                        <li><a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Tianfan Xue</a> — Ph.D. Co-advisor</li>
+                        <li><a href="https://person.zju.edu.cn/0086127">Huajun Feng</a> — M.S. Advisor</li>
+                        <li><a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a> — M.S. Co-advisor</li>
+                        <li><a href="https://person.zju.edu.cn/0098047">Qi Li</a> — M.S. Co-advisor</li>
+                    </ul>
+                </div>
+                <div class="list-tight">
+                    <h3>Collaborators</h3>
+                    <ul>
+                        <li><a href="https://guoshi28.github.io/">Shi Guo</a> · <a href="https://www.gujinwei.org/">Jinwei Gu</a></li>
+                        <li><a href="https://lyh-18.github.io/">Yihao Liu</a> · <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a></li>
+                        <li><a href="https://leiali.github.io/">Haoying Li</a> · <a href="https://tangeego.github.io/">Shiqi Chen</a></li>
+                        <li><a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honors & Service -->
+        <section class="section">
+            <h2 class="section-heading">Honors &amp; Service</h2>
+            <div class="section-body two-col">
+                <div class="list-tight">
+                    <h3>Honors</h3>
+                    <ul>
+                        <li>Outstanding Graduate of Zhejiang University (2025)</li>
+                        <li>National Scholarship (Undergraduate, 2019)</li>
+                        <li>Outstanding Graduate of Hunan Province (2020)</li>
+                    </ul>
+                </div>
+                <div class="list-tight">
+                    <h3>Service</h3>
+                    <ul>
+                        <li>PC Member — AAAI 2026, AAAI 2027</li>
+                        <li>Reviewer — IEEE TCI, TGRS, Optics Express, Applied Optics, ACM MM, ECCV, ICCV, BMCV</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section">
+            <h2 class="section-heading">Contact</h2>
+            <div class="section-body">
+                <ul class="contact-list">
+                    <li><strong>Email:</strong> <a href="mailto:naturezhanghn@zju.edu.cn">naturezhanghn@zju.edu.cn</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/naturezhanghn">github.com/naturezhanghn</a></li>
+                    <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Visitors (lazy loaded) -->
+        <section class="section">
+            <h2 class="section-heading">Visitors</h2>
+            <div class="section-body">
+                <div id="map-container" style="min-height:100px;"></div>
+            </div>
+        </section>
+
+        <footer>
+            © <span id="year"></span> Ziran Zhang · Generative AI · AI for Science
+        </footer>
+
     </div>
-    <div class="header-text">
-      <div class="name">Ziran Zhang</div>
-      <div class="title-line">Researcher @ Shanghai Academy of AI for Science</div>
-      <div class="tagline">
-        Under the supervision of <strong><a href="https://sites.google.com/site/zhusiyucs">Prof. Siyu Zhu</a></strong> · Generative AI · AI for Science · Efficient Inference
-      </div>
-      <div class="meta-line">
-        <span>Shanghai, China</span>
-        <span>Ph.D. @ Zhejiang University (2025)</span>
-      </div>
-      <div class="links">
-        <a href="mailto:naturezhanghn@zju.edu.cn">Email</a>
-        <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>
-        <a href="https://github.com/naturezhanghn">GitHub</a>
-        <a href="https://orcid.org/0000-0001-7003-2735">ORCID</a>
-      </div>
-    </div>
-  </header>
 
-  <!-- About Me -->
-  <section class="section">
-    <h2 class="section-heading">About Me</h2>
-    <div class="section-body">
-      <p>
-        I am a <strong>Researcher</strong> at the <a href="https://www.sais.com.cn"><strong>Shanghai Academy of AI for Science (SAIS)</strong></a>,
-        under the supervision of <a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a>.
-        My research centers on <strong>generative AI</strong> — including diffusion models, flow matching, and transformer-based architectures —
-        and <strong>AI for science</strong>, with applications in computational imaging, physics-informed modeling, and scientific discovery.
-        I also work on <strong>efficient inference</strong> techniques (quantization, pruning, and distillation) to enable scalable deployment.
-      </p>
-      <p>
-        I earned my Ph.D. from <a href="http://opt.zju.edu.cn/"><strong>Zhejiang University</strong></a> in June 2025.
-        Prior to SAIS, I was a <strong>Senior Vision Algorithm Engineer</strong> at <a href="https://www.honor.com/cn/"><strong>Honor</strong></a>,
-        leading AI-native imaging pipelines. I was also a member of the inaugural cohort of the <a href="https://www.shlab.org.cn/news/5443403.html"><strong>Pujiang National Laboratory Joint Training Ph.D. Program (2022–2025)</strong></a>, jointly advised by <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Dr. Yueting Chen</a> and <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Prof. Tianfan Xue</a>.
-      </p>
-      <p>
-        I obtained my B.S. from <a href="https://www.csu.edu.cn/"><strong>Central South University</strong></a>,
-        where I received the National Scholarship and was recognized as an Outstanding Graduate of Hunan Province.
-        My Master's research at Zhejiang University was advised by <a href="https://person.zju.edu.cn/0086127"><strong>Prof. Huajun Feng</strong></a>.
-      </p>
-      <p>
-        I have collaborated with <a href="https://guoshi28.github.io/">Shi Guo</a>,
-        <a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a>,
-        <a href="https://www.gujinwei.org/">Jinwei Gu</a>,
-        <a href="https://lyh-18.github.io/">Yihao Liu</a>,
-        <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a>,
-        <a href="https://person.zju.edu.cn/0098047">Qi Li</a>, and
-        <a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a>.
-      </p>
-    </div>
-  </section>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- Research Interests -->
-  <section class="section">
-    <h2 class="section-heading">Research Interests</h2>
-    <div class="section-body">
-      <div class="pill-list">
-        <div class="pill">Generative AI (Diffusion · Flow Matching · Transformers)</div>
-        <div class="pill">AI for Science (Physics-informed ML · Scientific Discovery)</div>
-        <div class="pill">Computational Photography &amp; Imaging</div>
-        <div class="pill muted">Efficient Inference (Quantization · Pruning · Distillation)</div>
-        <div class="pill muted">Optical &amp; Computational Imaging</div>
-      </div>
-    </div>
-  </section>
+        // Lazy load ClustrMaps
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var container = document.getElementById('map-container');
+                if (container) {
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = '//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0';
+                    script.async = true;
+                    script.defer = true;
+                    container.appendChild(script);
+                }
+            }, 2000);
+        });
 
-  <!-- Recent Highlights -->
-  <section class="section">
-    <h2 class="section-heading">Recent Highlights</h2>
-    <div class="section-body">
-      <ul class="news-list">
-        <li><span class="news-date">2025</span> Physics-guided jitter-aware restoration accepted to <strong>IEEE TGRS</strong>.</li>
-        <li><span class="news-date">2024</span> Event-based low-light frame interpolation at <strong>SIGGRAPH Asia</strong>.</li>
-        <li><span class="news-date">2024</span> Deep restoration for linear-array imaging at <strong>AAAI</strong>.</li>
-        <li><span class="news-date">2023</span> ASF-Transformer for atmospheric turbulence in <strong>Optics Express</strong>.</li>
-        <li><span class="news-date">2023</span> Real-world deep local motion deblurring at <strong>AAAI</strong>.</li>
-      </ul>
-    </div>
-  </section>
+        // Section reveal
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.15 });
 
-  <!-- Technical Skills -->
-  <section class="section">
-    <h2 class="section-heading">Technical Skills</h2>
-    <div class="section-body skills-grid">
-      <div class="list-tight">
-        <h3>Generative AI &amp; Foundation Models</h3>
-        <ul>
-          <li>Diffusion models, flow matching, transformer architectures.</li>
-          <li>Physics-informed and data-driven generative modeling.</li>
-          <li>Scientific applications: inverse problems, computational imaging.</li>
-        </ul>
-      </div>
-      <div class="list-tight">
-        <h3>Efficient Inference &amp; Acceleration</h3>
-        <ul>
-          <li>Model quantization, pruning, and knowledge distillation.</li>
-          <li>Scalable deployment for real-time and edge applications.</li>
-          <li>Algorithm–system co-design for performance.</li>
-        </ul>
-      </div>
-      <div class="list-tight">
-        <h3>Computational Imaging</h3>
-        <ul>
-          <li>Low-light imaging, event-based vision, line-scan restoration.</li>
-          <li>Interferometric and optical reconstruction.</li>
-          <li>AI-native camera &amp; ISP pipelines.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Selected Publications -->
-  <section class="section">
-    <h2 class="section-heading">Selected Publications</h2>
-    <div class="section-body">
-      <p class="small-note">Full list on <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>.</p>
-      <div class="card-grid">
-
-        <div class="card">
-          <img src="images/tgrs2025.png" alt="TGRS 2025" loading="lazy">
-          <div class="card-title">Jitter-Aware Restoration with Equivalent Jitter Model</div>
-          <div class="card-venue">IEEE TGRS, 2025</div>
-          <div class="card-desc">Physics-guided restoration for push-broom imaging.</div>
-          <div class="card-tags">#remote-sensing #deblurring</div>
-          <div class="card-links">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10841472">Paper</a>
-            <a href="https://github.com/naturezhanghn/EJM">Code</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/aaai2023.png" alt="AAAI 2023" loading="lazy">
-          <div class="card-title">Real-world Deep Local Motion Deblurring</div>
-          <div class="card-venue">AAAI, 2023</div>
-          <div class="card-desc">Spatially-varying blur modeling for dynamic scenes.</div>
-          <div class="card-tags">#deblurring #real-world</div>
-          <div class="card-links">
-            <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">Paper</a>
-            <a href="https://github.com/LeiaLi/ReLoBlur">Code</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/sa2024.png" alt="SIGGRAPH Asia 2024" loading="lazy">
-          <div class="card-title">Event-based Low-light Frame Interpolation</div>
-          <div class="card-venue">SIGGRAPH Asia, 2024</div>
-          <div class="card-desc">Sim-to-real framework for event-based low-light video.</div>
-          <div class="card-tags">#event-cameras #low-light</div>
-          <div class="card-links">
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">Paper</a>
-            <a href="https://github.com/OpenImagingLab/Sim2Real">Code</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/oe2023.png" alt="Optics Express 2023" loading="lazy">
-          <div class="card-title">ASF-Transformer for Atmospheric Turbulence</div>
-          <div class="card-venue">Optics Express, 2023</div>
-          <div class="card-desc">Alternating spatial-frequency learning for turbulence compensation.</div>
-          <div class="card-tags">#atmospheric #imaging</div>
-          <div class="card-links">
-            <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">Paper</a>
-            <a href="https://github.com/naturezhanghn/ASFTransformer">Code</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience & Education -->
-  <section class="section">
-    <h2 class="section-heading">Experience &amp; Education</h2>
-    <div class="section-body two-col">
-      <div class="list-tight">
-        <h3>Professional</h3>
-        <ul>
-          <li><strong>2026–Present</strong> — Researcher @ <a href="https://www.sais.com.cn">SAIS</a></li>
-          <li><strong>2025–2026</strong> — Senior Vision Algorithm Engineer @ <a href="https://www.honor.com/cn/">Honor</a></li>
-          <li><strong>2023–2025</strong> — Trainee Researcher @ <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a></li>
-          <li><strong>2022</strong> — Media Algorithm Intern @ Huawei 2012 Lab</li>
-        </ul>
-      </div>
-      <div class="list-tight">
-        <h3>Education</h3>
-        <ul>
-          <li><strong>Ph.D.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2022–2025)</li>
-          <li><strong>M.S.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2020–2022)</li>
-          <li><strong>B.S.</strong> Optoelectronic Engineering, <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Advisors & Collaborators -->
-  <section class="section">
-    <h2 class="section-heading">Advisors &amp; Collaborators</h2>
-    <div class="section-body two-col">
-      <div class="list-tight">
-        <h3>Advisors</h3>
-        <ul>
-          <li><a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a> — Current Supervisor (SAIS)</li>
-          <li><a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a> — Ph.D. Advisor</li>
-          <li><a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Tianfan Xue</a> — Ph.D. Co-advisor</li>
-          <li><a href="https://person.zju.edu.cn/0086127">Huajun Feng</a> — M.S. Advisor</li>
-          <li><a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a> — M.S. Co-advisor</li>
-          <li><a href="https://person.zju.edu.cn/0098047">Qi Li</a> — M.S. Co-advisor</li>
-        </ul>
-      </div>
-      <div class="list-tight">
-        <h3>Collaborators</h3>
-        <ul>
-          <li><a href="https://guoshi28.github.io/">Shi Guo</a> · <a href="https://www.gujinwei.org/">Jinwei Gu</a></li>
-          <li><a href="https://lyh-18.github.io/">Yihao Liu</a> · <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a></li>
-          <li><a href="https://leiali.github.io/">Haoying Li</a> · <a href="https://tangeego.github.io/">Shiqi Chen</a></li>
-          <li><a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Honors & Service -->
-  <section class="section">
-    <h2 class="section-heading">Honors &amp; Service</h2>
-    <div class="section-body two-col">
-      <div class="list-tight">
-        <h3>Honors</h3>
-        <ul>
-          <li>Outstanding Graduate of Zhejiang University (2025)</li>
-          <li>National Scholarship (Undergraduate, 2019)</li>
-          <li>Outstanding Graduate of Hunan Province (2020)</li>
-        </ul>
-      </div>
-      <div class="list-tight">
-        <h3>Service</h3>
-        <ul>
-          <li>PC Member — AAAI 2026, AAAI 2027</li>
-          <li>Reviewer — IEEE TCI, TGRS, Optics Express, Applied Optics, ACM MM, ECCV, ICCV, BMCV</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section">
-    <h2 class="section-heading">Contact</h2>
-    <div class="section-body">
-      <ul class="contact-list">
-        <li><strong>Email:</strong> <a href="mailto:naturezhanghn@zju.edu.cn">naturezhanghn@zju.edu.cn</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/naturezhanghn">github.com/naturezhanghn</a></li>
-        <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Visitors (lazy loaded) -->
-  <section class="section">
-    <h2 class="section-heading">Visitors</h2>
-    <div class="section-body">
-      <div id="map-container" style="min-height:100px;"></div>
-    </div>
-  </section>
-
-  <footer>
-    © <span id="year"></span> Ziran Zhang · Generative AI · AI for Science
-  </footer>
-
-</div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Lazy load ClustrMaps
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var container = document.getElementById('map-container');
-      if (container) {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = '//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0';
-        script.async = true;
-        script.defer = true;
-        container.appendChild(script);
-      }
-    }, 2000);
-  });
-
-  // Section reveal
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  sections.forEach(sec => observer.observe(sec));
-</script>
+        sections.forEach(sec => observer.observe(sec));
+    </script>
 </body>
 </html>
