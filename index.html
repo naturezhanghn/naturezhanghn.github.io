@@ -623,11 +623,18 @@
             </div>
         </section>
 
-        <!-- Visitors (lazy loaded) -->
+        <!-- Visitors (static image, no JS needed) -->
         <section class="section">
             <h2 class="section-heading">Visitors</h2>
             <div class="section-body">
-                <div id="map-container" style="min-height:100px;"></div>
+                <div id="map-container" style="min-height:100px;">
+                    <a href="https://clustrmaps.com/site/1bq5v" title="Visit tracker">
+                        <img src="https://clustrmaps.com/map_v2.png?d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0&cl=ffffff&w=600&t=tt"
+                             alt="ClustrMaps"
+                             style="max-width:100%; height:auto; display:block;"
+                             loading="lazy">
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -639,21 +646,6 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Lazy load ClustrMaps
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                var container = document.getElementById('map-container');
-                if (container) {
-                    var script = document.createElement('script');
-                    script.type = 'text/javascript';
-                    script.src = '//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0';
-                    script.async = true;
-                    script.defer = true;
-                    container.appendChild(script);
-                }
-            }, 2000);
-        });
 
         // Section reveal
         const sections = document.querySelectorAll('.section');
