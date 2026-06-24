@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Ziran Zhang – Researcher @ SAIS · Generative AI · AI for Science</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ziran Zhang's homepage – Researcher @ Shanghai Academy of AI for Science, working on generative AI, AI for science, and efficient inference.">
+  <meta name="description" content="Ziran Zhang's homepage – Researcher at Shanghai Scientific Intelligence Research Institute, working on generative AI, AI for science, and efficient inference.">
   <style>
     :root {
       --bg: #f5f6fa;
@@ -35,50 +35,39 @@
     a {
       color: var(--accent);
       text-decoration: none;
-      text-decoration-color: transparent;
-      transition: color 0.15s ease, text-decoration-color 0.15s ease;
+      transition: color 0.15s ease;
     }
 
     a:hover {
       color: #162b63;
       text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-decoration-color: currentColor;
     }
 
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 40px 16px 48px 16px;
+      padding: 40px 20px 48px;
       opacity: 0;
       transform: translateY(8px);
       animation: fadeInUp 0.5s ease-out forwards;
-      animation-delay: 0.05s;
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 24px;
-      margin-bottom: 28px;
+      gap: 28px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .profile-photo {
       flex: 0 0 140px;
-      display: flex;
-      justify-content: center;
     }
 
     .profile-photo img {
@@ -86,25 +75,24 @@
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--accent-soft);
-      box-shadow: 0 10px 22px rgba(15,23,42,0.12);
+      border: 3px solid white;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       background: #fff;
-      transition: box-shadow 0.25s ease;
+      transition: box-shadow 0.2s ease;
     }
 
     .profile-photo img:hover {
-      box-shadow: 0 18px 35px rgba(15,23,42,0.16);
+      box-shadow: 0 12px 32px rgba(26, 59, 122, 0.15);
     }
 
     .header-text {
-      flex: 1 1 260px;
-      min-width: 0;
+      flex: 1;
     }
 
     .name {
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: -0.02em;
       margin-bottom: 2px;
     }
 
@@ -122,31 +110,34 @@
     }
 
     .meta-line {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .meta-line span + span::before {
-      content: "•";
-      margin: 0 6px;
-      color: var(--border-soft);
-    }
-
-    .links {
-      font-size: 0.9rem;
-      margin-top: 6px;
+      content: "·";
+      margin: 0 8px;
+      color: #ccc;
     }
 
     .links a {
-      margin-right: 12px;
+      font-size: 0.85rem;
+      margin-right: 16px;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .links a:hover {
+      border-bottom-color: var(--accent);
     }
 
     .section {
-      margin-bottom: 32px;
+      margin-bottom: 36px;
       opacity: 0;
       transform: translateY(10px);
-      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     .section.is-visible {
@@ -155,23 +146,18 @@
     }
 
     .section-heading {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 650;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-heading::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(to right, rgba(31,60,136,0.3), transparent);
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-soft);
+      letter-spacing: -0.01em;
+      color: var(--text-main);
     }
 
     .section-body {
       font-size: 0.95rem;
+      color: #2d2d3f;
     }
 
     .section-body p {
@@ -184,34 +170,21 @@
       font-weight: 600;
     }
 
-    .vision-text {
-      margin-bottom: 6px;
-    }
-
     .pill-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
+      gap: 10px;
+      margin-top: 4px;
     }
 
     .pill {
-      padding: 4px 11px;
-      border-radius: 999px;
+      padding: 4px 14px;
+      border-radius: 20px;
       background: var(--accent-soft);
       color: var(--accent);
       font-size: 0.78rem;
       font-weight: 500;
-      white-space: nowrap;
-      border: 1px solid rgba(31,60,136,0.08);
-      box-shadow: 0 4px 10px rgba(15,23,42,0.04);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-    }
-
-    .pill:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(15,23,42,0.12);
-      background-color: #d8e3ff;
+      border: 1px solid rgba(26, 59, 122, 0.06);
     }
 
     .pill.muted {
@@ -222,17 +195,17 @@
 
     .news-list {
       list-style: none;
-      font-size: 0.86rem;
+      font-size: 0.88rem;
     }
 
     .news-list li {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
       display: flex;
-      gap: 8px;
+      gap: 12px;
     }
 
     .news-date {
-      min-width: 64px;
+      min-width: 70px;
       font-weight: 600;
       color: var(--accent);
     }
@@ -240,170 +213,139 @@
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      font-size: 0.9rem;
+      gap: 24px;
     }
 
     .skills-grid > div {
-      flex: 1 1 260px;
+      flex: 1 1 240px;
     }
 
     .list-tight ul {
-      padding-left: 1.1rem;
+      padding-left: 1.2rem;
     }
 
     .list-tight li {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .two-col {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
-      font-size: 0.9rem;
     }
 
     .two-col > div {
-      flex: 1 1 260px;
+      flex: 1 1 240px;
     }
 
     .sub-list {
-      padding-left: 1.05rem;
-      margin-top: 2px;
-    }
-
-    .sub-list li {
-      font-size: 0.86rem;
-      color: #6b7280;
-      margin-bottom: 2px;
+      padding-left: 1.2rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
     }
 
     .card-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 6px;
-      justify-content: center;
+      gap: 18px;
+      margin-top: 8px;
     }
 
     .card {
-      flex: 1 1 250px;
+      flex: 1 1 280px;
       max-width: 340px;
       background: var(--bg-card);
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1px solid var(--border-soft);
-      padding: 8px 8px 10px 8px;
-      box-shadow: 0 10px 22px rgba(15,23,42,0.06);
-      font-size: 0.86rem;
+      padding: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 35px rgba(15,23,42,0.15);
-      border-color: rgba(31,60,136,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border-color: var(--accent);
     }
 
     .card img {
       width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 6px;
-      display: block;
-      background: #f3f4f6;
-      transition: transform 0.25s ease;
-    }
-
-    .card:hover img {
-      transform: scale(1.02);
+      background: #f0f2f5;
+      margin-bottom: 8px;
     }
 
     .card-title {
       font-weight: 600;
-      margin-bottom: 3px;
+      font-size: 0.9rem;
+      margin-bottom: 2px;
     }
 
     .card-venue {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
     }
 
     .card-desc {
-      margin-bottom: 4px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      flex: 1;
     }
 
     .card-tags {
+      font-size: 0.72rem;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .card-links a {
       font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+      font-weight: 500;
+      margin-right: 10px;
+      border-bottom: 1px dotted transparent;
     }
 
-    .card-links {
-      margin-top: auto;
-      font-size: 0.8rem;
-    }
-
-    .card-links a + a::before {
-      content: "·";
-      margin: 0 6px;
-      color: var(--border-soft);
+    .card-links a:hover {
+      border-bottom-color: var(--accent);
     }
 
     .small-note {
-      font-size: 0.84rem;
       color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .pub-list-compact {
-      font-size: 0.86rem;
-      margin-top: 4px;
-    }
-
-    .pub-list-compact li {
-      margin-bottom: 3px;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
     }
 
     .contact-list {
       list-style: none;
-      font-size: 0.9rem;
     }
 
     .contact-list li {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     footer {
-      margin-top: 20px;
-      font-size: 0.78rem;
+      margin-top: 40px;
+      font-size: 0.75rem;
       color: var(--text-muted);
       text-align: center;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 20px;
     }
 
     @media (max-width: 720px) {
-      .page {
-        padding: 20px 14px 28px 14px;
-      }
-      .header {
-        text-align: left;
-        gap: 16px;
-      }
-      .section-heading::after {
-        display: none;
-      }
-      .profile-photo {
-        flex: 0 0 96px;
-      }
-      .profile-photo img {
-        width: 96px;
-        height: 96px;
-      }
-      .name {
-        font-size: 1.6rem;
-      }
+      .page { padding: 20px 14px; }
+      .header { gap: 16px; }
+      .profile-photo { flex: 0 0 80px; }
+      .profile-photo img { width: 80px; height: 80px; }
+      .name { font-size: 1.6rem; }
+      .card { flex: 1 1 100%; max-width: 100%; }
     }
   </style>
 </head>
@@ -417,7 +359,7 @@
     </div>
     <div class="header-text">
       <div class="name">Ziran Zhang</div>
-      <div class="title-line">Researcher Shanghai Academy of AI for Science</div>
+      <div class="title-line">Researcher @ Shanghai Scientific Intelligence Research Institute</div>
       <div class="tagline">
         Advised by <strong>Prof. Siyu Zhu</strong> · Generative AI · AI for Science · Efficient Inference
       </div>
@@ -434,12 +376,13 @@
     </div>
   </header>
 
-  <!-- About Me: concise opening, Generative AI & AI for Science first -->
+  <!-- About Me -->
   <section class="section">
     <h2 class="section-heading">About Me</h2>
     <div class="section-body">
       <p>
-        I am a <strong>Researcher</strong> at the <a href="https://www.sais.com.cn"><strong>Shanghai Academy of AI for Science by <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"><strong>Prof. Siyu Zhu</strong></a>.
+        I am a <strong>Researcher</strong> at the <a href="https://www.sais.com.cn"><strong>Shanghai Scientific Intelligence Research Institute (SAIS)</strong></a>,
+        working with <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"><strong>Prof. Siyu Zhu</strong></a>.
         My research centers on <strong>generative AI</strong> — including diffusion models, flow matching, and transformer-based architectures —
         and <strong>AI for science</strong>, with applications in computational imaging, physics-informed modeling, and scientific discovery.
         I also work on <strong>efficient inference</strong> techniques (quantization, pruning, and distillation) to enable scalable deployment.
@@ -468,7 +411,7 @@
     </div>
   </section>
 
-  <!-- Research Interests: Generative AI and AI for Science first -->
+  <!-- Research Interests -->
   <section class="section">
     <h2 class="section-heading">Research Interests</h2>
     <div class="section-body">
@@ -618,6 +561,8 @@
           <li><a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a> — Ph.D. Advisor</li>
           <li><a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Tianfan Xue</a> — Ph.D. Co-advisor</li>
           <li><a href="https://person.zju.edu.cn/0086127">Huajun Feng</a> — M.S. Advisor</li>
+          <li><a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a> — M.S. Co-advisor</li>
+          <li><a href="https://person.zju.edu.cn/0098047">Qi Li</a> — M.S. Co-advisor</li>
         </ul>
       </div>
       <div class="list-tight">
