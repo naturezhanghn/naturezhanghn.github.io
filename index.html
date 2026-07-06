@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ziran Zhang – Researcher @ SAIS · Generative AI · AI for Science</title>
+    <title>Ziran Zhang – Researcher @ SAIS · Multimodal Foundation Models · Generative AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ziran Zhang's homepage – Researcher at Shanghai Academy of AI for Science, working on generative AI, AI for science, and efficient inference.">
+    <meta name="description" content="Ziran Zhang's homepage – Researcher at Shanghai Academy of AI for Science, working on multimodal foundation models, generative AI, AI for science, scientific multimodal data, and efficient inference.">
+
     <style>
         :root {
             --bg: #f5f6fa;
@@ -118,7 +119,7 @@
             margin-bottom: 8px;
         }
 
-        .meta-line span+span::before {
+        .meta-line span + span::before {
             content: "·";
             margin: 0 8px;
             color: #ccc;
@@ -219,7 +220,7 @@
             gap: 24px;
         }
 
-        .skills-grid>div {
+        .skills-grid > div {
             flex: 1 1 240px;
         }
 
@@ -237,14 +238,8 @@
             gap: 24px;
         }
 
-        .two-col>div {
+        .two-col > div {
             flex: 1 1 240px;
-        }
-
-        .sub-list {
-            padding-left: 1.2rem;
-            font-size: 0.88rem;
-            color: var(--text-muted);
         }
 
         .card-grid {
@@ -335,6 +330,20 @@
             margin-bottom: 4px;
         }
 
+        .highlight-box {
+            background: var(--accent-soft);
+            border: 1px solid rgba(31, 60, 136, 0.12);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin: 12px 0;
+            color: #24345d;
+            font-size: 0.92rem;
+        }
+
+        .highlight-box strong {
+            color: var(--accent);
+        }
+
         footer {
             margin-top: 40px;
             font-size: 0.75rem;
@@ -348,26 +357,41 @@
             .page {
                 padding: 20px 14px;
             }
+
             .header {
                 gap: 16px;
             }
+
             .profile-photo {
                 flex: 0 0 80px;
             }
+
             .profile-photo img {
                 width: 80px;
                 height: 80px;
             }
+
             .name {
                 font-size: 1.6rem;
             }
+
             .card {
                 flex: 1 1 100%;
                 max-width: 100%;
             }
+
+            .news-list li {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .news-date {
+                min-width: auto;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="page">
 
@@ -376,16 +400,23 @@
             <div class="profile-photo">
                 <img src="images/pic.png" alt="Ziran Zhang" loading="lazy">
             </div>
+
             <div class="header-text">
                 <div class="name">Ziran Zhang</div>
                 <div class="title-line">Researcher @ Shanghai Academy of AI for Science</div>
+
                 <div class="tagline">
-                    Under the supervision of <strong><a href="https://sites.google.com/site/zhusiyucs">Prof. Siyu Zhu</a></strong> · Generative AI · AI for Science · Efficient Inference
+                    Multimodal Foundation Models · Generative AI · AI for Science · Efficient Inference
+                    <br>
+                    Working with <strong><a href="https://sites.google.com/site/zhusiyucs">Prof. Siyu Zhu</a></strong>
                 </div>
+
                 <div class="meta-line">
                     <span>Shanghai, China</span>
                     <span>Ph.D. @ Zhejiang University (2025)</span>
+                    <span>Joint Training Ph.D. Program @ Shanghai AI Lab</span>
                 </div>
+
                 <div class="links">
                     <a href="mailto:naturezhanghn@zju.edu.cn">Email</a>
                     <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>
@@ -398,18 +429,68 @@
         <!-- About Me -->
         <section class="section">
             <h2 class="section-heading">About Me</h2>
+
             <div class="section-body">
                 <p>
-                    I am a <strong>Researcher</strong> at the <a href="https://www.sais.com.cn"><strong>Shanghai Academy of AI for Science (SAIS)</strong></a>, under the supervision of <a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a>. My research centers on <strong>generative AI</strong> — including diffusion models, flow matching, and transformer-based architectures — and <strong>AI for science</strong>, with applications in computational imaging, physics-informed modeling, and scientific discovery. I also work on <strong>efficient inference</strong> techniques (speculative decoding、prefix cache、kv cache) to enable scalable deployment.
+                    I am a <strong>Researcher</strong> at the
+                    <a href="https://www.sais.com.cn"><strong>Shanghai Academy of AI for Science (SAIS)</strong></a>,
+                    working with
+                    <a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a>.
+                    My research focuses on <strong>multimodal foundation models</strong> and
+                    <strong>generative AI</strong>, with the goal of building AI systems that can understand,
+                    generate, and reason over <strong>language, images, videos, event streams, physical signals,
+                    and scientific measurements</strong>.
                 </p>
+
                 <p>
-                    I earned my Ph.D. from <a href="http://opt.zju.edu.cn/"><strong>Zhejiang University</strong></a> in June 2025. Prior to SAIS, I was a <strong>Senior Vision Algorithm Engineer</strong> at <a href="https://www.honor.com/cn/"><strong>Honor</strong></a>, leading AI-native imaging pipelines. I was also a member of the inaugural cohort of the <a href="https://www.shlab.org.cn/news/5443403.html"><strong>Pujiang National Laboratory Joint Training Ph.D. Program (2022–2025)</strong></a>, jointly advised by <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Dr. Yueting Chen</a> and <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Prof. Tianfan Xue</a>.
+                    I am broadly interested in <strong>large multimodal models</strong>,
+                    <strong>vision-language modeling</strong>, <strong>multimodal reasoning</strong>,
+                    <strong>diffusion / flow-based generation</strong>, and <strong>physics-aware learning</strong>.
+                    My long-term research vision is to extend foundation models beyond text and natural images,
+                    toward <strong>physical-world multimodal intelligence</strong> and
+                    <strong>AI for scientific discovery</strong>.
                 </p>
+
                 <p>
-                    I obtained my B.S. from <a href="https://www.csu.edu.cn/"><strong>Central South University</strong></a>, where I received the National Scholarship and was recognized as an Outstanding Graduate of Hunan Province. My Master's research at Zhejiang University was advised by <a href="https://person.zju.edu.cn/0086127"><strong>Prof. Huajun Feng</strong></a>.
+                    My previous research has been rooted in <strong>computational imaging</strong>,
+                    <strong>event-based vision</strong>, <strong>low-light and HDR imaging</strong>,
+                    <strong>remote sensing restoration</strong>, and <strong>physics-guided reconstruction</strong>.
+                    These experiences shape my current interest in multimodal models for
+                    <strong>scientific data, sensor-derived signals, AI-native imaging systems, and real-world perception</strong>.
                 </p>
+
+                <div class="highlight-box">
+                    <strong>Joint Training Ph.D. Experience:</strong>
+                    During my Ph.D., I was a member of the inaugural cohort of the
+                    <a href="https://www.shlab.org.cn/news/5443403.html"><strong>Pujiang National Laboratory Joint Training Ph.D. Program</strong></a>
+                    and conducted joint research at
+                    <a href="https://www.shlab.org.cn/"><strong>Shanghai AI Lab</strong></a>
+                    from 2023 to 2025. This experience strengthened my research background in
+                    foundation models, generative AI, computer vision, and AI for science.
+                </div>
+
                 <p>
-                    I have collaborated with <a href="https://guoshi28.github.io/">Shi Guo</a>,
+                    I earned my Ph.D. from
+                    <a href="http://opt.zju.edu.cn/"><strong>Zhejiang University</strong></a> in June 2025.
+                    Prior to SAIS, I was a <strong>Senior Vision Algorithm Engineer</strong> at
+                    <a href="https://www.honor.com/cn/"><strong>Honor</strong></a>, where I worked on AI-native imaging pipelines
+                    and real-world camera systems. My doctoral research was jointly advised by
+                    <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Dr. Yueting Chen</a>
+                    and
+                    <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Prof. Tianfan Xue</a>.
+                </p>
+
+                <p>
+                    I obtained my B.S. from
+                    <a href="https://www.csu.edu.cn/"><strong>Central South University</strong></a>,
+                    where I received the National Scholarship and was recognized as an Outstanding Graduate of Hunan Province.
+                    My Master's research at Zhejiang University was advised by
+                    <a href="https://person.zju.edu.cn/0086127"><strong>Prof. Huajun Feng</strong></a>.
+                </p>
+
+                <p>
+                    I have collaborated with
+                    <a href="https://guoshi28.github.io/">Shi Guo</a>,
                     <a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a>,
                     <a href="https://www.gujinwei.org/">Jinwei Gu</a>,
                     <a href="https://lyh-18.github.io/">Yihao Liu</a>,
@@ -423,13 +504,55 @@
         <!-- Research Interests -->
         <section class="section">
             <h2 class="section-heading">Research Interests</h2>
+
             <div class="section-body">
                 <div class="pill-list">
-                    <div class="pill">Generative AI (Diffusion · Flow Matching · Transformers)</div>
-                    <div class="pill">AI for Science (Physics-informed ML · Scientific Discovery)</div>
-                    <div class="pill">Computational Photography &amp; Imaging</div>
-                    <div class="pill muted">Efficient Inference (Quantization · Pruning · Distillation)</div>
-                    <div class="pill muted">Optical &amp; Computational Imaging</div>
+                    <div class="pill">Multimodal Foundation Models</div>
+                    <div class="pill">Vision-Language Models</div>
+                    <div class="pill">Multimodal Reasoning</div>
+                    <div class="pill">Generative AI: Diffusion · Flow Matching · Transformers</div>
+                    <div class="pill">Scientific Multimodal Data</div>
+                    <div class="pill">AI for Science</div>
+                    <div class="pill muted">Physics-Aware Computational Imaging</div>
+                    <div class="pill muted">Efficient Inference &amp; Deployment</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Vision -->
+        <section class="section">
+            <h2 class="section-heading">Research Vision</h2>
+
+            <div class="section-body">
+                <p>
+                    I am interested in developing <strong>multimodal foundation models</strong> that go beyond
+                    conventional web-scale image-text data. In particular, I focus on multimodal learning from
+                    <strong>physical and scientific modalities</strong>, such as event streams, low-light videos,
+                    HDR observations, remote sensing data, optical measurements, and sensor-derived signals.
+                </p>
+
+                <p>
+                    My research is driven by three connected questions:
+                </p>
+
+                <div class="list-tight">
+                    <ul>
+                        <li>
+                            <strong>Multimodal understanding:</strong>
+                            How can large models jointly understand language, images, videos, events, sensor data,
+                            and scientific measurements?
+                        </li>
+                        <li>
+                            <strong>Physics-grounded generation:</strong>
+                            How can generative models produce outputs that are not only visually plausible,
+                            but also physically consistent and scientifically faithful?
+                        </li>
+                        <li>
+                            <strong>Efficient multimodal inference:</strong>
+                            How can large multimodal and generative models be accelerated, compressed, and deployed
+                            in real-world imaging, sensing, and AI-native camera systems?
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -437,15 +560,37 @@
         <!-- Recent Highlights -->
         <section class="section">
             <h2 class="section-heading">Recent Highlights</h2>
+
             <div class="section-body">
                 <ul class="news-list">
-                   <li><span class="news-date">01.2025</span><span>A paper is published in <strong>IEEE TGRS 2025</strong> on physics-guided jitter-aware image restoration.</span></li>
-                   <li><span class="news-date">12.2024</span><span>A paper is published in <strong>SIGGRAPH Asia 2024</strong> on event-based low-light frame interpolation.</span></li>
-                   <li><span class="news-date">07.2024</span><span>A paper is published in <strong>AAAI 2024</strong> on deep restoration for linear-array imaging.</span></li>
-                   <li><span class="news-date">10.2023</span><span>A paper is published in <strong>Optics Express 2023</strong> on computational imaging.</span></li>
-                   <li><span class="news-date">08.2023</span><span>A paper is published in <strong>IEEE TGRS 2023</strong> on real-world imaging pipelines and restoration.</span></li>
-                   <li><span class="news-date">06.2023</span><span>A paper is published in <strong>AAAI 2023</strong> in computer vision and imaging.</span></li>
-                   <li><span class="news-date">11.2022</span><span>A paper is published in <strong>Optics Express 2022</strong> on deep reconstruction for interferometric imaging.</span></li>
+                    <li>
+                        <span class="news-date">01.2025</span>
+                        <span>A paper is published in <strong>IEEE TGRS 2025</strong> on physics-guided jitter-aware restoration for remote sensing imaging.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">12.2024</span>
+                        <span>A paper is published in <strong>SIGGRAPH Asia 2024</strong> on event-based low-light frame interpolation, connecting event sensing with generative video reconstruction.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">07.2024</span>
+                        <span>A paper is published in <strong>AAAI 2024</strong> on deep restoration for linear-array imaging systems.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">10.2023</span>
+                        <span>A paper is published in <strong>Optics Express 2023</strong> on transformer-based computational imaging under atmospheric turbulence.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">08.2023</span>
+                        <span>A paper is published in <strong>IEEE TGRS 2023</strong> on real-world imaging simulation and learning-based restoration.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">06.2023</span>
+                        <span>A paper is published in <strong>AAAI 2023</strong> on real-world local motion deblurring for dynamic scenes.</span>
+                    </li>
+                    <li>
+                        <span class="news-date">11.2022</span>
+                        <span>A paper is published in <strong>Optics Express 2022</strong> on deep reconstruction for photonic integrated interferometric imaging.</span>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -453,29 +598,50 @@
         <!-- Technical Skills -->
         <section class="section">
             <h2 class="section-heading">Technical Skills</h2>
+
             <div class="section-body skills-grid">
                 <div class="list-tight">
-                    <h3>Generative AI &amp; Foundation Models</h3>
+                    <h3>Multimodal Foundation Models</h3>
                     <ul>
-                        <li>Diffusion models, flow matching, transformer architectures.</li>
-                        <li>Physics-informed and data-driven generative modeling.</li>
-                        <li>Scientific applications: inverse problems, computational imaging.</li>
+                        <li>Vision-language modeling, multimodal alignment, and multimodal representation learning.</li>
+                        <li>Transformer-based architectures for image, video, event, and scientific data.</li>
+                        <li>Multimodal reasoning for physical-world perception and scientific understanding.</li>
                     </ul>
                 </div>
+
                 <div class="list-tight">
-                    <h3>Efficient Inference &amp; Acceleration</h3>
+                    <h3>Generative AI</h3>
                     <ul>
-                        <li>Model quantization, pruning, and knowledge distillation.</li>
-                        <li>Scalable deployment for real-time and edge applications.</li>
-                        <li>Algorithm–system co-design for performance.</li>
+                        <li>Diffusion models, flow matching, and generative transformers.</li>
+                        <li>Image/video generation, restoration, and reconstruction under physical constraints.</li>
+                        <li>Generative inverse problems for imaging, sensing, and scientific measurement.</li>
                     </ul>
                 </div>
+
                 <div class="list-tight">
-                    <h3>Computational Imaging</h3>
+                    <h3>AI for Science</h3>
                     <ul>
-                        <li>Low-light imaging, event-based vision, line-scan restoration.</li>
-                        <li>Interferometric and optical reconstruction.</li>
-                        <li>AI-native camera &amp; ISP pipelines.</li>
+                        <li>Scientific multimodal data modeling and physics-aware machine learning.</li>
+                        <li>Foundation models for scientific imaging, measurement, and reconstruction.</li>
+                        <li>Data consistency, uncertainty, and physical fidelity in generative systems.</li>
+                    </ul>
+                </div>
+
+                <div class="list-tight">
+                    <h3>Efficient Inference &amp; Deployment</h3>
+                    <ul>
+                        <li>Model quantization, pruning, distillation, and deployment-aware optimization.</li>
+                        <li>Efficient inference for real-time and edge-side multimodal systems.</li>
+                        <li>Algorithm-system co-design for AI-native cameras and sensing pipelines.</li>
+                    </ul>
+                </div>
+
+                <div class="list-tight">
+                    <h3>Computational Imaging &amp; Sensing</h3>
+                    <ul>
+                        <li>Low-light imaging, HDR imaging, event-based vision, and video interpolation.</li>
+                        <li>Remote sensing restoration, line-scan imaging, and jitter-aware reconstruction.</li>
+                        <li>Optical reconstruction, interferometric imaging, and physics-guided restoration.</li>
                     </ul>
                 </div>
             </div>
@@ -484,16 +650,37 @@
         <!-- Selected Publications -->
         <section class="section">
             <h2 class="section-heading">Selected Publications</h2>
+
             <div class="section-body">
-                <p class="small-note">Full list on <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>.</p>
+                <p class="small-note">
+                    Full list on
+                    <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>.
+                </p>
+
                 <div class="card-grid">
+
+                    <div class="card">
+                        <img src="images/sa2024.png" alt="SIGGRAPH Asia 2024" loading="lazy">
+                        <div class="card-title">Event-based Low-light Frame Interpolation</div>
+                        <div class="card-venue">SIGGRAPH Asia, 2024</div>
+                        <div class="card-desc">
+                            A sim-to-real framework for event-based low-light video reconstruction, exploring event streams as a physical modality for generative video restoration.
+                        </div>
+                        <div class="card-tags">#event-cameras #low-light #video-generation #multimodal-sensing</div>
+                        <div class="card-links">
+                            <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">Paper</a>
+                            <a href="https://github.com/OpenImagingLab/Sim2Real">Code</a>
+                        </div>
+                    </div>
 
                     <div class="card">
                         <img src="images/tgrs2025.png" alt="TGRS 2025" loading="lazy">
                         <div class="card-title">Jitter-Aware Restoration with Equivalent Jitter Model</div>
                         <div class="card-venue">IEEE TGRS, 2025</div>
-                        <div class="card-desc">Physics-guided restoration for push-broom imaging.</div>
-                        <div class="card-tags">#remote-sensing #deblurring</div>
+                        <div class="card-desc">
+                            Physics-guided restoration for push-broom remote sensing, introducing a jitter-aware model for physically grounded image reconstruction.
+                        </div>
+                        <div class="card-tags">#remote-sensing #physics-aware-ai #scientific-imaging</div>
                         <div class="card-links">
                             <a href="https://ieeexplore.ieee.org/abstract/document/10841472">Paper</a>
                             <a href="https://github.com/naturezhanghn/EJM">Code</a>
@@ -504,8 +691,10 @@
                         <img src="images/aaai2023.png" alt="AAAI 2023" loading="lazy">
                         <div class="card-title">Real-world Deep Local Motion Deblurring</div>
                         <div class="card-venue">AAAI, 2023</div>
-                        <div class="card-desc">Spatially-varying blur modeling for dynamic scenes.</div>
-                        <div class="card-tags">#deblurring #real-world</div>
+                        <div class="card-desc">
+                            Real-world spatially varying blur modeling for dynamic scenes, contributing to robust visual perception under complex camera motion.
+                        </div>
+                        <div class="card-tags">#deblurring #real-world-vision #dynamic-scenes</div>
                         <div class="card-links">
                             <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">Paper</a>
                             <a href="https://github.com/LeiaLi/ReLoBlur">Code</a>
@@ -513,23 +702,13 @@
                     </div>
 
                     <div class="card">
-                        <img src="images/sa2024.png" alt="SIGGRAPH Asia 2024" loading="lazy">
-                        <div class="card-title">Event-based Low-light Frame Interpolation</div>
-                        <div class="card-venue">SIGGRAPH Asia, 2024</div>
-                        <div class="card-desc">Sim-to-real framework for event-based low-light video.</div>
-                        <div class="card-tags">#event-cameras #low-light</div>
-                        <div class="card-links">
-                            <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">Paper</a>
-                            <a href="https://github.com/OpenImagingLab/Sim2Real">Code</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
                         <img src="images/oe2023.png" alt="Optics Express 2023" loading="lazy">
                         <div class="card-title">ASF-Transformer for Atmospheric Turbulence</div>
                         <div class="card-venue">Optics Express, 2023</div>
-                        <div class="card-desc">Alternating spatial-frequency learning for turbulence compensation.</div>
-                        <div class="card-tags">#atmospheric #imaging</div>
+                        <div class="card-desc">
+                            Transformer-based spatial-frequency learning for turbulence compensation, connecting optical degradation modeling with deep visual restoration.
+                        </div>
+                        <div class="card-tags">#transformers #computational-imaging #physics-aware-vision</div>
                         <div class="card-links">
                             <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">Paper</a>
                             <a href="https://github.com/naturezhanghn/ASFTransformer">Code</a>
@@ -543,22 +722,55 @@
         <!-- Experience & Education -->
         <section class="section">
             <h2 class="section-heading">Experience &amp; Education</h2>
+
             <div class="section-body two-col">
                 <div class="list-tight">
                     <h3>Professional</h3>
                     <ul>
-                        <li><strong>2026–Present</strong> — Researcher @ <a href="https://www.sais.com.cn">SAIS</a></li>
-                        <li><strong>2025–2026</strong> — Senior Vision Algorithm Engineer @ <a href="https://www.honor.com/cn/">Honor</a></li>
-                        <li><strong>2023–2025</strong> — Trainee Researcher @ <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a></li>
-                        <li><strong>2022</strong> — Media Algorithm Intern @ Huawei 2012 Lab</li>
+                        <li>
+                            <strong>2026–Present</strong> —
+                            Researcher @ <a href="https://www.sais.com.cn">SAIS</a>
+                        </li>
+                        <li>
+                            <strong>2025–2026</strong> —
+                            Senior Vision Algorithm Engineer @ <a href="https://www.honor.com/cn/">Honor</a>
+                        </li>
+                        <li>
+                            <strong>2023–2025</strong> —
+                            Trainee Researcher @ <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a>
+                            <br>
+                            <span class="small-note">
+                                Joint training Ph.D. research under the Pujiang National Laboratory Joint Training Ph.D. Program.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>2022</strong> —
+                            Media Algorithm Intern @ Huawei 2012 Lab
+                        </li>
                     </ul>
                 </div>
+
                 <div class="list-tight">
                     <h3>Education</h3>
                     <ul>
-                        <li><strong>Ph.D.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2022–2025)</li>
-                        <li><strong>M.S.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2020–2022)</li>
-                        <li><strong>B.S.</strong> Optoelectronic Information Science and Engineering, <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)</li>
+                        <li>
+                            <strong>Ph.D.</strong> Optical Engineering,
+                            <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2022–2025)
+                            <br>
+                            <span class="small-note">
+                                Jointly trained with
+                                <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a> through the
+                                <a href="https://www.shlab.org.cn/news/5443403.html">Pujiang National Laboratory Joint Training Ph.D. Program</a>.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>M.S.</strong> Optical Engineering,
+                            <a href="http://opt.zju.edu.cn/">Zhejiang University</a> (2020–2022)
+                        </li>
+                        <li>
+                            <strong>B.S.</strong> Optoelectronic Information Science and Engineering,
+                            <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -567,25 +779,56 @@
         <!-- Advisors & Collaborators -->
         <section class="section">
             <h2 class="section-heading">Advisors &amp; Collaborators</h2>
+
             <div class="section-body two-col">
                 <div class="list-tight">
-                    <h3>Advisors</h3>
+                    <h3>Advisors &amp; Mentors</h3>
                     <ul>
-                        <li><a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a> — Current Supervisor (SAIS)</li>
-                        <li><a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a> — Ph.D. Advisor</li>
-                        <li><a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Tianfan Xue</a> — Ph.D. Co-advisor</li>
-                        <li><a href="https://person.zju.edu.cn/0086127">Huajun Feng</a> — M.S. Advisor</li>
-                        <li><a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a> — M.S. Co-advisor</li>
-                        <li><a href="https://person.zju.edu.cn/0098047">Qi Li</a> — M.S. Co-advisor</li>
+                        <li>
+                            <a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a>
+                            — SAIS
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Yueting Chen</a>
+                            — Ph.D. Advisor
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Tianfan Xue</a>
+                            — Ph.D. Co-advisor
+                        </li>
+                        <li>
+                            <a href="https://person.zju.edu.cn/0086127">Huajun Feng</a>
+                            — M.S. Advisor
+                        </li>
+                        <li>
+                            <a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a>
+                            — M.S. Co-advisor
+                        </li>
+                        <li>
+                            <a href="https://person.zju.edu.cn/0098047">Qi Li</a>
+                            — M.S. Co-advisor
+                        </li>
                     </ul>
                 </div>
+
                 <div class="list-tight">
                     <h3>Collaborators</h3>
                     <ul>
-                        <li><a href="https://guoshi28.github.io/">Shi Guo</a> · <a href="https://www.gujinwei.org/">Jinwei Gu</a></li>
-                        <li><a href="https://lyh-18.github.io/">Yihao Liu</a> · <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a></li>
-                        <li><a href="https://leiali.github.io/">Haoying Li</a> · <a href="https://tangeego.github.io/">Shiqi Chen</a></li>
-                        <li><a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a></li>
+                        <li>
+                            <a href="https://guoshi28.github.io/">Shi Guo</a> ·
+                            <a href="https://www.gujinwei.org/">Jinwei Gu</a>
+                        </li>
+                        <li>
+                            <a href="https://lyh-18.github.io/">Yihao Liu</a> ·
+                            <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&hl=zh-TW">Xuelong Li</a>
+                        </li>
+                        <li>
+                            <a href="https://leiali.github.io/">Haoying Li</a> ·
+                            <a href="https://tangeego.github.io/">Shiqi Chen</a>
+                        </li>
+                        <li>
+                            <a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -594,6 +837,7 @@
         <!-- Honors & Service -->
         <section class="section">
             <h2 class="section-heading">Honors &amp; Service</h2>
+
             <div class="section-body two-col">
                 <div class="list-tight">
                     <h3>Honors</h3>
@@ -603,11 +847,12 @@
                         <li>Outstanding Graduate of Hunan Province (2020)</li>
                     </ul>
                 </div>
+
                 <div class="list-tight">
-                    <h3>Service</h3>
+                    <h3>Academic Service</h3>
                     <ul>
                         <li>PC Member — AAAI 2026, AAAI 2027</li>
-                        <li>Reviewer — IEEE TCI, TGRS, Optics Express, Applied Optics, ACM MM, ECCV, ICCV, BMCV</li>
+                        <li>Reviewer — IEEE TCI, TGRS, Optics Express, Applied Optics, ACM MM, ECCV, ICCV, BMVC</li>
                     </ul>
                 </div>
             </div>
@@ -616,19 +861,31 @@
         <!-- Contact -->
         <section class="section">
             <h2 class="section-heading">Contact</h2>
+
             <div class="section-body">
                 <ul class="contact-list">
-                    <li><strong>Email:</strong> <a href="mailto:naturezhanghn@zju.edu.cn">naturezhanghn@zju.edu.cn</a></li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/naturezhanghn">github.com/naturezhanghn</a></li>
-                    <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a></li>
+                    <li>
+                        <strong>Email:</strong>
+                        <a href="mailto:naturezhanghn@zju.edu.cn">naturezhanghn@zju.edu.cn</a>
+                    </li>
+                    <li>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/naturezhanghn">github.com/naturezhanghn</a>
+                    </li>
+                    <li>
+                        <strong>Google Scholar:</strong>
+                        <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>
+                    </li>
+                    <li>
+                        <strong>ORCID:</strong>
+                        <a href="https://orcid.org/0000-0001-7003-2735">0000-0001-7003-2735</a>
+                    </li>
                 </ul>
             </div>
         </section>
 
-
-
         <footer>
-            © <span id="year"></span> Ziran Zhang · Generative AI · AI for Science
+            © <span id="year"></span> Ziran Zhang · Multimodal Foundation Models · Generative AI · AI for Science
         </footer>
 
     </div>
