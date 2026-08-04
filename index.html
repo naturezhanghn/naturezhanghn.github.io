@@ -355,18 +355,13 @@
             max-width: 860px;
         }
 
-        .visitor-map {
-            max-width: 600px;
-            padding: 10px;
-            border: 1px solid var(--border-soft);
-            border-radius: 8px;
-            background: var(--bg-card);
+        .visitor-note {
+            color: var(--text-muted);
+            font-size: 0.88rem;
         }
 
-        .visitor-map img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .visitor-note a {
+            font-weight: 600;
         }
 
         .small-note {
@@ -693,11 +688,7 @@
         <section class="section visitors-section">
             <h2 class="section-heading">Visitors</h2>
             <div class="section-body">
-                <div class="visitor-map">
-                    <a href="https://clustrmaps.com/site/1bq5v" title="Visit tracker">
-                        <img src="https://clustrmaps.com/map_v2.png?d=xpVbL44eoe75JcgH_sR2JTn7R5yhjDwmG9mUxpyhOw0&amp;cl=ffffff&amp;w=600&amp;t=tt" alt="Visitor map" loading="lazy">
-                    </a>
-                </div>
+                <p class="visitor-note">Site statistics are collected from August 2026 onward with <a href="https://naturezhanghn.goatcounter.com/">GoatCounter</a>.</p>
             </div>
         </section>
 
@@ -724,5 +715,6 @@
 
         sections.forEach(sec => observer.observe(sec));
     </script>
+    <script data-goatcounter="https://naturezhanghn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
