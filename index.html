@@ -112,6 +112,30 @@
             margin-bottom: 6px;
         }
 
+        .tagline .affiliation {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .tagline .focus {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 0;
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .tagline .focus span {
+            white-space: nowrap;
+        }
+
+        .tagline .focus span+span::before {
+            content: "·";
+            margin: 0 10px;
+            color: #b8c0bc;
+        }
+
         .meta-line {
             font-size: 0.88rem;
             color: var(--text-muted);
@@ -321,6 +345,16 @@
             border-bottom-color: var(--accent);
         }
 
+        .industry-section h3 {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .industry-section p {
+            max-width: 860px;
+        }
+
         .small-note {
             color: var(--text-muted);
             font-size: 0.85rem;
@@ -380,7 +414,12 @@
                 <div class="name">Ziran Zhang</div>
                 <div class="title-line">Researcher @ Shanghai Academy of AI for Science</div>
                 <div class="tagline">
-                    Working with <strong><a href="https://sites.google.com/site/zhusiyucs">Prof. Siyu Zhu</a></strong> · Visual Generation, Editing &amp; Evaluation · Model Acceleration &amp; Inference · Computational Photography &amp; Imaging
+                    <span class="affiliation">Working with <strong><a href="https://sites.google.com/site/zhusiyucs">Prof. Siyu Zhu</a></strong> at SAIS</span>
+                    <span class="focus" aria-label="Research focus">
+                        <span>Visual generation, editing &amp; evaluation</span>
+                        <span>Model acceleration &amp; inference</span>
+                        <span>Computational photography &amp; imaging</span>
+                    </span>
                 </div>
                 <div class="meta-line">
                     <span>Shanghai, China</span>
@@ -536,6 +575,20 @@
                     </div>
 
                 </div>
+            </div>
+        </section>
+
+        <!-- Industry Translation -->
+        <section class="section industry-section">
+            <h2 class="section-heading">Industry Translation</h2>
+            <div class="section-body">
+                <h3>HONOR "Da Wang Imaging": Cloud-enhanced Long-range Super-resolution</h3>
+                <p>
+                    At the HONOR Shanghai Research Institute, I contributed to the development and deployment of a diffusion-based cloud-enhanced long-range super-resolution pipeline for the flagship HONOR Magic smartphone series. The system replaced an earlier transformer-based solution and was integrated into a commercial imaging workflow.
+                </p>
+                <p class="small-note">
+                    The work covered diffusion-model adaptation, data curation, perceptual quality evaluation, artifact suppression, and efficient inference. Product-specific details are omitted because of confidentiality.
+                </p>
             </div>
         </section>
 
