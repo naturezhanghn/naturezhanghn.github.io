@@ -355,6 +355,17 @@
             max-width: 860px;
         }
 
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .industry-item {
+            padding-left: 16px;
+            border-left: 3px solid var(--accent);
+        }
+
         .small-note {
             color: var(--text-muted);
             font-size: 0.85rem;
@@ -398,6 +409,9 @@
             .card {
                 flex: 1 1 100%;
                 max-width: 100%;
+            }
+            .industry-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -580,14 +594,25 @@
         <!-- Industry Translation -->
         <section class="section industry-section">
             <h2 class="section-heading">Industry Translation</h2>
-            <div class="section-body">
-                <h3>HONOR "Da Wang Imaging": Cloud-enhanced Long-focal-length Super-resolution</h3>
-                <p>
-                    Developed and deployed a diffusion-based cloud enhancement pipeline for long-focal-length super-resolution on HONOR Magic flagship smartphones.
-                </p>
-                <p class="small-note">
-                    Contributions included model adaptation, data and quality evaluation, artifact suppression, and efficient inference.
-                </p>
+            <div class="section-body industry-grid">
+                <div class="industry-item">
+                    <h3>HONOR "Da Wang Imaging": Cloud-enhanced Long-focal-length Super-resolution</h3>
+                    <p>
+                        Developed and deployed a diffusion-based cloud enhancement pipeline for long-focal-length super-resolution on HONOR Magic flagship smartphones.
+                    </p>
+                    <p class="small-note">
+                        Contributions included model adaptation, data and quality evaluation, artifact suppression, and efficient inference.
+                    </p>
+                </div>
+                <div class="industry-item">
+                    <h3>Huawei Mate 60: RAW-SR AI Cloud Enhancement</h3>
+                    <p>
+                        Contributed to a RAW super-resolution and AI cloud enhancement project for the Huawei Mate 60 series during an internship at Huawei 2012 Laboratory.
+                    </p>
+                    <p class="small-note">
+                        Work focused on RAW image restoration, model evaluation, and practical imaging optimization.
+                    </p>
+                </div>
             </div>
         </section>
 
