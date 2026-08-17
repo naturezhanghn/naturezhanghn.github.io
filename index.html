@@ -764,6 +764,22 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Preserve the 4,125 visitors accumulated before Busuanzi tracking.
+        // Busuanzi reported 2 site UVs when this migration baseline was captured.
+        const legacyVisitorCount = 4125;
+        const busuanziBaseline = 2;
+        const visitorValue = document.getElementById('busuanzi_value_site_uv');
+        const visitorObserver = new MutationObserver(() => {
+            const liveCount = Number.parseInt(visitorValue.textContent, 10);
+            if (!Number.isFinite(liveCount)) return;
+
+            visitorObserver.disconnect();
+            visitorValue.textContent = String(
+                legacyVisitorCount + Math.max(0, liveCount - busuanziBaseline)
+            );
+        });
+        visitorObserver.observe(visitorValue, { childList: true, characterData: true, subtree: true });
+
         // Section reveal
         const sections = document.querySelectorAll('.section');
         const observer = new IntersectionObserver((entries) => {
