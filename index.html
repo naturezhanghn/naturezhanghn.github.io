@@ -414,6 +414,23 @@
             padding-top: 20px;
         }
 
+        .visitor-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 8px;
+            padding: 3px 10px;
+            border: 1px solid var(--border-soft);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.65);
+            font-variant-numeric: tabular-nums;
+        }
+
+        #busuanzi_value_site_uv {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         @media (max-width: 720px) {
             .page {
                 padding: 20px 14px;
@@ -735,11 +752,15 @@
         </section>
 
         <footer>
-            © <span id="year"></span> Ziran Zhang · Language, Image &amp; Video Generation · Efficient Inference
+            <div>© <span id="year"></span> Ziran Zhang · Language, Image &amp; Video Generation · Efficient Inference</div>
+            <div class="visitor-counter" id="busuanzi_container_site_uv" aria-label="Total visitor count">
+                Visitors: <span id="busuanzi_value_site_uv">—</span>
+            </div>
         </footer>
 
     </div>
 
+    <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
