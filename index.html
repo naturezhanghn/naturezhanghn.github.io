@@ -2,804 +2,1282 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ziran Zhang · Researcher at SAIS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ziran Zhang is a researcher at the Shanghai Academy of AI for Science. His work spans generative models, efficient inference, AI computational photography, and high-resolution remote sensing, with training at Zhejiang University's State Key Laboratory of Modern Optical Instrumentation.">
+
+    <title>Ziran Zhang | AI Agents &amp; Generative AI</title>
+
+    <meta
+        name="description"
+        content="Ziran Zhang is a researcher at the Shanghai Academy of AI for Science. His current research focuses on AI agents, building on a background in generative modeling, efficient inference, and computational imaging."
+    >
+
+    <meta name="theme-color" content="#fafbf9">
+
     <style>
         :root {
-            --bg: #f5f6fa;
-            --bg-card: #ffffff;
-            --text-main: #111827;
-            --text-muted: #6b7280;
-            --accent: #1f3c88;
-            --accent-soft: #e4ecff;
-            --border-soft: #e5e7eb;
-            --max-width: 1080px;
+            --bg: #fafbf9;
+            --surface: #ffffff;
+            --text: #202822;
+            --muted: #657069;
+            --accent: #27634e;
+            --accent-hover: #184632;
+            --accent-soft: #edf4ef;
+            --border: #e0e7e1;
+            --max-width: 1060px;
+            --radius: 12px;
         }
 
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 24px;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+            margin: 0;
             background: var(--bg);
-            color: var(--text-main);
-            line-height: 1.7;
+            color: var(--text);
+            font-family:
+                -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Helvetica, Arial, sans-serif;
             font-size: 15px;
+            line-height: 1.75;
             -webkit-font-smoothing: antialiased;
         }
 
         a {
             color: var(--accent);
             text-decoration: none;
-            transition: color 0.15s ease;
+            text-underline-offset: 3px;
         }
 
         a:hover {
-            color: #162b63;
+            color: var(--accent-hover);
             text-decoration: underline;
         }
 
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 5px;
+            border-radius: 3px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        strong {
+            font-weight: 650;
+        }
+
         .page {
-            max-width: var(--max-width);
+            width: min(100%, var(--max-width));
             margin: 0 auto;
-            padding: 40px 20px 48px;
-            opacity: 0;
-            transform: translateY(8px);
-            animation: fadeInUp 0.5s ease-out forwards;
+            padding: 46px 28px 28px;
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .skip-link {
+            position: absolute;
+            top: -80px;
+            left: 16px;
+            z-index: 100;
+            padding: 10px 16px;
+            background: var(--surface);
+            border: 1px solid var(--accent);
         }
 
-        .header {
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        /* Navigation */
+
+        .site-nav {
             display: flex;
             flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px 24px;
+            padding-bottom: 30px;
+            font-size: 0.86rem;
+        }
+
+        .site-nav a {
+            color: var(--muted);
+        }
+
+        .site-nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Profile */
+
+        .profile {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 156px;
+            gap: 38px;
             align-items: center;
-            gap: 28px;
-            margin-bottom: 32px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border-soft);
-        }
-
-        .profile-photo {
-            flex: 0 0 140px;
-        }
-
-        .profile-photo img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            background: #fff;
-            transition: box-shadow 0.2s ease;
-        }
-
-        .profile-photo img:hover {
-            box-shadow: 0 12px 32px rgba(26, 59, 122, 0.15);
-        }
-
-        .header-text {
-            flex: 1;
+            padding: 18px 0 32px;
+            border-bottom: 1px solid var(--border);
         }
 
         .name {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
+            font-size: clamp(2.1rem, 5vw, 2.8rem);
+            line-height: 1.15;
+            font-weight: 720;
+            letter-spacing: -0.045em;
         }
 
-        .title-line {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 4px;
+        .position {
+            margin-bottom: 14px;
+            color: var(--muted);
+            font-size: 1rem;
         }
 
-        .tagline {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            margin-bottom: 6px;
+        .position a {
+            color: inherit;
         }
 
-        .tagline .affiliation {
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .tagline .focus {
+        .research-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px 0;
+            gap: 8px;
+            margin-bottom: 17px;
+        }
+
+        .tag {
+            padding: 3px 10px;
+            background: var(--accent-soft);
             color: var(--accent);
+            border-radius: 5px;
+            font-size: 0.77rem;
+            font-weight: 550;
+        }
+
+        .profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
             font-size: 0.88rem;
-            font-weight: 600;
         }
 
-        .tagline .focus span {
-            white-space: nowrap;
+        .profile-photo {
+            width: 156px;
+            height: 156px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--surface);
+            box-shadow: 0 5px 24px rgba(30, 60, 40, 0.07);
         }
 
-        .tagline .focus span+span::before {
-            content: "·";
-            margin: 0 10px;
-            color: #b8c0bc;
-        }
+        /* Sections */
 
-        .meta-line {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
-        .meta-line span+span::before {
-            content: "·";
-            margin: 0 8px;
-            color: #ccc;
-        }
-
-        .links a {
-            font-size: 0.85rem;
-            margin-right: 16px;
-            font-weight: 500;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
-        }
-
-        .links a:hover {
-            border-bottom-color: var(--accent);
-        }
-
-        .section {
-            margin-bottom: 36px;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+        section {
+            margin-top: 40px;
         }
 
         .section-heading {
-            font-size: 1.15rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 8px 20px;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: 1.18rem;
             font-weight: 650;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--border-soft);
-            letter-spacing: -0.01em;
-            color: var(--text-main);
+            letter-spacing: -0.025em;
         }
 
-        .section-body {
-            font-size: 0.95rem;
-            color: #2d2d3f;
-        }
-
-        .section-body p {
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-            font-weight: 600;
-        }
-
-        .pill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 4px;
-        }
-
-        .pill {
-            padding: 4px 14px;
-            border-radius: 20px;
-            background: var(--accent-soft);
-            color: var(--accent);
-            font-size: 0.78rem;
-            font-weight: 500;
-            border: 1px solid rgba(26, 59, 122, 0.06);
-        }
-
-        .pill.muted {
-            background: #e5e7eb;
-            color: #4b5563;
-            border-color: rgba(148, 163, 184, 0.5);
-        }
-
-        .news-list {
-            list-style: none;
-            font-size: 0.88rem;
-        }
-
-        .news-list li {
-            margin-bottom: 4px;
-            display: flex;
-            gap: 12px;
-        }
-
-        .news-date {
-            min-width: 70px;
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-
-        .skills-grid>div {
-            flex: 1 1 240px;
-        }
-
-        .list-tight ul {
-            padding-left: 1.2rem;
-        }
-
-        .list-tight li {
-            margin-bottom: 4px;
-        }
-
-        .two-col {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-
-        .two-col>div {
-            flex: 1 1 240px;
-        }
-
-        .sub-list {
-            padding-left: 1.2rem;
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
-
-        .card-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 8px;
-        }
-
-        .card {
-            flex: 1 1 280px;
-            max-width: 340px;
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border-soft);
-            padding: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            border-color: var(--accent);
-        }
-
-        .card img {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: contain;
-            border-radius: 8px;
-            background: #f0f2f5;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .card-title {
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 2px;
-        }
-
-        .card-venue {
-            font-size: 0.8rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-
-        .card-desc {
+        .section-heading > a {
             font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            flex: 1;
+            font-weight: 400;
         }
 
-        .card-tags {
-            font-size: 0.72rem;
-            color: #888;
-            margin-bottom: 6px;
+        .about-copy {
+            max-width: 940px;
         }
 
-        .card-links a {
-            font-size: 0.78rem;
-            font-weight: 500;
-            margin-right: 10px;
-            border-bottom: 1px dotted transparent;
+        .vision {
+            margin: 20px 0;
+            padding: 17px 21px;
+            border-left: 3px solid var(--accent);
+            background: var(--accent-soft);
+            border-radius: 0 8px 8px 0;
         }
 
-        .card-links a:hover {
-            border-bottom-color: var(--accent);
+        .vision p {
+            margin-bottom: 0;
         }
 
-        .industry-section h3 {
+        .eyebrow {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--accent);
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .small {
+            font-size: 0.86rem;
+        }
+
+        /* Research */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .research-card {
+            padding: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .research-card h3 {
+            margin-bottom: 9px;
             font-size: 1rem;
-            line-height: 1.4;
-            margin-bottom: 8px;
+            line-height: 1.45;
         }
 
-        .industry-section p {
-            max-width: 860px;
+        .research-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.89rem;
         }
+
+        .research-note {
+            margin-top: 16px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* Publications */
+
+        .publication-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .publication {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 24px;
+            padding: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .publication-image {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: contain;
+            align-self: center;
+            background: #f5f7f4;
+            border-radius: 7px;
+        }
+
+        .publication h3 {
+            margin-bottom: 4px;
+            font-size: 1.02rem;
+            line-height: 1.45;
+            letter-spacing: -0.01em;
+        }
+
+        .publication h3 a {
+            color: var(--text);
+        }
+
+        .publication h3 a:hover {
+            color: var(--accent);
+        }
+
+        .publication-venue {
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .publication-authors {
+            margin-bottom: 6px;
+            color: var(--muted);
+            font-size: 0.84rem;
+        }
+
+        .publication-description {
+            margin-bottom: 10px;
+            color: var(--muted);
+            font-size: 0.89rem;
+        }
+
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.82rem;
+            font-weight: 550;
+        }
+
+        /* Industry */
 
         .industry-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
+            gap: 28px;
         }
 
         .industry-item {
-            padding-left: 16px;
-            border-left: 3px solid var(--accent);
+            padding-left: 18px;
+            border-left: 2px solid var(--border);
         }
 
-        .research-progress {
-            color: var(--text-muted);
+        .industry-item h3 {
+            margin-bottom: 4px;
+            font-size: 1rem;
+            line-height: 1.45;
         }
 
-        .progress-row {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 18px;
-            padding: 12px 0;
-            border-top: 1px solid var(--border-soft);
-        }
-
-        .progress-row strong {
-            color: var(--text-main);
-            font-size: 0.9rem;
-        }
-
-        .progress-status {
-            flex: 0 0 auto;
+        .industry-meta {
+            margin-bottom: 9px;
             color: var(--accent);
-            font-size: 0.78rem;
+            font-size: 0.82rem;
+        }
+
+        .industry-item p:last-child {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.89rem;
+        }
+
+        /* Experience and education */
+
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 34px;
+        }
+
+        .subheading {
+            margin-bottom: 17px;
+            font-size: 0.98rem;
+            font-weight: 650;
+        }
+
+        .timeline {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .timeline li {
+            display: grid;
+            grid-template-columns: 104px minmax(0, 1fr);
+            gap: 12px;
+            margin-bottom: 19px;
+        }
+
+        .timeline-date {
+            padding-top: 2px;
+            color: var(--muted);
+            font-size: 0.79rem;
+            white-space: nowrap;
+        }
+
+        .timeline-title {
+            display: block;
+            font-size: 0.9rem;
+            line-height: 1.5;
             font-weight: 600;
         }
 
-        .small-note {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-bottom: 6px;
+        .timeline-org {
+            display: block;
+            margin-top: 2px;
+            font-size: 0.86rem;
         }
 
-        .contact-list {
-            list-style: none;
+        .timeline-note {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.81rem;
         }
 
-        .contact-list li {
-            margin-bottom: 4px;
+        /* Service and contact */
+
+        .clean-list {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 0.89rem;
         }
 
-        .contact-aside {
-            font-size: 0.88rem;
+        .clean-list li {
+            margin-bottom: 9px;
         }
 
-        .contact-aside p {
-            margin-bottom: 12px;
+        .contact-copy {
+            max-width: 610px;
+        }
+
+        .contact-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .personal-note {
+            color: var(--muted);
+            font-size: 0.89rem;
+        }
+
+        .personal-note h3 {
+            color: var(--text);
         }
 
         footer {
-            margin-top: 40px;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-align: center;
-            border-top: 1px solid var(--border-soft);
-            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px 20px;
+            margin-top: 45px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.76rem;
         }
 
-        .visitor-counter {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 8px;
-            padding: 3px 10px;
-            border: 1px solid var(--border-soft);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.65);
-            font-variant-numeric: tabular-nums;
+        footer p {
+            margin: 0;
         }
 
-        #busuanzi_value_site_uv {
-            color: var(--accent);
-            font-weight: 600;
-        }
+        /* Responsive */
 
-        @media (max-width: 720px) {
-            .page {
-                padding: 20px 14px;
-            }
-            .header {
-                gap: 16px;
-            }
-            .profile-photo {
-                flex: 0 0 80px;
-            }
-            .profile-photo img {
-                width: 80px;
-                height: 80px;
-            }
-            .name {
-                font-size: 1.6rem;
-            }
-            .card {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-            .industry-grid {
+        @media (max-width: 820px) {
+            .research-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .research-card {
+                padding: 18px 20px;
+            }
+
+            .publication {
+                grid-template-columns: 180px minmax(0, 1fr);
+                gap: 20px;
+            }
+
+            .two-col {
+                gap: 26px;
+            }
+
+            .timeline li {
+                grid-template-columns: 1fr;
+                gap: 3px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 22px 18px;
+            }
+
+            .site-nav {
+                justify-content: flex-start;
+                gap: 8px 17px;
+                padding-bottom: 22px;
+                font-size: 0.8rem;
+            }
+
+            .profile {
+                grid-template-columns: minmax(0, 1fr) 88px;
+                gap: 17px;
+                align-items: start;
+                padding-top: 8px;
+            }
+
+            .profile-photo {
+                width: 88px;
+                height: 88px;
+                border-width: 3px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .position {
+                font-size: 0.89rem;
+            }
+
+            .profile-links {
+                gap: 6px 15px;
+                font-size: 0.82rem;
+            }
+
+            .tag {
+                font-size: 0.71rem;
+            }
+
+            section {
+                margin-top: 32px;
+            }
+
+            .vision {
+                padding: 15px 17px;
+            }
+
+            .publication {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 17px;
+            }
+
+            .publication-image {
+                max-height: 220px;
+            }
+
+            .industry-grid,
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .timeline li {
+                grid-template-columns: 104px minmax(0, 1fr);
+                gap: 12px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                font-size: 11pt;
+            }
+
+            .page {
+                max-width: none;
+                padding: 0;
+            }
+
+            .site-nav,
+            .skip-link,
+            .back-to-top {
+                display: none;
+            }
+
+            section {
+                margin-top: 24px;
+            }
+
+            .publication,
+            .research-card,
+            .industry-item,
+            .timeline li {
+                break-inside: avoid;
+            }
+
+            .publication {
+                grid-template-columns: 150px minmax(0, 1fr);
+            }
+
+            a {
+                color: inherit;
+            }
+
+            .profile-photo {
+                box-shadow: none;
             }
         }
     </style>
 </head>
-<body>
+
+<body id="top">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <div class="page">
 
-        <!-- Header / Profile -->
-        <header class="header">
-            <div class="profile-photo">
-                <img src="images/pic.png" alt="Ziran Zhang" loading="lazy">
-            </div>
-            <div class="header-text">
-                <div class="name">Ziran Zhang</div>
-                <div class="title-line">Researcher · Shanghai Academy of AI for Science</div>
-                <div class="tagline">
-                    <span class="focus" aria-label="Research focus">
-                        <span>Language, image &amp; video generation</span>
-                        <span>Evaluation &amp; efficient inference</span>
-                        <span>Computational Photography &amp; Imaging</span>
-                    </span>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Profile -->
+        <header class="profile">
+            <div>
+                <h1 class="name">Ziran Zhang</h1>
+
+                <p class="position">
+                    Researcher<br>
+                    <a href="https://www.sais.com.cn">
+                        Shanghai Academy of AI for Science
+                    </a>
+                </p>
+
+                <div class="research-tags" aria-label="Research interests">
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Generative Modeling</span>
+                    <span class="tag">Evaluation &amp; Efficient Inference</span>
                 </div>
-                <div class="meta-line">
-                    <span>Shanghai, China</span>
-                    <span>Ph.D. @ Zhejiang University (2025)</span>
-                </div>
-                <div class="links">
+
+                <div class="profile-links">
                     <a href="mailto:zhangziran@sais.org.cn">Email</a>
-                    <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>
+                    <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&amp;hl=en">
+                        Google Scholar
+                    </a>
                     <a href="https://github.com/naturezhanghn">GitHub</a>
                     <a href="https://orcid.org/0000-0001-7003-2735">ORCID</a>
+
+                    <!-- Upload your CV before enabling this link.
+                    <a href="files/Ziran_Zhang_CV.pdf">CV</a>
+                    -->
                 </div>
             </div>
+
+            <img
+                class="profile-photo"
+                src="images/pic.png"
+                alt="Portrait of Ziran Zhang"
+                width="156"
+                height="156"
+                fetchpriority="high"
+            >
         </header>
 
-        <!-- About Me -->
-        <section class="section">
-            <h2 class="section-heading">About Me</h2>
-            <div class="section-body">
-                <p>
-                    I am a <strong>Researcher</strong> at the <a href="https://www.sais.com.cn"><strong>Shanghai Academy of AI for Science (SAIS)</strong></a>, working with <a href="https://sites.google.com/site/zhusiyucs"><strong>Prof. Siyu Zhu</strong></a>. My current work involves <strong>language, image, and video generation</strong>, visual editing, evaluation of generative models, and efficient inference for diffusion-based systems.
-                </p>
-                <p>
-                    I earned my Ph.D. from <a href="http://opt.zju.edu.cn/"><strong>Zhejiang University</strong></a> in June 2025, where I was affiliated with the <a href="http://opt.zju.edu.cn/2017/0401/c72719a1527391/page.htm"><strong>State Key Laboratory of Modern Optical Instrumentation</strong></a> and specialized in <strong>AI computational photography</strong>. My work during this period included mobile imaging and high-resolution remote-sensing image restoration. Before joining SAIS, I worked as a <strong>Senior Vision Algorithm Engineer</strong> at <a href="https://www.honor.com/cn/"><strong>HONOR</strong></a> on generative imaging systems. I also participated in the <a href="https://www.shlab.org.cn/news/5443403.html"><strong>Pujiang National Laboratory Joint Training Ph.D. Program (2022–2025)</strong></a>, jointly advised by <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en">Prof. Yueting Chen</a> and <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&hl=en">Prof. Tianfan Xue</a>.
-                </p>
-                <p>
-                    I obtained my B.S. from <a href="https://www.csu.edu.cn/"><strong>Central South University</strong></a>, where I received the National Scholarship and was recognized as an Outstanding Graduate of Hunan Province. During my undergraduate studies, I also co-authored a paper on <a href="https://link.springer.com/article/10.1186/s11671-021-03505-2">light sensors</a> with <a href="https://faculty.csu.edu.cn/hejun/zh_CN/index.htm">Jun He</a>. My Master's research at Zhejiang University was advised by <a href="https://person.zju.edu.cn/0086127">Prof. Huajun Feng</a>. Afterwards, I pursued my Ph.D. through a direct Master-to-Ph.D. program, with joint research supervision from Shanghai AI Lab.
-                </p>
-                <p>
-                    I value careful experimentation, transparent evaluation, and steady collaboration, and I am open to exchanging ideas with researchers and students interested in generative vision and efficient inference.
-                </p>
-            </div>
-        </section>
+        <main id="main">
 
-        <!-- Research Interests -->
-        <section class="section">
-            <h2 class="section-heading">Research Interests</h2>
-            <div class="section-body">
-                <div class="pill-list">
-                    <div class="pill">Language, Image &amp; Video Generation</div>
-                    <div class="pill">Generative Model Evaluation</div>
-                    <div class="pill">Efficient Inference</div>
-                    <div class="pill muted">Computational Photography &amp; Imaging</div>
+            <!-- About -->
+            <section id="about" aria-labelledby="about-heading">
+                <div class="section-heading">
+                    <h2 id="about-heading">About</h2>
                 </div>
-            </div>
-        </section>
 
-        <!-- Selected Updates -->
-        <section class="section">
-            <h2 class="section-heading">Selected Updates</h2>
-            <div class="section-body">
-                <ul class="news-list">
-                   <li><span class="news-date">01.2025</span><span>A paper is published in <strong>IEEE TGRS 2025</strong> on physics-guided jitter-aware image restoration.</span></li>
-                   <li><span class="news-date">12.2024</span><span>A paper is published in <strong>SIGGRAPH Asia 2024</strong> on event-based low-light frame interpolation.</span></li>
-                   <li><span class="news-date">07.2024</span><span>A paper is published in <strong>AAAI 2024</strong> on deep restoration for linear-array imaging.</span></li>
-                   <li><span class="news-date">10.2023</span><span>A paper is published in <strong>Optics Express 2023</strong> on computational imaging.</span></li>
-                   <li><span class="news-date">08.2023</span><span>A paper is published in <strong>IEEE TGRS 2023</strong> on real-world imaging pipelines and restoration.</span></li>
-                   <li><span class="news-date">06.2023</span><span>A paper is published in <strong>AAAI 2023</strong> in computer vision and imaging.</span></li>
-                   <li><span class="news-date">11.2022</span><span>A paper is published in <strong>Optics Express 2022</strong> on deep reconstruction for interferometric imaging.</span></li>
-                </ul>
-            </div>
-        </section>
+                <div class="about-copy">
+                    <p>
+                        I am a Researcher at the
+                        <a href="https://www.sais.com.cn">
+                            Shanghai Academy of AI for Science (SAIS)
+                        </a>,
+                        working with
+                        <a href="https://sites.google.com/site/zhusiyucs">
+                            Prof. Siyu Zhu
+                        </a>.
+                        My current research focuses on <strong>AI agents</strong>.
+                        I am interested in moving beyond content generation
+                        toward systems that can carry out useful tasks
+                        in collaboration with people.
+                        My background spans generative modeling,
+                        efficient inference, and computational imaging.
+                    </p>
 
-        <!-- Technical Skills -->
-        <section class="section">
-            <h2 class="section-heading">Technical Skills</h2>
-            <div class="section-body skills-grid">
-                <div class="list-tight">
-                    <h3>Language, Image &amp; Video Generation</h3>
-                    <ul>
-                        <li>Language, image, and video generation, editing, and quality assessment.</li>
-                        <li>Multimodal data preparation and model adaptation.</li>
-                    </ul>
-                </div>
-                <div class="list-tight">
-                    <h3>Diffusion Model Acceleration &amp; Inference</h3>
-                    <ul>
-                        <li>Diffusion sampling, distillation, and inference optimization.</li>
-                        <li>Evaluation and deployment support.</li>
-                    </ul>
-                </div>
-                <div class="list-tight">
-                    <h3>Computational Photography &amp; Imaging</h3>
-                    <ul>
-                        <li>Low-light imaging, event-based vision, and line-scan restoration.</li>
-                        <li>Interferometric and optical reconstruction.</li>
-                        <li>Imaging pipelines and practical restoration.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Selected Publications -->
-        <section class="section">
-            <h2 class="section-heading">Selected Publications</h2>
-            <div class="section-body">
-                <p class="small-note">Full list on <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a>.</p>
-                <div class="card-grid">
-
-                    <div class="card">
-                        <img src="images/tgrs2025.png" alt="TGRS 2025" loading="lazy">
-                        <div class="card-title">Jitter-Aware Restoration with Equivalent Jitter Model</div>
-                        <div class="card-venue">IEEE TGRS, 2025</div>
-                        <div class="card-desc">Physics-guided restoration for push-broom imaging.</div>
-                        <div class="card-tags">#remote-sensing #deblurring</div>
-                        <div class="card-links">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/10841472">Paper</a>
-                            <a href="https://github.com/naturezhanghn/EJM">Code</a>
-                        </div>
+                    <div class="vision">
+                        <span class="eyebrow">Long-term vision</span>
+                        <p>
+                            My long-term ambition is to contribute to
+                            <strong>artificial general intelligence
+                            that expands human capabilities</strong>.
+                            I hope to help build AI that reduces repetitive
+                            labor, broadens access to knowledge and tools,
+                            and enables new forms of collaboration and
+                            social organization.
+                            I am motivated not only by what AI can automate,
+                            but also by how its benefits can be broadly
+                            shared—giving people greater freedom to pursue
+                            creative, meaningful, and self-directed work.
+                        </p>
                     </div>
 
-                    <div class="card">
-                        <img src="images/aaai2023.png" alt="AAAI 2023" loading="lazy">
-                        <div class="card-title">Real-world Deep Local Motion Deblurring</div>
-                        <div class="card-venue">AAAI, 2023</div>
-                        <div class="card-desc">Spatially-varying blur modeling for dynamic scenes.</div>
-                        <div class="card-tags">#deblurring #real-world</div>
-                        <div class="card-links">
-                            <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">Paper</a>
-                            <a href="https://github.com/LeiaLi/ReLoBlur">Code</a>
+                    <p>
+                        I received my Ph.D. in Optical Engineering from
+                        <a href="http://opt.zju.edu.cn/">
+                            Zhejiang University
+                        </a>
+                        in June 2025, where I was affiliated with the
+                        <a href="http://opt.zju.edu.cn/2017/0401/c72719a1527391/page.htm">
+                            State Key Laboratory of Modern Optical Instrumentation
+                        </a>.
+                        My doctoral research focused on computational
+                        photography and image restoration.
+                        I also participated in the
+                        <a href="https://www.shlab.org.cn/news/5443403.html">
+                            Pujiang National Laboratory Joint Training Ph.D. Program
+                        </a>,
+                        with joint supervision from
+                        <a href="https://scholar.google.com/citations?user=gS-0tfAAAAAJ&amp;hl=en">
+                            Prof. Yueting Chen
+                        </a>
+                        and
+                        <a href="https://scholar.google.com/citations?user=RfSQKrIAAAAJ&amp;hl=en">
+                            Prof. Tianfan Xue
+                        </a>.
+                    </p>
+
+                    <p>
+                        Before joining SAIS, I worked as a Senior Vision
+                        Algorithm Engineer at
+                        <a href="https://www.honor.com/cn/">HONOR</a>
+                        on diffusion-based mobile imaging.
+                        My experience in imaging research and industry
+                        informs my interest in building AI systems that
+                        work under real-world quality and efficiency constraints.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Research -->
+            <section id="research" aria-labelledby="research-heading">
+                <div class="section-heading">
+                    <h2 id="research-heading">Research Directions</h2>
+                </div>
+
+                <div class="research-grid">
+                    <article class="research-card">
+                        <span class="eyebrow">Current focus</span>
+                        <h3>AI Agents &amp; Human–AI Collaboration</h3>
+                        <p>
+                            I am working on AI agents, with the goal of
+                            turning model capabilities into useful assistance
+                            with real-world tasks.
+                            I am interested in how these systems can
+                            complement human expertise and expand
+                            what people can accomplish.
+                        </p>
+                    </article>
+
+                    <article class="research-card">
+                        <span class="eyebrow">Supporting research</span>
+                        <h3>Generative Modeling &amp; Efficient Inference</h3>
+                        <p>
+                            My work involves language, image, and video
+                            generation, model evaluation, and efficient
+                            inference.
+                            I am interested in the trade-offs among output
+                            quality, reliability, and computational cost,
+                            particularly in practical generative systems.
+                        </p>
+                    </article>
+
+                    <article class="research-card">
+                        <span class="eyebrow">Research foundation</span>
+                        <h3>Computational Imaging &amp; Restoration</h3>
+                        <p>
+                            My earlier research combines imaging models
+                            with learning-based reconstruction to address
+                            motion blur, low light, platform jitter,
+                            and atmospheric turbulence.
+                            Applications include mobile photography and
+                            high-resolution remote sensing.
+                        </p>
+                    </article>
+                </div>
+
+                <p class="research-note">
+                    The publications below reflect my work in computational
+                    imaging and restoration; AI agents are my current research focus.
+                </p>
+            </section>
+
+            <!-- Publications -->
+            <section id="publications" aria-labelledby="publications-heading">
+                <div class="section-heading">
+                    <h2 id="publications-heading">Selected Publications</h2>
+
+                    <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&amp;hl=en">
+                        Full list on Google Scholar ↗
+                    </a>
+                </div>
+
+                <!--
+                    Before publishing:
+                    1. Verify each official publication title and venue.
+                    2. Add the full author list below each title.
+                    3. Bold Ziran Zhang's name.
+                    4. Mark equal contribution or corresponding authorship
+                       only when supported by the publication.
+                    The display titles below are retained from the supplied page.
+                -->
+
+                <div class="publication-list">
+
+                    <article class="publication">
+                        <img
+                            class="publication-image"
+                            src="images/tgrs2025.png"
+                            alt="Overview of jitter-aware restoration for push-broom imaging"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <div>
+                            <h3>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10841472">
+                                    Jitter-Aware Restoration with Equivalent Jitter Model
+                                </a>
+                            </h3>
+
+                            <!-- Add verified authors here:
+                            <p class="publication-authors">...</p>
+                            -->
+
+                            <p class="publication-venue">
+                                IEEE Transactions on Geoscience and Remote Sensing, 2025
+                            </p>
+
+                            <p class="publication-description">
+                                Physics-guided restoration for push-broom
+                                imaging using an equivalent jitter model.
+                            </p>
+
+                            <div class="publication-links">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10841472">
+                                    Paper
+                                </a>
+                                <a href="https://github.com/naturezhanghn/EJM">
+                                    Code
+                                </a>
+                            </div>
                         </div>
+                    </article>
+
+                    <article class="publication">
+                        <img
+                            class="publication-image"
+                            src="images/sa2024.png"
+                            alt="Overview of event-based low-light frame interpolation"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <div>
+                            <h3>
+                                <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">
+                                    Event-based Low-light Frame Interpolation
+                                </a>
+                            </h3>
+
+                            <!-- Add the verified author list here. -->
+
+                            <p class="publication-venue">
+                                SIGGRAPH Asia, 2024
+                            </p>
+
+                            <p class="publication-description">
+                                A sim-to-real framework for event-based
+                                frame interpolation in low-light video.
+                            </p>
+
+                            <div class="publication-links">
+                                <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">
+                                    Paper
+                                </a>
+                                <a href="https://github.com/OpenImagingLab/Sim2Real">
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <img
+                            class="publication-image"
+                            src="images/aaai2023.png"
+                            alt="Examples of real-world local motion deblurring"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <div>
+                            <h3>
+                                <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">
+                                    Real-world Deep Local Motion Deblurring
+                                </a>
+                            </h3>
+
+                            <!-- Add the verified author list here. -->
+
+                            <p class="publication-venue">
+                                AAAI, 2023
+                            </p>
+
+                            <p class="publication-description">
+                                Modeling and restoring spatially varying
+                                local motion blur in real-world dynamic scenes.
+                            </p>
+
+                            <div class="publication-links">
+                                <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25215/24987">
+                                    Paper
+                                </a>
+                                <a href="https://github.com/LeiaLi/ReLoBlur">
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <img
+                            class="publication-image"
+                            src="images/oe2023.png"
+                            alt="Overview of spatial-frequency learning for atmospheric turbulence compensation"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <div>
+                            <h3>
+                                <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">
+                                    ASF-Transformer for Atmospheric Turbulence
+                                </a>
+                            </h3>
+
+                            <!-- Add the verified author list here. -->
+
+                            <p class="publication-venue">
+                                Optics Express, 2023
+                            </p>
+
+                            <p class="publication-description">
+                                Alternating spatial- and frequency-domain
+                                learning for atmospheric turbulence compensation.
+                            </p>
+
+                            <div class="publication-links">
+                                <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">
+                                    Paper
+                                </a>
+                                <a href="https://github.com/naturezhanghn/ASFTransformer">
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Industry research -->
+            <section id="industry" aria-labelledby="industry-heading">
+                <div class="section-heading">
+                    <h2 id="industry-heading">Selected Industry Research</h2>
+                </div>
+
+                <div class="industry-grid">
+                    <article class="industry-item">
+                        <h3>Diffusion-Based Telephoto Enhancement</h3>
+
+                        <p class="industry-meta">
+                            HONOR · 2025
+                        </p>
+
+                        <p>
+                            Contributed to a cloud-based diffusion enhancement
+                            pipeline for telephoto super-resolution on
+                            HONOR Magic series smartphones.
+                            My work included model adaptation, data and
+                            image-quality evaluation, artifact suppression,
+                            and efficient inference.
+                        </p>
+                    </article>
+
+                    <article class="industry-item">
+                        <h3>RAW Super-Resolution &amp; Cloud Enhancement</h3>
+
+                        <p class="industry-meta">
+                            Huawei 2012 Laboratory · 2022
+                        </p>
+
+                        <p>
+                            Worked on RAW super-resolution and AI cloud
+                            enhancement during an internship,
+                            focusing on image restoration, model evaluation,
+                            and imaging pipeline optimization.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Experience and education -->
+            <section id="experience" aria-labelledby="experience-heading">
+                <div class="section-heading">
+                    <h2 id="experience-heading">Experience &amp; Education</h2>
+                </div>
+
+                <div class="two-col">
+
+                    <div>
+                        <h3 class="subheading">
+                            Appointments &amp; Research Experience
+                        </h3>
+
+                        <ul class="timeline">
+                            <li>
+                                <span class="timeline-date">2026–Present</span>
+                                <div>
+                                    <span class="timeline-title">Researcher</span>
+                                    <a
+                                        class="timeline-org"
+                                        href="https://www.sais.com.cn"
+                                    >
+                                        Shanghai Academy of AI for Science
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="timeline-date">2025–2026</span>
+                                <div>
+                                    <span class="timeline-title">
+                                        Senior Vision Algorithm Engineer
+                                    </span>
+                                    <a
+                                        class="timeline-org"
+                                        href="https://www.honor.com/cn/"
+                                    >
+                                        HONOR
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="timeline-date">2023–2025</span>
+                                <div>
+                                    <span class="timeline-title">
+                                        Trainee Researcher
+                                    </span>
+                                    <a
+                                        class="timeline-org"
+                                        href="https://www.shlab.org.cn/"
+                                    >
+                                        Shanghai AI Lab
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="timeline-date">2022</span>
+                                <div>
+                                    <span class="timeline-title">
+                                        Media Algorithm Intern
+                                    </span>
+                                    <a
+                                        class="timeline-org"
+                                        href="https://www.huawei.com/cn/"
+                                    >
+                                        Huawei 2012 Laboratory
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="card">
-                        <img src="images/sa2024.png" alt="SIGGRAPH Asia 2024" loading="lazy">
-                        <div class="card-title">Event-based Low-light Frame Interpolation</div>
-                        <div class="card-venue">SIGGRAPH Asia, 2024</div>
-                        <div class="card-desc">Sim-to-real framework for event-based low-light video.</div>
-                        <div class="card-tags">#event-cameras #low-light</div>
-                        <div class="card-links">
-                            <a href="https://dl.acm.org/doi/pdf/10.1145/3680528.3687649">Paper</a>
-                            <a href="https://github.com/OpenImagingLab/Sim2Real">Code</a>
-                        </div>
+                    <div>
+                        <h3 class="subheading">Education</h3>
+
+                        <ul class="timeline">
+                            <li>
+                                <span class="timeline-date">2022–2025</span>
+                                <div>
+                                    <span class="timeline-title">
+                                        Ph.D. in Optical Engineering
+                                    </span>
+                                    <a
+                                        class="timeline-org"
+                                        href="http://opt.zju.edu.cn/"
+                                    >
+                                        Zhejiang University
+                                    </a>
+                                </div>
+                            </li>
+
+                            <!--
+                                If a separate master's degree was awarded,
+                                replace this entry with the exact degree title.
+                                Otherwise, retain the research-stage description.
+                            -->
+                            <li>
+                                <span class="timeline-date">2020–2022</span>
+                                <div>
+                                    <span class="timeline-title">
+                                        Graduate Research in Optical Engineering
+                                    </span>
+                                    <a
+                                        class="timeline-org"
+                                        href="http://opt.zju.edu.cn/"
+                                    >
+                                        Zhejiang University
+                                    </a>
+                                    <span class="timeline-note">
+                                        Master's-stage research advised by
+                                        <a href="https://person.zju.edu.cn/0086127">
+                                            Prof. Huajun Feng
+                                        </a>;
+                                        subsequently transitioned to the
+                                        Ph.D. program.
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="timeline-date">2016–2020</span>
+                                <div>
+                                    <span class="timeline-title">
+                                        B.S. in Optoelectronic Information
+                                        Science and Engineering
+                                    </span>
+                                    <a
+                                        class="timeline-org"
+                                        href="https://www.csu.edu.cn/"
+                                    >
+                                        Central South University
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="card">
-                        <img src="images/oe2023.png" alt="Optics Express 2023" loading="lazy">
-                        <div class="card-title">ASF-Transformer for Atmospheric Turbulence</div>
-                        <div class="card-venue">Optics Express, 2023</div>
-                        <div class="card-desc">Alternating spatial-frequency learning for turbulence compensation.</div>
-                        <div class="card-tags">#atmospheric #imaging</div>
-                        <div class="card-links">
-                            <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-31-22-37128">Paper</a>
-                            <a href="https://github.com/naturezhanghn/ASFTransformer">Code</a>
-                        </div>
+                </div>
+            </section>
+
+            <!-- Academic service and honors -->
+            <section id="service" aria-labelledby="service-heading">
+                <div class="section-heading">
+                    <h2 id="service-heading">
+                        Academic Service &amp; Selected Honors
+                    </h2>
+                </div>
+
+                <div class="two-col">
+                    <div>
+                        <h3 class="subheading">Academic Service</h3>
+
+                        <ul class="clean-list">
+                            <li>
+                                <strong>Program Committee:</strong>
+                                AAAI 2026, 2027
+                            </li>
+                            <li>
+                                <strong>Conference Reviewing:</strong>
+                                ACM Multimedia, ECCV, ICCV, BMVC
+                            </li>
+                            <li>
+                                <strong>Journal Reviewing:</strong>
+                                IEEE Transactions on Computational Imaging,
+                                IEEE Transactions on Geoscience and Remote Sensing,
+                                Optics Express, Applied Optics
+                            </li>
+                        </ul>
                     </div>
 
-                </div>
-            </div>
-        </section>
+                    <div>
+                        <h3 class="subheading">Selected Honors</h3>
 
-        <!-- Research in Progress -->
-        <section class="section research-progress">
-            <h2 class="section-heading">Research in Progress</h2>
-            <div class="section-body">
-                <div class="progress-row">
-                    <strong>Applications of Multimodal Large Models in the Humanities and Social Sciences</strong>
-                    <span class="progress-status">In progress</span>
+                        <ul class="clean-list">
+                            <li>
+                                Outstanding Graduate of Zhejiang University, 2025
+                            </li>
+                            <li>
+                                Outstanding Graduate of Hunan Province, 2020
+                            </li>
+                            <li>
+                                National Scholarship, 2019
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="progress-row">
-                    <strong>Evaluation &amp; Acceleration of Multimodal Large Models</strong>
-                    <span class="progress-status">In progress</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Selected Industry Projects -->
-        <section class="section industry-section">
-            <h2 class="section-heading">Selected Industry Projects</h2>
-            <div class="section-body industry-grid">
-                <div class="industry-item">
-                    <h3>2025 · HONOR "Da Wang Imaging": Cloud-enhanced Long-focal-length Super-resolution</h3>
-                    <p>
-                        Worked on a diffusion-based cloud enhancement pipeline for long-focal-length super-resolution on HONOR Magic series smartphones.
-                    </p>
-                    <p class="small-note">
-                        The work included model adaptation, data and quality evaluation, artifact suppression, and efficient inference.
-                    </p>
+            <!-- Contact -->
+            <section id="contact" aria-labelledby="contact-heading">
+                <div class="section-heading">
+                    <h2 id="contact-heading">Contact</h2>
                 </div>
-                <div class="industry-item">
-                    <h3>2022 · Huawei Mate 60: RAW-SR AI Cloud Enhancement</h3>
-                    <p>
-                        Worked on a RAW super-resolution and AI cloud enhancement project for the Huawei Mate 60 series during an internship at Huawei 2012 Laboratory.
-                    </p>
-                    <p class="small-note">
-                        Work focused on RAW image restoration, model evaluation, and imaging optimization.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Experience & Education -->
-        <section class="section">
-            <h2 class="section-heading">Experience &amp; Education</h2>
-            <div class="section-body two-col">
-                <div class="list-tight">
-                    <h3>Professional</h3>
-                    <ul>
-                        <li><strong>2026–Present</strong> — Researcher, <a href="https://www.sais.com.cn">SAIS</a></li>
-                        <li><strong>2025–2026</strong> — Senior Vision Algorithm Engineer, <a href="https://www.honor.com/cn/">HONOR</a></li>
-                        <li><strong>2023–2025</strong> — Trainee Researcher, <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a></li>
-                        <li><strong>2022</strong> — Media Algorithm Intern, <a href="https://www.huawei.com/cn/">Huawei 2012 Lab</a></li>
-                    </ul>
-                </div>
-                <div class="list-tight">
-                    <h3>Education</h3>
-                    <ul>
-                        <li><strong>Ph.D.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a> — Joint Program with <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a> (2022–2025)</li>
-                        <li><strong>M.S.</strong> Optical Engineering, <a href="http://opt.zju.edu.cn/">Zhejiang University</a>, <a href="http://opt.zju.edu.cn/2017/0401/c72719a1527391/page.htm">State Key Laboratory of Modern Optical Instrumentation</a> (2020–2022)</li>
-                        <li><strong>B.S.</strong> Optoelectronic Information Science and Engineering, <a href="https://www.csu.edu.cn/">Central South University</a> (2016–2020)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                <div class="two-col">
+                    <div class="contact-copy">
+                        <p>
+                            I welcome research discussions and collaborations
+                            on AI agents, generative models, and efficient AI
+                            systems—particularly work that connects technical
+                            progress with useful real-world applications.
+                        </p>
 
-        <!-- Collaborators -->
-        <section class="section">
-            <h2 class="section-heading">Collaborators</h2>
-            <div class="section-body two-col">
-                <div>
-                    <h3>Past Mentors &amp; Senior Collaborators</h3>
-                    <p>
-                        <a href="https://www.gujinwei.org/">Jinwei Gu</a> ·
-                        <a href="https://person.zju.edu.cn/0089108">Zhihai Xu</a> ·
-                        <a href="https://person.zju.edu.cn/0098047">Qi Li</a> ·
-                        <a href="https://scholar.google.com/citations?user=ahUibskAAAAJ&amp;hl=zh-CN">Xuelong Li</a> ·
-                        <a href="https://iopen.nwpu.edu.cn/info/1251/1852.htm">Bin Zhao</a>
-                    </p>
-                </div>
-                <div>
-                    <h3>Close Collaborators</h3>
-                    <p>
-                        <a href="https://guoshi28.github.io/">Shi Guo</a> ·
-                        <a href="https://tangeego.github.io/">Shiqi Chen</a> ·
-                        <a href="https://leiali.github.io/">Haoying Li</a> ·
-                        <a href="https://sites.google.com/view/yongrayma">Yongrui Ma</a> ·
-                        <a href="https://lyh-18.github.io/">Yihao Liu</a>
-                    </p>
-                </div>
-            </div>
-        </section>
+                        <p>
+                            <a href="mailto:zhangziran@sais.org.cn">
+                                zhangziran@sais.org.cn
+                            </a>
+                            <br>
+                            <span class="muted small">Shanghai, China</span>
+                        </p>
+                    </div>
 
-        <!-- Honors & Service -->
-        <section class="section">
-            <h2 class="section-heading">Honors &amp; Service</h2>
-            <div class="section-body two-col">
-                <div class="list-tight">
-                    <h3>Honors</h3>
-                    <ul>
-                        <li>Outstanding Graduate of Zhejiang University (2025)</li>
-                        <li>National Scholarship (Undergraduate, 2019)</li>
-                        <li>Outstanding Graduate of Hunan Province (2020)</li>
-                    </ul>
+                    <div class="personal-note">
+                        <h3 class="subheading">Beyond Research</h3>
+                        <p>
+                            Outside research, I enjoy playing basketball,
+                            learning about history, international relations,
+                            and economics, and exchanging ideas with people
+                            from different backgrounds.
+                        </p>
+                    </div>
                 </div>
-                <div class="list-tight">
-                    <h3>Service</h3>
-                    <ul>
-                        <li>Program Committee Member — AAAI 2026, AAAI 2027</li>
-                        <li>Reviewer — IEEE TCI, TGRS, Optics Express, Applied Optics, ACM MM, ECCV, ICCV, BMVC</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Contact -->
-        <section class="section">
-            <h2 class="section-heading">Contact</h2>
-            <div class="section-body two-col">
-                <div>
-                    <ul class="contact-list">
-                        <li><strong>Email:</strong> <a href="mailto:zhangziran@sais.org.cn">zhangziran@sais.org.cn</a></li>
-                        <li><strong>GitHub:</strong> <a href="https://github.com/naturezhanghn">github.com/naturezhanghn</a></li>
-                        <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com.hk/citations?user=-1d4kR0AAAAJ&hl=zh-CN">Google Scholar</a></li>
-                    </ul>
-                </div>
-                <div class="contact-aside">
-                    <h3>Hobbies &amp; Interests</h3>
-                    <p>Playing basketball, learning about history, international relations, and economics and finance through Bilibili, and exchanging ideas with people from different backgrounds.</p>
-                </div>
-            </div>
-        </section>
+        </main>
 
         <footer>
-            <div>© <span id="year"></span> Ziran Zhang · Language, Image &amp; Video Generation · Efficient Inference</div>
-            <div class="visitor-counter" id="busuanzi_container_site_uv" aria-label="Total visitor count">
-                Visitors: <span id="busuanzi_value_site_uv">—</span>
-            </div>
+            <p>© <span id="year">2026</span> Ziran Zhang</p>
+            <p class="back-to-top">
+                <a href="#top">Back to top ↑</a>
+            </p>
         </footer>
 
     </div>
 
-    <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Add the 4,125 visitors accumulated before Busuanzi tracking.
-        const legacyVisitorCount = 4125;
-        const visitorValue = document.getElementById('busuanzi_value_site_uv');
-        const visitorObserver = new MutationObserver(() => {
-            const liveCount = Number.parseInt(visitorValue.textContent, 10);
-            if (!Number.isFinite(liveCount)) return;
-
-            visitorObserver.disconnect();
-            visitorValue.textContent = String(legacyVisitorCount + liveCount);
-        });
-        visitorObserver.observe(visitorValue, { childList: true, characterData: true, subtree: true });
-
-        // Section reveal
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, { threshold: 0.15 });
-
-        sections.forEach(sec => observer.observe(sec));
+        const yearElement = document.getElementById("year");
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
     </script>
 </body>
 </html>
