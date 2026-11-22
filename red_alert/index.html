@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>坦克大战</title>
+	<meta name="description" content="坦克大战：保护基地，摧毁敌军，穿过砖墙、钢墙、水域和树林。" />
+	<meta name="theme-color" content="#101820" />
 
 	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
@@ -22,18 +24,75 @@
 			padding: 0;
 			margin: 0;
 		}
+		:root { color-scheme: dark; }
 		html, body {
 			background: #000;
 			color: #fff;
 			overflow: hidden;
 			touch-action: none;
 			-ms-touch-action: none;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+		}
+		body { min-height: 100vh; min-height: 100dvh; }
+		#c2canvasdiv {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+			height: 100dvh;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
 		}
 		canvas {
+			display: block;
+			max-width: 100vw;
+			max-height: 100vh;
+			max-height: 100dvh;
+			object-fit: contain;
 			touch-action-delay: none;
 			touch-action: none;
 			-ms-touch-action: none;
 		}
+		#game-guide {
+			position: fixed;
+			z-index: 20;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: min(480px, calc(100vw - 32px));
+			padding: 26px;
+			border: 1px solid #52717b;
+			border-radius: 16px;
+			background: linear-gradient(145deg, #172833f5, #0b1219f5);
+			box-shadow: 0 22px 70px #000b;
+			backdrop-filter: blur(14px);
+			transition: opacity .2s ease, transform .2s ease;
+		}
+		#game-guide.is-hidden { opacity: 0; transform: translate(-50%, -46%); pointer-events: none; }
+		#game-guide .guide-kicker { color: #f0b65c; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+		#game-guide h1 { margin: 7px 0 6px; font-size: clamp(26px, 5vw, 38px); letter-spacing: .04em; }
+		#game-guide .guide-lede { color: #bdcbd0; line-height: 1.65; font-size: 15px; }
+		#game-guide .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 20px 0 14px; }
+		#game-guide .guide-grid div { padding: 11px 9px; border: 1px solid #2e4651; border-radius: 9px; background: #10202a; }
+		#game-guide .guide-grid b, #game-guide .guide-grid span { display: block; }
+		#game-guide .guide-grid b { color: #f1c66b; font-size: 14px; }
+		#game-guide .guide-grid span { color: #a8b9be; font-size: 12px; line-height: 1.45; margin-top: 4px; }
+		#game-guide .guide-note { color: #8fa4aa; font-size: 12px; line-height: 1.6; }
+		#game-guide button { min-height: 44px; border: 1px solid #ed765f; border-radius: 8px; color: #fff; background: linear-gradient(135deg, #d74d43, #96323a); padding: 0 16px; margin-top: 18px; font-size: 14px; font-weight: 700; cursor: pointer; }
+		#game-guide-close { position: absolute; top: 10px; right: 12px; border: 0 !important; background: transparent !important; color: #a7bac0 !important; min-height: 36px !important; padding: 0 8px !important; margin: 0 !important; font-size: 24px !important; }
+		#game-guide-toggle { position: fixed; z-index: 19; top: max(14px, env(safe-area-inset-top)); right: max(14px, env(safe-area-inset-right)); min-width: 44px; min-height: 44px; border: 1px solid #526b73; border-radius: 10px; color: #eff4f0; background: #10222bd9; font-weight: 700; cursor: pointer; }
+		#mobile-hint { display: none; position: fixed; z-index: 10; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: max-content; max-width: calc(100vw - 28px); padding: 8px 12px; border: 1px solid #435c63; border-radius: 99px; color: #dce7e2; background: #0c1820d9; font-size: 12px; pointer-events: none; }
+		.noscript-note { position: fixed; z-index: 30; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; background: #0a1015; color: #fff; }
+		@media (max-width: 720px) {
+			#game-guide { padding: 22px 18px 18px; width: min(430px, calc(100vw - 22px)); }
+			#game-guide .guide-lede { font-size: 14px; }
+			#game-guide .guide-grid { grid-template-columns: 1fr; gap: 7px; margin: 14px 0 10px; }
+			#game-guide .guide-grid div { display: grid; grid-template-columns: 56px 1fr; align-items: center; padding: 9px; }
+			#game-guide .guide-grid span { margin-top: 0; }
+			#game-guide button:not(#game-guide-close) { width: 100%; }
+			#mobile-hint { display: block; }
+		}
+		@media (prefers-reduced-motion: reduce) { #game-guide { transition: none; } }
     </style>
 
 
@@ -55,6 +114,21 @@
 
 	<!-- The canvas must be inside a div called c2canvasdiv -->
 	<div id="c2canvasdiv">
+		<div id="game-guide" role="dialog" aria-modal="true" aria-labelledby="game-guide-title">
+			<button id="game-guide-close" type="button" aria-label="关闭说明">×</button>
+			<div class="guide-kicker">WELCOME // TANK BATTLE</div>
+			<h1 id="game-guide-title">坦克大战</h1>
+			<p class="guide-lede">保护基地，消灭所有敌方坦克。先熟悉操作，再进入战场。</p>
+			<div class="guide-grid">
+				<div><b>移动</b><span>方向键或 WASD</span></div>
+				<div><b>开火</b><span>空格键或屏幕开火键</span></div>
+				<div><b>目标</b><span>保护基地并清除敌军</span></div>
+			</div>
+			<p class="guide-note">砖墙可以击破，钢墙可以挡弹，水域会阻挡坦克，树林能遮住坦克。手机上请横屏游玩，并使用屏幕方向键和开火按钮。</p>
+			<button id="game-guide-start" type="button">知道了，开始游戏</button>
+		</div>
+		<button id="game-guide-toggle" type="button" aria-label="打开游戏说明">说明</button>
+		<div id="mobile-hint">手机操作：屏幕方向键移动 · 开火按钮射击</div>
 
 		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
 		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
@@ -63,6 +137,7 @@
 		</canvas>
 
 	</div>
+	<noscript><div class="noscript-note">坦克大战需要开启 JavaScript 才能运行。</div></noscript>
 
 	<!-- Pages load faster with scripts at the bottom -->
 
@@ -121,6 +196,32 @@
 				OnRegisterSWError(e);
 			}
 		};
+		function resizeTankBattleCanvas() {
+			if (typeof window.cr_sizeCanvas !== "function") return;
+			var host = document.getElementById("c2canvasdiv");
+			if (!host) return;
+			var rect = host.getBoundingClientRect();
+			window.cr_sizeCanvas(Math.floor(rect.width), Math.floor(rect.height));
+		}
+		window.addEventListener("resize", resizeTankBattleCanvas, false);
+		window.addEventListener("orientationchange", function () { window.setTimeout(resizeTankBattleCanvas, 160); }, false);
     </script>
+	<script>
+		(function () {
+			var guide = document.getElementById("game-guide");
+			var toggle = document.getElementById("game-guide-toggle");
+			var start = document.getElementById("game-guide-start");
+			var close = document.getElementById("game-guide-close");
+			function hideGuide() {
+				guide.classList.add("is-hidden");
+				try { window.localStorage.setItem("tank-battle-guide-dismissed", "1"); } catch (e) {}
+			}
+			function showGuide() { guide.classList.remove("is-hidden"); }
+			start.addEventListener("click", hideGuide);
+			close.addEventListener("click", hideGuide);
+			toggle.addEventListener("click", showGuide);
+			try { if (window.localStorage.getItem("tank-battle-guide-dismissed") === "1") hideGuide(); } catch (e) {}
+		}());
+	</script>
 </body>
 </html>
