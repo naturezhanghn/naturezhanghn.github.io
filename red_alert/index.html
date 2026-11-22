@@ -1,39 +1,126 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#080d14">
-  <meta name="description" content="赤潮防线：一款快节奏的浏览器即时战略小游戏。">
-  <title>山巅防线 · Red Alert: Summit Siege</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>坦克大战</title>
+
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
+	<meta name="HandheldFriendly" content="true" />
+
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+    </style>
+
+
 </head>
+
 <body>
-  <div class="game-shell">
-    <header class="topbar">
-      <div class="brand-lockup"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><div class="eyebrow">RED ALERT // SUMMIT SIEGE</div><h1>山巅防线</h1></div></div>
-      <div class="mission-strip"><span class="status-dot"></span><span id="missionStatus">行动中 · 1V7 山巅防守</span><span class="mission-divider"></span><span id="gameClock">00:00</span></div>
-      <div class="top-actions"><button class="icon-button" id="soundToggle" aria-label="切换音效">◒</button><button class="icon-button" id="pauseButton" aria-label="暂停游戏">Ⅱ</button><button class="outline-button" id="briefButton">作战简报</button></div>
-    </header>
-    <main class="battle-layout">
-      <aside class="intel-panel left-panel">
-        <section class="panel-section commander-card"><div class="section-kicker">COMMANDER // 07</div><div class="commander-row"><div class="avatar">LC</div><div><h2>林澈</h2><p>东岸防区指挥官</p></div><div class="online-pill">LIVE</div></div><div class="morale"><span>士气</span><div class="meter"><i id="moraleMeter"></i></div><strong id="moraleValue">78%</strong></div></section>
-        <section class="panel-section objective-card"><div class="section-kicker">PRIMARY OBJECTIVE</div><div class="objective-title"><span class="objective-icon">✦</span><strong>守住最高处</strong></div><p>面对七方军团持续攻山，守住山巅指挥中心。</p><div class="objective-progress"><span id="waveProgress" style="width:0%"></span></div><div class="objective-meta"><span id="waveLabel">WAVE 0 / 7</span><span id="objectiveState">WAITING</span></div></section>
-        <section class="panel-section intel-log"><div class="section-kicker">FIELD INTEL</div><div id="eventLog" class="event-log" aria-live="polite"></div></section>
-        <section class="panel-section controls-card"><div class="section-kicker">FIELD MANUAL</div><p><kbd>左键</kbd> 选中单位或框选<br><kbd>右键</kbd> 移动 / 攻击<br><kbd>空格</kbd> 暂停行动</p></section>
-      </aside>
-      <section class="battlefield-column"><div class="battlefield-wrap"><canvas id="battlefield" aria-label="山巅防线等距战区地图"></canvas><div class="map-overlay top-left"><span class="live-dot"></span> LIVE TACTICAL FEED</div><div class="map-overlay top-right">GRID <span id="gridReadout">SUMMIT</span></div><div class="map-overlay bottom-left">SUMMIT 04° 18' 09" &nbsp; // &nbsp; SECTOR 1V7</div><div class="map-overlay bottom-right" id="cameraHint">WHEEL TO ZOOM</div><div id="pauseOverlay" class="pause-overlay hidden"><span>行动暂停</span><small>按空格或点击右上角继续</small></div></div><div class="map-status-row"><div class="selection-readout"><span class="selection-mark"></span><span id="selectionLabel">未选择单位</span></div><div class="legend"><span><i class="legend-dot friendly"></i>我方</span><span><i class="legend-dot hostile"></i>敌方</span><span><i class="legend-dot resource"></i>高地</span></div></div></section>
-      <aside class="intel-panel right-panel">
-        <section class="resources-panel"><div class="section-kicker">WAR CHEST</div><div class="resource-row"><span class="resource-icon credits">₡</span><div><small>资金</small><strong id="credits">2,450</strong></div><em id="creditRate">+12 / min</em></div><div class="resource-row"><span class="resource-icon power">ϟ</span><div><small>电力</small><strong id="power">84 / 100</strong></div><em class="positive">稳定</em></div><div class="resource-row"><span class="resource-icon ore">◆</span><div><small>矿石</small><strong id="ore">620</strong></div><em id="oreRate">+4 / min</em></div></section>
-        <section class="panel-section build-panel"><div class="section-heading"><div class="section-kicker">CONSTRUCTION</div><span id="buildCount">3 SLOTS</span></div><div class="build-grid"><button class="build-card" data-build="harvester"><span class="build-icon">▣</span><strong>采矿车</strong><small>₡ 650 · +8/min</small></button><button class="build-card" data-build="barracks"><span class="build-icon">⌂</span><strong>兵营</strong><small>₡ 520 · 训练步兵</small></button><button class="build-card" data-build="turret"><span class="build-icon">◈</span><strong>哨戒炮</strong><small>₡ 760 · 自动防卫</small></button></div></section>
-        <section class="panel-section unit-panel"><div class="section-heading"><div class="section-kicker">TASK FORCE</div><span id="unitCount">3 UNITS</span></div><div id="unitList" class="unit-list"></div></section>
-        <section class="panel-section action-panel"><button class="primary-action" id="deployButton"><span>＋</span> 部署突击队 <b>₡ 300</b></button><button class="secondary-action" id="repairButton"><span>↻</span> 紧急维修 <b>₡ 180</b></button></section>
-      </aside>
-    </main>
-    <footer class="bottom-bar"><div class="footer-brand"><span class="red-line"></span><span>FROSTLINE COMMAND NETWORK</span></div><div class="footer-tip" id="footerTip">资源正在自动采集 · 选择单位后右键下达命令</div><div class="footer-version">SEASON 01 &nbsp;·&nbsp; BUILD 1.0.7</div></footer>
-  </div>
-  <div class="modal-backdrop" id="briefModal" role="dialog" aria-modal="true" aria-labelledby="briefTitle"><div class="brief-modal"><button class="modal-close" id="closeBrief" aria-label="关闭作战简报">×</button><div class="section-kicker">CLASSIFIED // SUMMIT SIEGE</div><h2 id="briefTitle">守住最高处</h2><p class="brief-lede">一座山巅，七方敌军。利用高地和自动炮塔，把峡谷变成一条不断收紧的火力线。</p><div class="brief-grid"><div><span>01</span><strong>筑垒</strong><p>在山脊部署哨戒炮与兵营，建立交叉火力。</p></div><div><span>02</span><strong>集结</strong><p>山巅守卫会自动拦截靠近的敌军，也能右键转移。</p></div><div><span>03</span><strong>守峰</strong><p>七波军团同时从山下压上，指挥中心倒下即告失败。</p></div></div><button class="primary-action modal-action" id="startBrief">开始防守 <span>→</span></button></div></div>
-  <div id="toast" class="toast" role="status"></div><script type="module" src="game.js"></script>
+	<div id="fb-root"></div>
+
+	<script>
+	// Issue a warning if trying to preview an exported project on disk.
+	(function(){
+		// Check for running exported on file protocol
+		if (window.location.protocol.substr(0, 4) === "file")
+		{
+			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
+		}
+	})();
+	</script>
+
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv">
+
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="1920" height="1080">
+
+		</canvas>
+
+	</div>
+
+	<!-- Pages load faster with scripts at the bottom -->
+
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="jquery-2.1.1.min.js"></script>
+
+
+
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="c2runtime.js"></script>
+
+    <script>
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+
+		function OnRegisterSWError(e)
+		{
+			console.warn("Failed to register service worker: ", e);
+		};
+
+		// Runtime calls this global method when ready to start caching (i.e. after startup).
+		// This registers the service worker which caches resources for offline support.
+		window.C2_RegisterSW = function C2_RegisterSW()
+		{
+			if (!navigator.serviceWorker)
+				return;		// no SW support, ignore call
+
+			try {
+				navigator.serviceWorker.register("sw.js", { scope: "./" })
+				.then(function (reg)
+				{
+					console.log("Registered service worker on " + reg.scope);
+				})
+				.catch(OnRegisterSWError);
+			}
+			catch (e)
+			{
+				OnRegisterSWError(e);
+			}
+		};
+    </script>
 </body>
 </html>
